@@ -7,14 +7,20 @@ import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintStream;
+import java.nio.file.Files;
 import java.util.Scanner;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.AbstractButton;
 import javax.swing.JButton;
 import javax.swing.JTextField;
@@ -30,8 +36,12 @@ public class MainFrame extends JFrame{
 	static JPanel p = new JPanel();
 	static JButton next_page_button = new JButton(">>");
 	static JButton previous_page_button = new JButton("<<");
+	static JButton add_precipe_button = new JButton("Dodaj przepis");
+	static JButton accept_precipe_button = new JButton("dodaj");
 	static JTextArea precipe_area = new JTextArea();
 	static JTextArea ingredients_area = new JTextArea("Lista przepisow tu bedzie");	
+	static JScrollPane ingredients_scroll = new JScrollPane(ingredients_area);
+	static JScrollPane precipe_scroll = new JScrollPane(precipe_area);
 	static int counter = 0;
 	static String text0 = null;
 	static String text1 = null;
@@ -94,39 +104,64 @@ public class MainFrame extends JFrame{
             System.out.println( "Error reading file");                  
         }
 		next_page_button.addActionListener(new ActionListener() { 
-			  public void actionPerformed(ActionEvent e) 
-			  { 
-				  if(counter == 0)
-				  {
-					  counter = 1;
-					  precipe_area.setText(precipes_and_indgredients[counter + 1]);
-					  ingredients_area.setText(precipes_and_indgredients[counter + 2]);
-				  }
-				  else
-				  {
-					  counter = 0;
-					  precipe_area.setText(precipes_and_indgredients[counter]);
-					  ingredients_area.setText(precipes_and_indgredients[counter + 1]);
-				  }
-			  } 
+			public void actionPerformed(ActionEvent e) 
+			{ 
+				if(counter == 0)
+				{
+					counter = 1;
+					precipe_area.setText(precipes_and_indgredients[counter + 1]);
+					ingredients_area.setText(precipes_and_indgredients[counter + 2]);
+				}
+				else
+				{
+					counter = 0;
+					precipe_area.setText(precipes_and_indgredients[counter]);
+					ingredients_area.setText(precipes_and_indgredients[counter + 1]);
+				}
+			} 
 		});	
 		
 		previous_page_button.addActionListener(new ActionListener() { 
-			  public void actionPerformed(ActionEvent e) 
-			  { 
-				  if(counter == 0)
-				  {
-					  counter = 1;
-					  precipe_area.setText(precipes_and_indgredients[counter + 1]);
-					  ingredients_area.setText(precipes_and_indgredients[counter + 2]);
-				  }
-				  else
-				  {
-					  counter = 0;
-					  precipe_area.setText(precipes_and_indgredients[counter]);
-					  ingredients_area.setText(precipes_and_indgredients[counter + 1]);
-				  }
-			  } 
+			public void actionPerformed(ActionEvent e) 
+			{ 
+				if(counter == 0)
+				{
+					counter = 1;
+					precipe_area.setText(precipes_and_indgredients[counter + 1]);
+					ingredients_area.setText(precipes_and_indgredients[counter + 2]);
+				}
+				else
+				{
+					counter = 0;
+					precipe_area.setText(precipes_and_indgredients[counter]);
+					ingredients_area.setText(precipes_and_indgredients[counter + 1]);
+				}
+			} 
+		});	
+		
+		add_precipe_button.addActionListener(new ActionListener() { 
+			public void actionPerformed(ActionEvent e) 
+			{ 
+				precipe_area.setText("");
+				ingredients_area.setText("");
+				accept_precipe_button.setVisible(true);
+
+					  
+			} 
+		});	
+		
+		accept_precipe_button.addActionListener(new ActionListener() { 
+			public void actionPerformed(ActionEvent e) 
+			{
+			    String precipe = precipe_area.getText();
+			    String ingredients = ingredients_area.getText();
+			    System.out.println(precipe);
+			    System.out.println(ingredients);			     
+			    BufferedWriter writer1 = null;
+			    BufferedWriter writer2 = null;
+				accept_precipe_button.setVisible(false);
+					  
+			} 
 		});	
 	}
 	
@@ -148,15 +183,24 @@ public class MainFrame extends JFrame{
 		previous_page_button.setBackground(Color.LIGHT_GRAY);
 		p.add(previous_page_button);
 		
-		precipe_area.setBounds(400, 100, 600, 700);
+		add_precipe_button.setBounds(220, 20, 150, 50);
+		add_precipe_button.setBackground(Color.LIGHT_GRAY);
+		p.add(add_precipe_button);
+		
+		accept_precipe_button.setBackground(Color.LIGHT_GRAY);
+		accept_precipe_button.setBounds(390, 20, 100, 50);
+		accept_precipe_button.setVisible(false);
+		p.add(accept_precipe_button);
+		
+		precipe_scroll.setBounds(400, 100, 600, 700);
 		precipe_area.setBackground(Color.LIGHT_GRAY);
 		precipe_area.setFont(new Font("Serif", Font.ITALIC, 16));
-		p.add(precipe_area);
+		p.add(precipe_scroll);
 		
-		ingredients_area.setBounds(20, 100, 300, 700);
+		ingredients_scroll.setBounds(20, 100, 300, 700);
 		ingredients_area.setBackground(Color.LIGHT_GRAY);
 		ingredients_area.setFont(new Font("Serif", Font.ITALIC, 16));
-		p.add(ingredients_area);
+		p.add(ingredients_scroll);
 		
 		add(p); //to jest window param klasy
 		setVisible(true); 
