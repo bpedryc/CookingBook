@@ -1,0 +1,13 @@
+<recipe>
+	<id>0<id/>
+	<title>Kluski jakieś</title>
+	<author>Gotowanie z Pietruszką</author>
+	<rating>4</rating>
+	<preptime>25 minut</preptime>
+	<ingredients>
+		<ingreditent>2 jabłka</ingredient>
+		<ingreditent>3 gruszki</ingredient>
+		<ingreditent>4 winogrona</ingredient>
+	</ingedients>
+	<description>Taki fajny przepis. Weź owoce i zmieszaj.</description>
+</recipe>
