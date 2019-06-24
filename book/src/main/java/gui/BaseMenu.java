@@ -1,9 +1,10 @@
-package gui;
+package ksiazka_kucharska_gui;
 
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.*;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -14,15 +15,21 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
+import javax.swing.JTextField;
+import javax.swing.JComboBox;
 
-public abstract class BaseMenu {
+public abstract class MainFrame {
+	static String[] filter_table = {"Składniki", "Nazwa przepisu", "Autor"};
 	static JPanel p = new JPanel();
 	static JButton next_page_button = new JButton(">>");
 	static JButton previous_page_button = new JButton("<<");
+	static JButton search_button = new JButton("Szukaj");
+	static JComboBox<String> filter_list = new JComboBox<String>(filter_table);
 	static JTextArea precipe_area = new JTextArea();
 	static JTextArea ingredients_area = new JTextArea("Lista przepisow tu bedzie");	
 	static JScrollPane ingredients_scroll = new JScrollPane(ingredients_area);
 	static JScrollPane precipe_scroll = new JScrollPane(precipe_area);
+	static JTextField search_text = new JTextField();
 	public static JFrame main_frame = new JFrame();
 	int counter = 0;
 	private static boolean logged = false;
@@ -33,34 +40,54 @@ public abstract class BaseMenu {
 	String[] precipes_and_indgredients = new String[4];
 	
 	public abstract void extra_things();
-	
-	public BaseMenu()
+    
+	public MainFrame()
 	{
 		main_frame.setResizable(true);
 		main_frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		p.setLayout(null);
 		p.setBackground(Color.DARK_GRAY);
 		
-		next_page_button.setBounds(120, 20, 50, 50);
+		next_page_button.setBounds(80, 510, 50, 50);
 		next_page_button.setBackground(Color.LIGHT_GRAY);
 		p.add(next_page_button);
 		
-		previous_page_button.setBounds(20, 20, 50, 50);
+		previous_page_button.setBounds(20, 510, 50, 50);
 		previous_page_button.setBackground(Color.LIGHT_GRAY);
 		p.add(previous_page_button);
 		
-		precipe_scroll.setBounds(400, 100, 600, 700);
+		search_button.setBounds(710, 20, 80, 40);
+		search_button.setBackground(Color.LIGHT_GRAY);
+		p.add(search_button);
+		
+		filter_list.setBounds(70, 20, 120, 40);
+		filter_list.setBackground(Color.LIGHT_GRAY);
+		p.add(filter_list);
+		
+		precipe_scroll.setBounds(400, 100, 600, 670);
 		precipe_area.setBackground(Color.LIGHT_GRAY);
 		precipe_area.setFont(new Font("Serif", Font.ITALIC, 16));
 		p.add(precipe_scroll);
 		
-		ingredients_scroll.setBounds(20, 100, 300, 700);
+		ingredients_scroll.setBounds(20, 100, 300, 400);
 		ingredients_area.setBackground(Color.LIGHT_GRAY);
 		ingredients_area.setFont(new Font("Serif", Font.ITALIC, 16));
 		p.add(ingredients_scroll);
 		
+		search_text.setBounds(200, 20, 500, 40);
+		search_text.setBackground(Color.LIGHT_GRAY);
+		search_text.setFont(new Font("Serif", Font.ROMAN_BASELINE, 16));
+		search_text.setText("Wpisz szukaną frazę...");
+		p.add(search_text);
+		
 		main_frame.add(p); //to jest window param klasy
 		main_frame.setVisible(true);
+		
+		search_text.addMouseListener(new MouseAdapter() {
+			public void mouseClicked(MouseEvent e) {
+			    search_text.setText("");
+			}	
+		});
 		
 		next_page_button.addActionListener(new ActionListener() { 
 			public void actionPerformed(ActionEvent e) 
@@ -153,7 +180,7 @@ public abstract class BaseMenu {
 	}
 
 	public void set_logged(boolean logged) {
-		BaseMenu.logged = logged;
+		MainFrame.logged = logged;
 	}
 }
 
