@@ -1,4 +1,4 @@
-package ksiazka_kucharska_gui;
+package gui;
 
 import java.awt.Color;
 import java.awt.Rectangle;
@@ -6,14 +6,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
 
-public class Logged_user extends MainFrame{
+public class LoggedMenu extends MainFrame{
 	
 	JButton add_precipe_button = new JButton("Dodaj");
 	JButton accept_precipe_button = new JButton("+");
 	JButton add_comment = new JButton("Dodaj_komentarz");
 	JButton sing_out_button = new JButton("Wyloguj");
 
-	public Logged_user(Rectangle dimensions) 
+	public LoggedMenu(Rectangle dimensions) 
 	{
 		main_frame.setBounds(dimensions);
 		add_precipe_button.setBounds(140, 510, 100, 50);
