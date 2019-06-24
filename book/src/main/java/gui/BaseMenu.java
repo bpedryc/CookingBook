@@ -1,4 +1,4 @@
-package ksiazka_kucharska_gui;
+package gui;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -18,7 +18,7 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.JComboBox;
 
-public abstract class MainFrame {
+public abstract class BaseMenu {
 	static String[] filter_table = {"Składniki", "Nazwa przepisu", "Autor"};
 	static JPanel p = new JPanel();
 	static JButton next_page_button = new JButton(">>");
@@ -41,7 +41,7 @@ public abstract class MainFrame {
 	
 	public abstract void extra_things();
     
-	public MainFrame()
+	public BaseMenu()
 	{
 		main_frame.setResizable(true);
 		main_frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -180,7 +180,7 @@ public abstract class MainFrame {
 	}
 
 	public void set_logged(boolean logged) {
-		MainFrame.logged = logged;
+		BaseMenu.logged = logged;
 	}
 }
 
