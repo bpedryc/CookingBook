@@ -18,7 +18,7 @@ public class MainClass {
 				{
 					break;
 				}
-				object.extra_things();
+				object.extraThings();
 			}
 			dimensions = BaseMenu.main_frame.getBounds();
 			object = (BaseMenu)new LoggedMenu(dimensions);
@@ -28,7 +28,7 @@ public class MainClass {
 				{
 					break;
 				}
-				object.extra_things();
+				object.extraThings();
 			}
 			dimensions = BaseMenu.main_frame.getBounds();
 		}
