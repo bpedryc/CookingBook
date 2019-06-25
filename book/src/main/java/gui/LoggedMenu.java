@@ -1,5 +1,4 @@
 package gui;
-
 import java.awt.Color;
 import java.awt.Rectangle;
 import java.awt.event.ActionEvent;
@@ -16,6 +15,7 @@ public class LoggedMenu extends BaseMenu{
 	public LoggedMenu(Rectangle dimensions) 
 	{
 		main_frame.setBounds(dimensions);
+		
 		add_precipe_button.setBounds(140, 510, 100, 50);
 		add_precipe_button.setBackground(Color.LIGHT_GRAY);
 		add_precipe_button.setVisible(true);
@@ -27,7 +27,7 @@ public class LoggedMenu extends BaseMenu{
 		p.add(accept_precipe_button);
 		
 		sing_out_button.setBackground(Color.LIGHT_GRAY);
-		sing_out_button.setBounds(850, 20, 150, 50);
+		sing_out_button.setBounds(900, 20, 150, 50);
 		sing_out_button.setVisible(true);
 		p.add(sing_out_button);
 		
@@ -52,7 +52,7 @@ public class LoggedMenu extends BaseMenu{
 			} 
 		});
 	}
-	public void extra_things() 
+	public void extraThings() 
 	{
 		add_precipe_button.setVisible(true);
 		sing_out_button.setVisible(true);

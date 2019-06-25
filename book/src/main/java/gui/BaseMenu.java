@@ -31,6 +31,7 @@ public abstract class BaseMenu {
 	static JScrollPane precipe_scroll = new JScrollPane(precipe_area);
 	static JTextField search_text = new JTextField();
 	public static JFrame main_frame = new JFrame();
+	//static Book book = new Book();
 	int counter = 0;
 	private static boolean logged = false;
 	String text0 = null;
@@ -39,7 +40,7 @@ public abstract class BaseMenu {
 	String text3 = null;
 	String[] precipes_and_indgredients = new String[4];
 	
-	public abstract void extra_things();
+	public abstract void extraThings();
     
 	public BaseMenu()
 	{
@@ -56,11 +57,11 @@ public abstract class BaseMenu {
 		previous_page_button.setBackground(Color.LIGHT_GRAY);
 		p.add(previous_page_button);
 		
-		search_button.setBounds(710, 20, 80, 40);
+		search_button.setBounds(660, 20, 80, 40);
 		search_button.setBackground(Color.LIGHT_GRAY);
 		p.add(search_button);
 		
-		filter_list.setBounds(70, 20, 120, 40);
+		filter_list.setBounds(20, 20, 120, 40);
 		filter_list.setBackground(Color.LIGHT_GRAY);
 		p.add(filter_list);
 		
@@ -74,7 +75,7 @@ public abstract class BaseMenu {
 		ingredients_area.setFont(new Font("Serif", Font.ITALIC, 16));
 		p.add(ingredients_scroll);
 		
-		search_text.setBounds(200, 20, 500, 40);
+		search_text.setBounds(150, 20, 500, 40);
 		search_text.setBackground(Color.LIGHT_GRAY);
 		search_text.setFont(new Font("Serif", Font.ROMAN_BASELINE, 16));
 		search_text.setText("Wpisz szukaną frazę...");
@@ -122,6 +123,20 @@ public abstract class BaseMenu {
 					precipe_area.setText(precipes_and_indgredients[counter]);
 					ingredients_area.setText(precipes_and_indgredients[counter + 1]);
 				}
+			} 
+		});	
+        
+        search_button.addActionListener(new ActionListener() { 
+			public void actionPerformed(ActionEvent e) 
+			{ 
+				System.out.println(search_text.getText()); //to czego szukamy	
+			} 
+		});	
+        
+        filter_list.addActionListener(new ActionListener() { 
+			public void actionPerformed(ActionEvent e) 
+			{ 
+				System.out.println(filter_list.getSelectedItem()); //to po czym szukamy
 			} 
 		});	
         
@@ -173,6 +188,8 @@ public abstract class BaseMenu {
         catch(IOException ex) {
             System.out.println( "Error reading file");                  
         }
+        //book.createRecipe(precipes_and_indgredients[0], precipes_and_indgredients[1]);
+        //book.createRecipe(precipes_and_indgredients[2], precipes_and_indgredients[3]);
 	}
 
 	public boolean get_logged() {
