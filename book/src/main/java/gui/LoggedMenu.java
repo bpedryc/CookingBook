@@ -6,7 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
 
-public class LoggedMenu extends MainFrame{
+public class LoggedMenu extends BaseMenu{
 	
 	JButton add_precipe_button = new JButton("Dodaj");
 	JButton accept_precipe_button = new JButton("+");
