@@ -1,7 +1,6 @@
 package mechanics;
 import java.util.List;
 import java.util.ArrayList;
-import java.util.Vector;
 
 public class Recipe {
 	private String author;

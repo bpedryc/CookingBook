@@ -13,7 +13,6 @@ public class MainClass {
 		// Plik w którym przechowujemy przepisy: book/src/main/resources/recipes.xml
 		ResourceManager resource_manager = new ResourceManager();
 		List<Recipe> recipes = resource_manager.fetchRecipes();
-		// --------
 	
 		Rectangle dimensions = new Rectangle(300, 100, 1100, 900);;
 		while(true) 
