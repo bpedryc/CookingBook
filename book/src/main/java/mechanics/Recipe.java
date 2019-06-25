@@ -1,12 +1,13 @@
 package mechanics;
-import java.util.Vector;
+import java.util.List;
+import java.util.ArrayList;
 
 public class Recipe {
 	private String author;
 	private String title;
 	private String rating;
 	private String prep_time;
-	private Vector<String> ingredients = new Vector<String>();
+	private List<String> ingredients = new ArrayList<String>();
 	private String description;
 	private int id;
 	
@@ -18,7 +19,7 @@ public class Recipe {
 		this.prep_time = builder.prep_time;
 		this.description = builder.description;
 		this.id = builder.id;
-		this.ingredients = (Vector<String>)builder.ingredients.clone();
+		this.ingredients = (ArrayList<String>)builder.ingredients;
 	}
 	
 	public String getAuthor()
@@ -51,19 +52,18 @@ public class Recipe {
 		return description;
 	}
 	
-	public Vector<String> getIngredients()
+	public List<String> getIngredients()
 	{
 		return ingredients;
 	}
 	
 	public static class Builder
 	{
-		
 		private String author;
 		private String title;
 		private String rating;
 		private String prep_time;
-		private Vector<String> ingredients = new Vector<String>();
+		private List<String> ingredients = new ArrayList<String>();
 		private String description;
 		private final int id;
 		
@@ -96,7 +96,7 @@ public class Recipe {
 			return this;
 		}
 		
-		public Builder ingredients(final Vector<String> ingredients)
+		public Builder ingredients(final List<String> ingredients)
 		{
 			this.ingredients = ingredients;
 			return this;

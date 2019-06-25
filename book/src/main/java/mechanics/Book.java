@@ -1,10 +1,11 @@
 package mechanics;
-import java.util.Vector;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Book {
 
 	private int recipe_id;
-	private Vector<Recipe> recipes = new Vector<Recipe>();
+	private List<Recipe> recipes = new ArrayList<Recipe>();
 	
 	public Book()
 	{
@@ -25,7 +26,7 @@ public class Book {
 		    desc += splitedArray[i];
 		}
 		
-		Vector<String> ingredient = new Vector<String>(); 
+		List<String> ingredient = new ArrayList<String>(); 
 		
 		splited = new String(ingredients);
 		String [] splitedArray2 = null;
