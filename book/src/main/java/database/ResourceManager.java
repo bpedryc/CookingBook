@@ -1,56 +1,88 @@
 package database;
 
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.DocumentBuilder;
-import org.w3c.dom.Document;
-import org.w3c.dom.NodeList;
-import org.w3c.dom.Node;
-import org.w3c.dom.Element;
-import java.io.File;
-import java.util.Vector;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
-import mechanics.Book;
+import org.jdom2.DataConversionException;
+import org.jdom2.Document;
+import org.jdom2.Element;
+import org.jdom2.JDOMException;
+import org.jdom2.input.SAXBuilder;
+
 import mechanics.Recipe;
 
-public class ResourceManager {
-	public Vector<Recipe> fetchRecipes(){
-		Vector<Recipe> return_vector = new Vector<Recipe>();
-		try {
-			File xml_file = new File("src/main/resources/recipes.xml");
-			DocumentBuilderFactory db_factory = DocumentBuilderFactory.newInstance();
-			DocumentBuilder d_builder = db_factory.newDocumentBuilder();
-			Document doc = d_builder.parse(xml_file);
-			doc.getDocumentElement().normalize();
-			NodeList nlist = doc.getElementsByTagName("recipe");
-			
-			for (int i = 0; i < nlist.getLength(); i++) {
-				Node nnode = nlist.item(i);
-				
-				if (nnode.getNodeType() == Node.ELEMENT_NODE) {
-					Element eelement = (Element)nnode;
-					NodeList ingredients_nlist = eelement.getElementsByTagName("ingredients");
-					for (int j = 0; j < ingredients_nlist; j++) {
-						
-					}
-					Recipe recipe = new Recipe.Builder(eelement.getAttribute("id")
-						.author(eelement.getElementsByTagName("").item(0).getTextContent())
-						.title(eelement.getElementsByTagName("").item(0).getTextContent())
-						.rating(eelement.getElementsByTagName("").item(0).getTextContent())
-						.prep_time(eelement.getElementsByTagName("").item(0).getTextContent())
-						.ingredients(eelement.getElementsByTagName("").item(0).getTextContent())
-						.description(eelement.getElementsByTagName("").item(0).getTextContent())
-						.build();
-					return_vector.add(recipe);
-				}
+/**
+ * Menedżer zasobów w projekcie
+ * Odpowiedzialny za takie zadania jak: pozyskanie zapisanych przepisów 
+ * z pliku lub zapisanie przepisów w pliku
+ * @author Bartek
+*/
+public class ResourceManager 
+{
+	/**
+	 * Zwraca listę obiektów typu Recipe, którą pozyskuje z pliku zasobów 
+	 * projektu. Plik ten znajduje się w src/main/resources/recipes.xml
+	 * @return lista przepisów
+	*/
+	public List<Recipe> fetchRecipes(){
+		List<Recipe> return_list = new ArrayList<Recipe>();
+		
+		String xml_file = "src/main/resources/recipes.xml";
+		Document document = getSAXParsedDocument(xml_file);
+		
+		Element root_node = document.getRootElement();
+		List<Element> nodes = root_node.getChildren();
+		
+		for (int i = 0; i < nodes.size(); i++) {
+			Element cur_node = nodes.get(i);
+			List<Element> ingredient_nodes = cur_node.getChild("ingredients").getChildren();
+			List<String> ingredient_texts = new ArrayList<String>();
+			for(Element ingredient_node : ingredient_nodes) {
+				ingredient_texts.add(ingredient_node.getText());
 			}
 			
-		} catch (Exception e) {
-			e.printStackTrace();
+			int node_id = 0;
+			try
+			{
+				node_id = cur_node.getAttribute("id").getIntValue();
+			} catch(DataConversionException e)
+			{
+				e.printStackTrace();
+			}
+			
+			Recipe new_recipe = new Recipe.Builder(node_id)
+					.author(cur_node.getChildText("author"))
+					.title(cur_node.getChildText("title"))
+					.rating(cur_node.getChildText("rating"))
+					.prep_time(cur_node.getChildText("preptime"))
+					.ingredients(ingredient_texts)
+					.description(cur_node.getChildText("description"))
+					.build();
+					
+			return_list.add(new_recipe);
 		}
-		
-		return return_vector;
+		return return_list;
 	}
 	
-
+	/**
+	 * Funkcja pomocnicza pozwalająca parse'ować plik .xml
+	 * o konkretnej nazwie
+	 * @param file_name Nazwa pliku
+	 * @return Dane pliku w postaci Document
+	*/
+	private Document getSAXParsedDocument(String file_name) {
+		SAXBuilder builder = new SAXBuilder();
+		Document document = null;
+		try
+		{
+			document = builder.build(file_name);
+		}
+		catch (JDOMException | IOException e)
+		{
+			e.printStackTrace();
+		}
+		return document;
+	}
 	
 }

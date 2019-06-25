@@ -1,13 +1,20 @@
 import java.awt.Rectangle;
+import java.util.List;
 
-import gui.GuestMenu;
-import gui.LoggedMenu;
-import gui.BaseMenu;
+import gui.*;
+import database.*;
+import mechanics.*;
 
 public class MainClass {
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args){
+		
+		// Przykładowe użycie ResourceManagera, żeby otrzymać przepisy z pliku .xml
+		// Plik w którym przechowujemy przepisy: book/src/main/resources/recipes.xml
+		ResourceManager resource_manager = new ResourceManager();
+		List<Recipe> recipes = resource_manager.fetchRecipes();
+		// --------
+	
 		Rectangle dimensions = new Rectangle(300, 100, 1100, 900);;
 		while(true) 
 		{
@@ -32,6 +39,7 @@ public class MainClass {
 			}
 			dimensions = BaseMenu.main_frame.getBounds();
 		}
+		
 	}
 }
 
