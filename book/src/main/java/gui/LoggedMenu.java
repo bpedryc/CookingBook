@@ -16,6 +16,8 @@ public class LoggedMenu extends BaseMenu{
 
 	public LoggedMenu(Rectangle dimensions) 
 	{
+		set_logged(true);
+		setLogged_helper(true);
 		main_frame.setBounds(dimensions);
 		
 		add_precipe_button.setBounds(140, 510, 100, 50);
@@ -32,7 +34,7 @@ public class LoggedMenu extends BaseMenu{
 		sing_out_button.setBounds(900, 20, 150, 50);
 		sing_out_button.setVisible(true);
 		p.add(sing_out_button);
-		
+				
 		add_precipe_button.addActionListener(new ActionListener() { 
 			public void actionPerformed(ActionEvent e) 
 			{ 
@@ -57,10 +59,6 @@ public class LoggedMenu extends BaseMenu{
 	    sing_out_button.addActionListener(new ActionListener() { 
 			public void actionPerformed(ActionEvent e) 
 			{ 
-				//akcja po zalogowaniu
-				sing_out_button.setVisible(false);
-				add_precipe_button.setVisible(false);
-				accept_precipe_button.setVisible(false);
 				setLogged_helper(false);
 				
 			} 
@@ -68,12 +66,19 @@ public class LoggedMenu extends BaseMenu{
 	}
 	public void extraThings() 
 	{
-		add_precipe_button.setVisible(true);
-		sing_out_button.setVisible(true);
 		if(isLogged_helper() == false)
 		{
+			sing_out_button.setVisible(false);
+			add_precipe_button.setVisible(false);
+			accept_precipe_button.setVisible(false);
 			set_logged(false);
 		}		
+		try {
+			TimeUnit.MILLISECONDS.sleep(100);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	
 	}
 
 }

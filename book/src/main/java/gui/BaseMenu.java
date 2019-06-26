@@ -33,8 +33,8 @@ public abstract class BaseMenu {
 	public static JFrame main_frame = new JFrame();
 	//static Book book = new Book();
 	int counter = 0;
-	private static boolean logged = false;
-	private boolean logged_helper = false;
+	private static boolean logged;
+	private boolean logged_helper;
 	String text0 = null;
 	String text1 = null;
 	String text2 = null;
