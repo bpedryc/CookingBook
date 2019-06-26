@@ -1,14 +1,18 @@
 package database;
 
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.jdom2.Attribute;
 import org.jdom2.DataConversionException;
 import org.jdom2.Document;
 import org.jdom2.Element;
 import org.jdom2.JDOMException;
 import org.jdom2.input.SAXBuilder;
+import org.jdom2.output.Format;
+import org.jdom2.output.XMLOutputter;
 
 import mechanics.Recipe;
 
@@ -20,6 +24,45 @@ import mechanics.Recipe;
 */
 public class ResourceManager 
 {
+	/**
+	 * Zapisuje listę przepisów do pliku zasobów projektu.
+	 * Plik ten znajduje się w src/main/resources/recipes.xml
+	 * @param recipes Lista przepisów
+	*/
+	public void saveRecipes(List<Recipe> recipes) {
+		try
+		{
+			Element root_node = new Element("recipes");
+			Document document = new Document(root_node);
+			
+			for (Recipe recipe: recipes) {
+				Element recipe_node = new Element("recipe");
+				recipe_node.setAttribute(new Attribute("id", Integer.toString(recipe.getId())));
+				recipe_node.addContent(new Element("author").setText(recipe.getAuthor()));
+				recipe_node.addContent(new Element("title").setText(recipe.getTitle()));
+				recipe_node.addContent(new Element("rating").setText(recipe.getRating()));
+				recipe_node.addContent(new Element("preptime").setText(recipe.getPrep_time()));
+				
+				Element ingredients_node = new Element("ingredients");
+				for (String ingredient : recipe.getIngredients()) {
+					ingredients_node.addContent(new Element("ingredient").setText(ingredient));
+				}
+				recipe_node.addContent(ingredients_node);
+				
+				recipe_node.addContent(new Element("description").setText(recipe.getDescription()));
+			
+				root_node.addContent(recipe_node);
+			}
+			
+			XMLOutputter xml_output = new XMLOutputter();
+			xml_output.setFormat(Format.getPrettyFormat());
+			xml_output.output(document, new FileWriter("src/main/resources/recipes.xml"));
+		} catch (IOException e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
 	/**
 	 * Zwraca listę obiektów typu Recipe, którą pozyskuje z pliku zasobów 
 	 * projektu. Plik ten znajduje się w src/main/resources/recipes.xml

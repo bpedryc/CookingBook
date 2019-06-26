@@ -1,26 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <recipes>
-	<recipe id="0">
-		<title>Kluski jakieś</title>
-		<author>Jaimie Oliver</author>
-		<rating>4</rating>
-		<preptime>25 minut</preptime>
-		<ingredients>
-			<ingredient>2 jabłka</ingredient>
-			<ingredient>3 gruszki</ingredient>
-			<ingredient>4 winogrona</ingredient>
-		</ingredients>
-		<description>Klasyk. Koniecznie jeść na zimno.</description>
-	</recipe>
-	<recipe id="1">
-		<title>Racuchy</title>
-		<author>Gordon Ramsay</author>
-		<rating>5</rating>
-		<preptime>15 minut</preptime>
-		<ingredients>
-			<ingredient>2 jabłka</ingredient>
-			<ingredient>3 gruszki</ingredient>
-			<ingredient>4 winogrona</ingredient>
-		</ingredients>
-		<description>Bardzo dobre.</description>
-	</recipe>
+  <recipe id="0">
+    <author>Jaimie Oliver</author>
+    <title>Kluski jakieś</title>
+    <rating>4</rating>
+    <preptime>25 minut</preptime>
+    <ingredients>
+      <ingredient>2 jabłka</ingredient>
+      <ingredient>3 gruszki</ingredient>
+      <ingredient>4 winogrona</ingredient>
+    </ingredients>
+    <description>Klasyk. Koniecznie jeść na zimno.</description>
+  </recipe>
+  <recipe id="1">
+    <author>Gordon Ramsay</author>
+    <title>Racuchy</title>
+    <rating>5</rating>
+    <preptime>15 minut</preptime>
+    <ingredients>
+      <ingredient>2 jabłka</ingredient>
+      <ingredient>3 gruszki</ingredient>
+      <ingredient>4 winogrona</ingredient>
+    </ingredients>
+    <description>Bardzo dobre.</description>
+  </recipe>
+  <recipe id="2">
+    <author>gotowanietoproste</author>
+    <title>Trójkolorowe ciasto</title>
+    <rating>2/10</rating>
+    <preptime>46 minuty</preptime>
+    <ingredients>
+      <ingredient>burak</ingredient>
+      <ingredient>banan</ingredient>
+      <ingredient>marchew</ingredient>
+      <ingredient>mięta</ingredient>
+      <ingredient>sok</ingredient>
+    </ingredients>
+    <description>Jakiś ładny opis</description>
+  </recipe>
 </recipes>
