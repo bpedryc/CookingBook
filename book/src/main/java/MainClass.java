@@ -7,6 +7,7 @@ import mechanics.*;
 
 public class MainClass {
 	
+<<<<<<< HEAD
 	public static void main(String[] args){
 		
 		// Przykładowe użycie ResourceManagera, żeby otrzymać przepisy z pliku .xml
@@ -15,9 +16,16 @@ public class MainClass {
 		List<Recipe> recipes = resource_manager.fetchRecipes();
 	
 		Rectangle dimensions = new Rectangle(300, 100, 1100, 900);;
+=======
+	public static void main(String[] args)
+	{
+		Rectangle dimensions = new Rectangle(300, 100, 1100, 900);
+>>>>>>> Pietrov98_gui
 		while(true) 
 		{
 			BaseMenu object = new GuestMenu(dimensions);
+			System.out.println(object);
+			BaseMenu.main_frame.getContentPane().repaint();
 			while(object.get_logged() == false)
 			{
 				if(object.get_logged() == true)
@@ -28,6 +36,8 @@ public class MainClass {
 			}
 			dimensions = BaseMenu.main_frame.getBounds();
 			object = (BaseMenu)new LoggedMenu(dimensions);
+			BaseMenu.main_frame.getContentPane().repaint();
+			System.out.println(object);
 			while(object.get_logged() == true)
 			{
 				if(object.get_logged() == false)

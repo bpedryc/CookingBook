@@ -10,6 +10,7 @@ import java.awt.event.MouseEvent;
 import java.util.concurrent.TimeUnit;
 
 import javax.swing.JButton;
+import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class GuestMenu extends BaseMenu{
@@ -19,10 +20,13 @@ JTextField login_text = new JTextField();
 	
 	public GuestMenu(Rectangle dimensions)
 	{
+		set_logged(false);
+		setLogged_helper(false);
+		
 		main_frame.setBounds(dimensions);
 		loggin_button.setBounds(900, 20, 150, 50);
 		loggin_button.setBackground(Color.LIGHT_GRAY);
-		loggin_button.setVisible(true);
+		loggin_button.setVisible(true);	
 		p.add(loggin_button);
 
 		login_text.setBounds(750, 20, 140, 40);
@@ -31,7 +35,7 @@ JTextField login_text = new JTextField();
 		login_text.setText("Podaj nick...");
 		login_text.setVisible(true);
 		p.add(login_text);
-		
+				
 		login_text.addMouseListener(new MouseAdapter() {
 			public void mouseClicked(MouseEvent e) {
 				login_text.setText("");
@@ -40,7 +44,8 @@ JTextField login_text = new JTextField();
 		
 		loggin_button.addActionListener(new ActionListener() { 
 			public void actionPerformed(ActionEvent e) 
-			{ 				//akcja po zalogowaniu
+			{ 	
+				//akcja po zalogowaniu
 				if(login_text.getText().isEmpty() != true) 
 				{
 					setLogged_helper(true);
@@ -56,16 +61,14 @@ JTextField login_text = new JTextField();
 	
 	public void extraThings() 
 	{
-		loggin_button.setVisible(true);
-		login_text.setVisible(true);
 		if(isLogged_helper() == true)
 		{
 			loggin_button.setVisible(false);
-			set_logged(true);
 			login_text.setVisible(false);
+			set_logged(true);
 		}
 		try {
-			TimeUnit.MILLISECONDS.sleep(10);
+			TimeUnit.MILLISECONDS.sleep(100);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
