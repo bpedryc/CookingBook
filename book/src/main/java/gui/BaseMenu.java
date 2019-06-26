@@ -34,6 +34,7 @@ public abstract class BaseMenu {
 	//static Book book = new Book();
 	int counter = 0;
 	private static boolean logged = false;
+	private boolean logged_helper = false;
 	String text0 = null;
 	String text1 = null;
 	String text2 = null;
@@ -49,6 +50,11 @@ public abstract class BaseMenu {
 		p.setLayout(null);
 		p.setBackground(Color.DARK_GRAY);
 		
+		/*sposob na przyciski bez tla i ramek (tak jak link w htmlu)
+		  next_page_button.setBorder(null);
+		next_page_button.setOpaque(false);
+		next_page_button.setContentAreaFilled(false);
+		next_page_button.setBorderPainted(false);*/
 		next_page_button.setBounds(80, 510, 50, 50);
 		next_page_button.setBackground(Color.LIGHT_GRAY);
 		p.add(next_page_button);
@@ -198,6 +204,14 @@ public abstract class BaseMenu {
 
 	public void set_logged(boolean logged) {
 		BaseMenu.logged = logged;
+	}
+
+	public boolean isLogged_helper() {
+		return logged_helper;
+	}
+
+	public void setLogged_helper(boolean logged_helper) {
+		this.logged_helper = logged_helper;
 	}
 }
 

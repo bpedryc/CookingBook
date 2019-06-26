@@ -7,6 +7,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.concurrent.TimeUnit;
 
 import javax.swing.JButton;
 import javax.swing.JTextField;
@@ -15,7 +16,6 @@ public class GuestMenu extends BaseMenu{
 	
 JButton loggin_button = new JButton("Zaloguj się");
 JTextField login_text = new JTextField();
-
 	
 	public GuestMenu(Rectangle dimensions)
 	{
@@ -38,27 +38,39 @@ JTextField login_text = new JTextField();
 			}	
 		});
 		
+		loggin_button.addActionListener(new ActionListener() { 
+			public void actionPerformed(ActionEvent e) 
+			{ 				//akcja po zalogowaniu
+				if(login_text.getText().isEmpty() != true) 
+				{
+					setLogged_helper(true);
+					String nick = login_text.getText();
+					System.out.println(nick); //to bedzie przekazane jako nick
+					
+				}
+				
+			} 
+		});
+		
 	}
 	
 	public void extraThings() 
 	{
 		loggin_button.setVisible(true);
 		login_text.setVisible(true);
-		loggin_button.addActionListener(new ActionListener() { 
-			public void actionPerformed(ActionEvent e) 
-			{ 				//akcja po zalogowaniu
-				if(login_text.getText().isEmpty() != true) 
-				{
-					String nick = login_text.getText();
-					System.out.println(nick); //to bedzie przekazane jako nick
-					loggin_button.setVisible(false);
-					set_logged(true);
-					login_text.setVisible(false);
-				}
-				
-				
-			} 
-		});	
+		if(isLogged_helper() == true)
+		{
+			loggin_button.setVisible(false);
+			set_logged(true);
+			login_text.setVisible(false);
+		}
+		try {
+			TimeUnit.MILLISECONDS.sleep(10);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}		
+			
 	}
 
 }

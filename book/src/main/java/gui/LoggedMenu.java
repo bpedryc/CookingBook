@@ -3,6 +3,8 @@ import java.awt.Color;
 import java.awt.Rectangle;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.concurrent.TimeUnit;
+
 import javax.swing.JButton;
 
 public class LoggedMenu extends BaseMenu{
@@ -51,23 +53,27 @@ public class LoggedMenu extends BaseMenu{
 					  
 			} 
 		});
-	}
-	public void extraThings() 
-	{
-		add_precipe_button.setVisible(true);
-		sing_out_button.setVisible(true);
-		
-		sing_out_button.addActionListener(new ActionListener() { 
+	    
+	    sing_out_button.addActionListener(new ActionListener() { 
 			public void actionPerformed(ActionEvent e) 
 			{ 
 				//akcja po zalogowaniu
 				sing_out_button.setVisible(false);
 				add_precipe_button.setVisible(false);
 				accept_precipe_button.setVisible(false);
-				set_logged(false);
+				setLogged_helper(false);
 				
 			} 
-		});	
+		});
+	}
+	public void extraThings() 
+	{
+		add_precipe_button.setVisible(true);
+		sing_out_button.setVisible(true);
+		if(isLogged_helper() == false)
+		{
+			set_logged(false);
+		}		
 	}
 
 }
