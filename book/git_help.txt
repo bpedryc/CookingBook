@@ -1,0 +1,69 @@
+Jeœli pracowa³eœ na nie swoim branchu (np. na masterze):
+	git stash 
+	git checkout *nazwa twojego brancha*
+	git stash apply
+//W skrócie oznacza to, ¿e bierzesz wszystkie zmiany i przenosisz je na swój branch
+	
+
+Push'owanie swojego branch'a:
+	1. Upewnij siê, ¿e pracowa³eœ na swoim branchu (nie na masterze)
+	2. Zobacz co zmieni³eœ w projekcie
+		git status 
+	3. Jeœli chcesz wprowadziæ wszystkie zmiany:
+		git add -A
+	w innym przypadku
+		git add *œcie¿ka do pliku który chcesz dodaæ*
+	4. ZatwierdŸ zmiany w lokalnym branchu
+		git commit
+	5. Przeœlij zmiany na lokalnym branchu do brancha na serwerze (na GitHub'ie)
+		git push origin *nazwa twojego brancha*
+	
+
+Merge'owanie: (po tym jak push'owa³eœ swojego branch'a)
+	1. Upewnij siê, ¿e pracowa³eœ na swoim branchu (nie na masterze)
+	2. Przenieœ siê na branch master
+		git checkout master
+	3. Pobierz z serwera (z GitHub'a) najnowszego master'a
+		git pull origin master
+	4. Merge'uj
+		git merge *nazwa twojego brancha*
+	5. Jeœli merge nie da rady rozwi¹zaæ wszystkich konfliktów sam, zrób to za pomoc¹:
+		git mergetool
+	// JAK POZNAÆ ¯E MERGE NIE ROZWI¥ZA£ WSZYSTKICH KONFLIKTÓW SAM?
+		TAM GDZIE WCZEŒNIEJ PISA£O (master) bêdzie teraz pisaæ 
+		coœ w stylu (master-MERGE) albo (MERGE_HEAD) i wyskoczy komunikat
+	// DOMYŒLNY MERGETOOL TO VIMDIFF, JEŒLI CHCESZ U¯YÆ P4MERGE NI¯EJ NI¯EJ PISZE JAK GO USTAWIÆ
+	// JAK DZIA£A P4Merge? Zerknij na screenshot, który da³em na repo, zrozumiesz
+	6. Dodaj wszystkie zmiany 
+		git add -A
+	7. Commituj
+		git commit
+	8. Pushuj
+		git push origin master
+
+
+
+Ustawianie P4Merge:
+	1. Zainstaluj program (przeklikaj OK, wszystko domyœlne,
+			       pewnie trzeba bêdzie resetowaæ komputer)
+	2. Wpisz:
+		git config --global --edit
+// W tym pliku dodaj te linijki: (jeœli mia³eœ tam coœ z [merge] [mergetool] [difftool] [mergetool] to pokasuj te wczeœniejsze)
+[merge]
+    keepBackup = false;
+    tool = p4merge
+[mergetool "p4merge"]
+    path = C:/Program Files/Perforce/p4merge.exe
+    cmd = \"C:/Program Files/Perforce/p4merge.exe\" "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
+    keepTemporaries = false
+    trustExitCode = false
+    keepBackup = false
+[difftool]
+    prompt = false
+[mergetool]
+    prompt = false
+    keepBackup = false
+
+// Zapisz i powinno dzia³aæ nastêpnym razem jak uruchomisz git mergetool
+// Jeœli zainstalowa³eœ p4merge gdzie indziej ni¿ C:/Program Files/ to musisz dostosowaæ tutaj path i cmd
+		
