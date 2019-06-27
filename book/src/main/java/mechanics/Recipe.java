@@ -1,13 +1,9 @@
-package mechanics;
-import java.util.List;
-import java.util.ArrayList;
-
 public class Recipe {
 	private String author;
 	private String title;
 	private String rating;
 	private String prep_time;
-	private List<String> ingredients = new ArrayList<String>();
+	private String ingredients;
 	private String description;
 	private int id;
 	
@@ -19,7 +15,7 @@ public class Recipe {
 		this.prep_time = builder.prep_time;
 		this.description = builder.description;
 		this.id = builder.id;
-		this.ingredients = (ArrayList<String>)builder.ingredients;
+		this.ingredients = builder.ingredients;
 	}
 	
 	public String getAuthor()
@@ -52,18 +48,19 @@ public class Recipe {
 		return description;
 	}
 	
-	public List<String> getIngredients()
+	public String getIngredients()
 	{
 		return ingredients;
 	}
 	
 	public static class Builder
 	{
+		
 		private String author;
 		private String title;
 		private String rating;
 		private String prep_time;
-		private List<String> ingredients = new ArrayList<String>();
+		private String ingredients;
 		private String description;
 		private final int id;
 		
@@ -96,7 +93,7 @@ public class Recipe {
 			return this;
 		}
 		
-		public Builder ingredients(final List<String> ingredients)
+		public Builder ingredients(String ingredients)
 		{
 			this.ingredients = ingredients;
 			return this;
