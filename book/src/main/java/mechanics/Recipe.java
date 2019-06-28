@@ -1,8 +1,5 @@
 package mechanics;
-<<<<<<< Updated upstream
-=======
 import java.util.ArrayList;
->>>>>>> Stashed changes
 
 public class Recipe {
 	private String author;
@@ -54,7 +51,7 @@ public class Recipe {
 		return description;
 	}
 	
-	public ArrayList getIngredients()
+	public ArrayList<String> getIngredients()
 	{
 		return ingredients;
 	}

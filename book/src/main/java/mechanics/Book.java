@@ -1,17 +1,29 @@
 package mechanics;
 import java.util.Vector;
 import java.util.ArrayList;
-import java.util.Objects;
+import java.util.HashMap;
 
 public class Book {
 
 	private int recipe_id;
-	private Vector<Recipe> recipes = new Vector<Recipe>();
+	private ArrayList<Recipe> recipes = new ArrayList<Recipe>();
 	private int actual_it=-1;
 	
 	public Book()
 	{
+		ResourceManager storage = new ResourceManager();
 		recipe_id = 0;
+		loadRecipesFromFile();
+	}
+	
+	public void saveBeforeClosing()
+	{
+		storage.saveRecipes(recipes);
+	}
+	
+	public void loadRecipesFromFile()
+	{
+		recipes = storage.fetchRecipes();
 	}
 	
 	public ArrayList<String> getTitles()
@@ -25,19 +37,35 @@ public class Book {
 		return titles;
 	}
 	
-	public String [] searchRecipe(String name)
+	public HashMap<Integer,String> searchTitles(String name)
 	{
 		Vector<String> low_recipe_titles = new Vector<String>();
-		String name1 = name.toLowerCase();
+		name = name.toLowerCase();
+		HashMap<Integer, String> equal_titles = new HashMap<Integer, String>();
+		for(int i = 0; i < recipes.size(); i++)
+		{
+			low_recipe_titles.add(recipes.get(i).getTitle().toLowerCase());
+			if(low_recipe_titles.get(i).startsWith(name))
+			{
+				equal_titles.put(i,recipes.get(i).getTitle());
+			}
+		}
+		return equal_titles;
+	}
+	
+/*	public String [] searchRecipe(String name)
+	{
+		Vector<String> low_recipe_titles = new Vector<String>();
+		name = name.toLowerCase();
 		String [] find_recipe = new String [2];
 		for(int i = 0; i < recipes.size(); i++)
 		{
 			low_recipe_titles.add(recipes.get(i).getTitle().toLowerCase());
-			System.out.println(low_recipe_titles.get(i));
-			System.out.println(name1);
-			if(name1.trim().equals(low_recipe_titles.get(i)) == true)
+			//System.out.println(low_recipe_titles.get(i));
+			//System.out.println(name);
+			if(low_recipe_titles.get(i).startsWith(name))
 			{
-				System.out.println("weszlem tu");
+				//System.out.println("weszlem tu");
 				find_recipe = getChosenRecipe(i);
 				return find_recipe;
 			}
@@ -45,6 +73,7 @@ public class Book {
 		String [] empty = {"",""};
 		return empty;
 	}
+*/		// Currently unnecessary
 	
 	public String[] getAtributesToString()
 	{
