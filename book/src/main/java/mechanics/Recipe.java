@@ -1,9 +1,12 @@
+package mechanics;
+import java.util.ArrayList;
+
 public class Recipe {
 	private String author;
 	private String title;
 	private String rating;
 	private String prep_time;
-	private String ingredients;
+	private ArrayList<String> ingredients = new ArrayList<String>();
 	private String description;
 	private int id;
 	
@@ -48,7 +51,7 @@ public class Recipe {
 		return description;
 	}
 	
-	public String getIngredients()
+	public ArrayList<String> getIngredients()
 	{
 		return ingredients;
 	}
@@ -60,7 +63,7 @@ public class Recipe {
 		private String title;
 		private String rating;
 		private String prep_time;
-		private String ingredients;
+		private ArrayList<String> ingredients = new ArrayList<String>();
 		private String description;
 		private final int id;
 		
@@ -93,7 +96,7 @@ public class Recipe {
 			return this;
 		}
 		
-		public Builder ingredients(String ingredients)
+		public Builder ingredients(ArrayList<String> ingredients)
 		{
 			this.ingredients = ingredients;
 			return this;

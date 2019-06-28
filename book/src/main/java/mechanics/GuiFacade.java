@@ -1,6 +1,7 @@
 package mechanics;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class GuiFacade {
 
@@ -9,6 +10,17 @@ public class GuiFacade {
 	public GuiFacade()
 	{
 		book = new Book();
+	}
+	
+	public void saveBeforeClosing()
+	{
+		book.saveBeforeClosing();
+	}
+	
+	public HashMap<Integer,String> SearchTitles(String name)
+	{
+		HashMap<Integer,String> equal_titles = book.searchTitles(name);
+		return equal_titles;
 	}
 	
 	public boolean createRecipe(String recipes_str, String ingredients_str)
@@ -32,6 +44,15 @@ public class GuiFacade {
 		string = book.getNextRecipe();
 		return string;
 	}
+
+	/*
+	public String [] searchRecipe(String name)
+	{
+		String [] str = new String [2];
+		str = book.searchRecipe(name);
+		return str;
+	}
+	*/			//  Currently unnecessary
 	
 	public String[] getPrevRecipe()
 	{
