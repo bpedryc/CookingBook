@@ -1,5 +1,4 @@
 import java.awt.Rectangle;
-
 import gui.GuestMenu;
 import gui.LoggedMenu;
 import gui.BaseMenu;
@@ -32,6 +31,7 @@ public class MainClass {
 			}
 			dimensions = BaseMenu.main_frame.getBounds();
 		}
+		
 	}
 }
 
