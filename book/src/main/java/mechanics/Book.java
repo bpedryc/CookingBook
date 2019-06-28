@@ -1,6 +1,7 @@
 package mechanics;
 import java.util.Vector;
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Book {
 
@@ -24,10 +25,35 @@ public class Book {
 		return titles;
 	}
 	
+	public String [] searchRecipe(String name)
+	{
+		Vector<String> low_recipe_titles = new Vector<String>();
+		String name1 = name.toLowerCase();
+		String [] find_recipe = new String [2];
+		for(int i = 0; i < recipes.size(); i++)
+		{
+			low_recipe_titles.add(recipes.get(i).getTitle().toLowerCase());
+			System.out.println(low_recipe_titles.get(i));
+			System.out.println(name1);
+			if(name1.trim().equals(low_recipe_titles.get(i)) == true)
+			{
+				System.out.println("weszlem tu");
+				find_recipe = getChosenRecipe(i);
+				return find_recipe;
+			}
+		}
+		String [] empty = {"",""};
+		return empty;
+	}
+	
 	public String[] getAtributesToString()
 	{
 		String[] text = new String[2];
-		text[0] = recipes.get(actual_it).getIngredients();
+		text[0] = "";
+		for(int i = 0; i < recipes.get(actual_it).getIngredients().size(); i++)
+		{
+			text[0] += recipes.get(actual_it).getIngredients().get(i);
+		}
 		text[1] = recipes.get(actual_it).getTitle() + "\n"; 
 		text[1] += recipes.get(actual_it).getAuthor() + "\n"; 
 		text[1] += recipes.get(actual_it).getRating() + "\n"; 
@@ -104,12 +130,20 @@ public class Book {
 		    desc += splitedArray[i];
 		}
 		
+		ArrayList<String> ingred = new ArrayList<String>();
+		String splited2 = new String(ingredients_str);
+		String[] splitedArray2 = null;
+		splitedArray2 = splited2.split("\n");
+		for (int i = 0 ; i < splitedArray2.length ; i++) {
+		     ingred.add(splitedArray2[i]);
+		}
+
 		Recipe recipe = new Recipe.Builder(recipe_id)
 			.author(splitedArray[1])
 			.title(splitedArray[0])
 			.rating(splitedArray[2])
 			.prep_time(splitedArray[3])
-			.ingredients(ingredients_str)
+			.ingredients(ingred)
 			.description(desc)
 			.build();
 		

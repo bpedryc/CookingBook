@@ -33,6 +33,13 @@ public class GuiFacade {
 		return string;
 	}
 	
+	public String [] searchRecipe(String name)
+	{
+		String [] str = new String [2];
+		str = book.searchRecipe(name);
+		return str;
+	}
+	
 	public String[] getPrevRecipe()
 	{
 		String [] string = new String [2];
