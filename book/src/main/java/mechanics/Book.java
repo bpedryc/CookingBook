@@ -1,17 +1,23 @@
 package mechanics;
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 import java.util.Vector;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+import database.ResourceManager;
 
 public class Book {
 
 	private int recipe_id;
-	private ArrayList<Recipe> recipes = new ArrayList<Recipe>();
+	private List<Recipe> recipes = new ArrayList<Recipe>();
 	private int actual_it=-1;
+	ResourceManager storage = new ResourceManager();
 	
 	public Book()
 	{
-		ResourceManager storage = new ResourceManager();
 		recipe_id = 0;
 		loadRecipesFromFile();
 	}
