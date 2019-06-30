@@ -2,6 +2,8 @@
 import java.awt.Rectangle;
 import java.util.List;
 
+import javax.swing.JFrame;
+
 import gui.*;
 import database.*;
 import mechanics.*;
@@ -15,11 +17,13 @@ public class MainClass {
 		List<Recipe> recipes = resource_manager.fetchRecipes();
 	
 		Rectangle dimensions = new Rectangle(300, 100, 1100, 900);
+		GuiFacade facade = new GuiFacade();
+		MainWindow window = new MainWindow(dimensions, facade);
 
+		/*
 		while(true) 
 		{
 			BaseMenu object = new GuestMenu(dimensions);
-			System.out.println(object);
 			BaseMenu.main_frame.getContentPane().repaint();
 			while(object.get_logged() == false)
 			{
@@ -43,6 +47,7 @@ public class MainClass {
 			}
 			dimensions = BaseMenu.main_frame.getBounds();
 		}
+	*/
 	}
 }
 
