@@ -94,10 +94,22 @@ public class GuiFacade {
 		return true;
 	}
 	
-	public void logOut(String user_name)
+	public void logOut()
 	{
 		book.setLogStatus(false);
-		book.setUserName(user_name);
+		book.setUserName("");
+	}
+	
+	public int getSearchingType()
+	{
+		int searching_type;
+		searching_type = book.getSearchingType();
+		return searching_type;
+	}
+	
+	public void setSearchingType(String searching_type)
+	{
+		book.setSearchingType(searching_type);
 	}
 	
 	public ArrayList<String> getTitles()
