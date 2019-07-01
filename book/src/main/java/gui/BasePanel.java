@@ -162,7 +162,7 @@ public abstract class BasePanel extends JPanel {
         filter_list.addActionListener(new ActionListener() { 
 			public void actionPerformed(ActionEvent e) 
 			{ 
-				facade.setSearchingType(filter_list.getSelectedItem())
+				facade.setSearchingType(filter_list.getSelectedItem().toString());
 				
 				
 				/*

@@ -48,5 +48,7 @@ public class MainWindow extends JFrame {
 	public void displayPanel(JPanel panel) {
 		this.getContentPane().removeAll();
 		this.getContentPane().add(panel);
+		this.revalidate();
+		this.repaint();
 	}
 }

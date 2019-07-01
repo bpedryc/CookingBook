@@ -41,10 +41,10 @@ public class GuestPanel extends BasePanel {
 		login_button.addActionListener(new ActionListener() { 
 			public void actionPerformed(ActionEvent e) 
 			{ 	
+				String test = login_text.getText();
 				if (facade.logIn(login_text.getText())) {
 					window.displayPanel(window.getUserPanel());
 				} 
-				
 				/*
 				 * Stary kod
 				//akcja po zalogowaniu

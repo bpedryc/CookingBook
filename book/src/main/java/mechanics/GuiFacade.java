@@ -52,7 +52,6 @@ public class GuiFacade {
 	
 	public String[] getChosenRecipe(int index_of_recipe)
 	{
-		System.out.println("jestem tu");
 		String [] string = new String [2];
 		string = book.getChosenRecipe(index_of_recipe);
 		return string;
@@ -63,6 +62,11 @@ public class GuiFacade {
 		String [] string = new String [2];
 		string = book.getNextRecipe();
 		return string;
+	}
+	
+	public int getActualIt()
+	{
+		return book.getActualIt();
 	}
 
 	/*
@@ -83,7 +87,7 @@ public class GuiFacade {
 	
 	public boolean logIn(String user_name)
 	{
-		if(user_name == "")
+		if(user_name.contentEquals("") || user_name.contentEquals("Podaj nick..."))
 		{
 			return false;
 		}

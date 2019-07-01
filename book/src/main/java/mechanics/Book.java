@@ -23,6 +23,11 @@ public class Book {
 		loadRecipes();
 	}
 	
+	public int getActualIt()
+	{
+		return actual_it;
+	}
+	
 	public int getSearchingType()
 	{
 		return searching_type;

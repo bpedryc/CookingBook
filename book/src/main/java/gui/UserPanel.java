@@ -10,10 +10,11 @@ import mechanics.GuiFacade;
 
 public class UserPanel extends BasePanel {
 	
-	JButton add_recipe_button = new JButton("Dodaj");
+	JButton add_recipe_button = new JButton("Kreator");
 	JButton accept_recipe_button = new JButton("+");
 	JButton add_comment = new JButton("Dodaj_komentarz");
 	JButton sing_out_button = new JButton("Wyloguj");
+	boolean creating_recipe = false;
 	
 	public UserPanel(MainWindow win, GuiFacade fac) {
 		super(win, fac);
@@ -38,18 +39,39 @@ public class UserPanel extends BasePanel {
 			{
 				// Tutaj użytkownik rozpoczyna proces tworzenia przepisu
 				// Zadanie dla Pietruchy: Uniemożliwić użytkownikowi zmienianie przpisów
-				recipe_area.setText("");
-				ingredients_area.setText("");
-				accept_recipe_button.setVisible(true);
-				
+				if (!creating_recipe) {
+					creating_recipe = true;
+					ingredients_area.setText("składnik1\nskładnik2");
+					recipe_area.setText("Nazwa przepisu\nAutor\nOcena\nCzas wykonania\nOpis");
+					accept_recipe_button.setVisible(true);
+					next_page_button.setVisible(false);
+					previous_page_button.setVisible(false);
+				} else {
+					creating_recipe = false;
+					String[] raw_recipe = facade.getChosenRecipe(facade.getActualIt());
+					recipe_area.setText(raw_recipe[0]);
+					ingredients_area.setText(raw_recipe[1]);
+					accept_recipe_button.setVisible(false);
+					next_page_button.setVisible(true);
+					previous_page_button.setVisible(true);
+					accept_recipe_button.setVisible(false);
+				}
 			} 
 		});	
 		
 	    accept_recipe_button.addActionListener(new ActionListener() { 
 			public void actionPerformed(ActionEvent e) 
 			{
-				facade.createRecipe(recipe_area.getText(), ingredients_area.getText());
-				accept_recipe_button.setVisible(false);
+				if(facade.createRecipe(recipe_area.getText(), ingredients_area.getText())) {
+					creating_recipe = false;
+					String[] raw_recipe = facade.getChosenRecipe(facade.getActualIt());
+					recipe_area.setText(raw_recipe[0]);
+					ingredients_area.setText(raw_recipe[1]);
+					accept_recipe_button.setVisible(false);
+					next_page_button.setVisible(true);
+					previous_page_button.setVisible(true);
+					accept_recipe_button.setVisible(false);
+				}
 				
 				/*
 				 * Stary kod
