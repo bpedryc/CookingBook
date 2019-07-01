@@ -5,11 +5,15 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 import mechanics.GuiFacade;
 
 public class MainWindow extends JFrame {
 	GuiFacade facade;
+	
+	GuestPanel guest_panel;
+	UserPanel user_panel;
 	
 	public MainWindow(Rectangle dims, GuiFacade fac) {
 		super("Cooking Book");
@@ -23,11 +27,26 @@ public class MainWindow extends JFrame {
 		});
 		
 		this.facade = fac; 
+		guest_panel = new GuestPanel(this, fac);
+		user_panel = new UserPanel(this, fac);
 		
-		this.getContentPane().add(new GuestPanel(fac));
+		this.displayPanel(guest_panel);
 		
 		this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 		this.setBounds(dims);
 		this.setVisible(true);
+	}
+	
+	public GuestPanel getGuestPanel() {
+		return this.guest_panel;
+	}
+	
+	public UserPanel getUserPanel() {
+		return this.user_panel;
+	}
+	
+	public void displayPanel(JPanel panel) {
+		this.getContentPane().removeAll();
+		this.getContentPane().add(panel);
 	}
 }

@@ -9,6 +9,7 @@ import java.awt.event.MouseEvent;
 
 import javax.swing.JButton;
 import javax.swing.JComboBox;
+import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
@@ -16,8 +17,9 @@ import javax.swing.JTextField;
 
 import mechanics.GuiFacade;
 
-public class BasePanel extends JPanel {
+public abstract class BasePanel extends JPanel {
 	
+	MainWindow window;
 	GuiFacade facade;
 	
 	JButton next_page_button = new JButton(">>");
@@ -37,7 +39,8 @@ public class BasePanel extends JPanel {
 	int counter = 0;
 	String[] recipe_raw = new String[4];
 	
-	public BasePanel(GuiFacade fac) {
+	public BasePanel(MainWindow win, GuiFacade fac) {
+		this.window = win;
 		this.facade = fac;
 		
 		this.setLayout(null);
@@ -66,14 +69,18 @@ public class BasePanel extends JPanel {
 		filter_list.setBackground(Color.LIGHT_GRAY);
 		this.add(filter_list);
 		
+		String[] recipe_raw = facade.getChosenRecipe(0);
+		
 		recipe_scroll.setBounds(400, 100, 600, 670);
 		recipe_area.setBackground(Color.LIGHT_GRAY);
 		recipe_area.setFont(new Font("Serif", Font.ITALIC, 16));
+		recipe_area.setText(recipe_raw[0]);
 		this.add(recipe_scroll);
 		
 		ingredients_scroll.setBounds(20, 100, 300, 400);
 		ingredients_area.setBackground(Color.LIGHT_GRAY);
 		ingredients_area.setFont(new Font("Serif", Font.ITALIC, 16));
+		ingredients_area.setText(recipe_raw[1]);
 		this.add(ingredients_scroll);
 		
 		search_text.setBounds(150, 20, 500, 40);
@@ -91,8 +98,7 @@ public class BasePanel extends JPanel {
 		next_page_button.addActionListener(new ActionListener() { 
 			public void actionPerformed(ActionEvent e) 
 			{ 
-				// Do zrobienia
-				// recipe_raw = fasada.wczytajKolejnyPrzepis()
+				String[] recipe_raw = facade.getNextRecipe();
 				recipe_area.setText(recipe_raw[0]);
 				ingredients_area.setText(recipe_raw[1]);
 				
@@ -117,8 +123,7 @@ public class BasePanel extends JPanel {
         previous_page_button.addActionListener(new ActionListener() { 
 			public void actionPerformed(ActionEvent e) 
 			{ 
-				// Do zrobienia
-				// recipe_raw = fasada.wczytajKolejnyPrzepis()
+				String[] recipe_raw = facade.getPrevRecipe();
 				recipe_area.setText(recipe_raw[0]);
 				ingredients_area.setText(recipe_raw[1]);
 				
@@ -143,9 +148,8 @@ public class BasePanel extends JPanel {
         search_button.addActionListener(new ActionListener() { 
 			public void actionPerformed(ActionEvent e) 
 			{ 
-				// Do zrobienia:
-				// List<String> dopasowane_tytuly = fasada.znajdzDopasowaneTytuly(search_text.getText())
-				// wyswietlDopasowaneTytulyJakoPrzyciski() - każdy z tych przycisków będzie przenosił do konkretnego przepisu
+				//HashMap<Integer, String> found_titles = facade.search(search_text.getText());
+				// wyświetlaj wszystkie te w postaci guzików
 				
 				
 				/*
@@ -158,9 +162,7 @@ public class BasePanel extends JPanel {
         filter_list.addActionListener(new ActionListener() { 
 			public void actionPerformed(ActionEvent e) 
 			{ 
-				// Do zrobienia:
-				// fasada.zmienFiltrWyszukiwania(filter_list.getSelectedItem())
-				
+				facade.setSearchingType(filter_list.getSelectedItem())
 				
 				
 				/*

@@ -8,14 +8,15 @@ import javax.swing.JButton;
 
 import mechanics.GuiFacade;
 
-public class UserPanel extends BasePanel{
+public class UserPanel extends BasePanel {
+	
 	JButton add_recipe_button = new JButton("Dodaj");
 	JButton accept_recipe_button = new JButton("+");
 	JButton add_comment = new JButton("Dodaj_komentarz");
 	JButton sing_out_button = new JButton("Wyloguj");
 	
-	public UserPanel(GuiFacade fac) {
-		super(fac);
+	public UserPanel(MainWindow win, GuiFacade fac) {
+		super(win, fac);
 		
 		add_recipe_button.setBounds(140, 510, 100, 50);
 		add_recipe_button.setBackground(Color.LIGHT_GRAY);
@@ -34,26 +35,21 @@ public class UserPanel extends BasePanel{
 				
 		add_recipe_button.addActionListener(new ActionListener() { 
 			public void actionPerformed(ActionEvent e) 
-			{ 
-				// Do zrobienia:
-				//fasada.dodajPrzepis()
-				
-				
-				/*
-				 * Stary kod
+			{
+				// Tutaj użytkownik rozpoczyna proces tworzenia przepisu
+				// Zadanie dla Pietruchy: Uniemożliwić użytkownikowi zmienianie przpisów
 				recipe_area.setText("");
 				ingredients_area.setText("");
 				accept_recipe_button.setVisible(true);
-				*/
+				
 			} 
 		});	
 		
 	    accept_recipe_button.addActionListener(new ActionListener() { 
 			public void actionPerformed(ActionEvent e) 
 			{
-				// Do zrobienia:
-				// fasada.???
-				
+				facade.createRecipe(recipe_area.getText(), ingredients_area.getText());
+				accept_recipe_button.setVisible(false);
 				
 				/*
 				 * Stary kod
@@ -69,8 +65,8 @@ public class UserPanel extends BasePanel{
 	    sing_out_button.addActionListener(new ActionListener() { 
 			public void actionPerformed(ActionEvent e) 
 			{ 
-				// Do zrobienia:
-				// fasada.wyloguj()
+				facade.logOut();
+				window.displayPanel(window.getGuestPanel());
 				
 				/*
 				 * Stary kod

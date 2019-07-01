@@ -10,11 +10,7 @@ public class MainClass {
 	
 		Rectangle dimensions = new Rectangle(300, 100, 1100, 900);
 		GuiFacade facade = new GuiFacade();
-		facade.createBook();
 		MainWindow window = new MainWindow(dimensions, facade);
-
-		
-		
 		
 		/*
 		while(true) 

@@ -7,7 +7,7 @@ public class GuiFacade {
 
 	private Book book;
 	
-	public void createBook() 
+	public GuiFacade() 
 	{
 		book = new Book();
 		//Może tutaj coś bardziej skomplikowanego być póniej idunno

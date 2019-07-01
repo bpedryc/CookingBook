@@ -17,8 +17,8 @@ public class GuestPanel extends BasePanel {
 	JButton login_button = new JButton("Zaloguj się");
 	JTextField login_text = new JTextField();
 	
-	public GuestPanel(GuiFacade fac) {
-		super(fac);
+	public GuestPanel(MainWindow win, GuiFacade fac) {
+		super(win, fac);
 		
 		login_button.setBounds(900, 20, 150, 50);
 		login_button.setBackground(Color.LIGHT_GRAY);
@@ -41,8 +41,9 @@ public class GuestPanel extends BasePanel {
 		login_button.addActionListener(new ActionListener() { 
 			public void actionPerformed(ActionEvent e) 
 			{ 	
-				// Do zrobienia:
-				// fasada.zaloguj()
+				if (facade.logIn(login_text.getText())) {
+					window.displayPanel(window.getUserPanel());
+				} 
 				
 				/*
 				 * Stary kod
