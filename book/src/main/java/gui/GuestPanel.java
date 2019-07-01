@@ -41,9 +41,11 @@ public class GuestPanel extends BasePanel {
 		login_button.addActionListener(new ActionListener() { 
 			public void actionPerformed(ActionEvent e) 
 			{ 	
-				//tutaj zaimplementować metode fasady
+				// Do zrobienia:
+				// fasada.zaloguj()
 				
 				/*
+				 * Stary kod
 				//akcja po zalogowaniu
 				if(login_text.getText().isEmpty() != true) 
 				{

@@ -91,6 +91,13 @@ public class BasePanel extends JPanel {
 		next_page_button.addActionListener(new ActionListener() { 
 			public void actionPerformed(ActionEvent e) 
 			{ 
+				// Do zrobienia
+				// recipe_raw = fasada.wczytajKolejnyPrzepis()
+				recipe_area.setText(recipe_raw[0]);
+				ingredients_area.setText(recipe_raw[1]);
+				
+				/*
+				 * Stary kod
 				if(counter == 0)
 				{
 					counter = 1;
@@ -103,12 +110,20 @@ public class BasePanel extends JPanel {
 					recipe_area.setText(recipe_raw[counter]);
 					ingredients_area.setText(recipe_raw[counter + 1]);
 				}
+				*/
 			} 
 		});	
 		
         previous_page_button.addActionListener(new ActionListener() { 
 			public void actionPerformed(ActionEvent e) 
 			{ 
+				// Do zrobienia
+				// recipe_raw = fasada.wczytajKolejnyPrzepis()
+				recipe_area.setText(recipe_raw[0]);
+				ingredients_area.setText(recipe_raw[1]);
+				
+				/*
+				 * Stary kod
 				if(counter == 0)
 				{
 					counter = 1;
@@ -121,20 +136,37 @@ public class BasePanel extends JPanel {
 					recipe_area.setText(recipe_raw[counter]);
 					ingredients_area.setText(recipe_raw[counter + 1]);
 				}
+				*/
 			} 
 		});	
         
         search_button.addActionListener(new ActionListener() { 
 			public void actionPerformed(ActionEvent e) 
 			{ 
-				System.out.println(search_text.getText()); //to czego szukamy	
+				// Do zrobienia:
+				// List<String> dopasowane_tytuly = fasada.znajdzDopasowaneTytuly(search_text.getText())
+				// wyswietlDopasowaneTytulyJakoPrzyciski() - każdy z tych przycisków będzie przenosił do konkretnego przepisu
+				
+				
+				/*
+				 * Stary kod
+				 * System.out.println(search_text.getText()); //to czego szukamy	
+				 */
 			} 
 		});	
         
         filter_list.addActionListener(new ActionListener() { 
 			public void actionPerformed(ActionEvent e) 
 			{ 
+				// Do zrobienia:
+				// fasada.zmienFiltrWyszukiwania(filter_list.getSelectedItem())
+				
+				
+				
+				/*
+				 * Stary kod
 				System.out.println(filter_list.getSelectedItem()); //to po czym szukamy
+				*/
 			} 
 		});
 	}

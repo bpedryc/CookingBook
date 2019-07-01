@@ -35,40 +35,47 @@ public class UserPanel extends BasePanel{
 		add_recipe_button.addActionListener(new ActionListener() { 
 			public void actionPerformed(ActionEvent e) 
 			{ 
+				// Do zrobienia:
+				//fasada.dodajPrzepis()
+				
+				
 				/*
+				 * Stary kod
 				recipe_area.setText("");
 				ingredients_area.setText("");
 				accept_recipe_button.setVisible(true);
 				*/
-				
-				//fasada : dodaj przepis
 			} 
 		});	
 		
 	    accept_recipe_button.addActionListener(new ActionListener() { 
 			public void actionPerformed(ActionEvent e) 
 			{
+				// Do zrobienia:
+				// fasada.???
+				
+				
 				/*
+				 * Stary kod
 			    String recipe = recipe_area.getText();
 			    String ingredients = ingredients_area.getText();
 			    System.out.println(recipe);
 			    System.out.println(ingredients);			     
 			    accept_recipe_button.setVisible(false);
-			    */
-				
-				//fasada : ???
-					  
+			    */	  
 			} 
 		});
 	    
 	    sing_out_button.addActionListener(new ActionListener() { 
 			public void actionPerformed(ActionEvent e) 
 			{ 
-				//fasada: wyloguj użytkownika
+				// Do zrobienia:
+				// fasada.wyloguj()
 				
-				
-				//setLogged_helper(false);
-				
+				/*
+				 * Stary kod
+				 * setLogged_helper(false);
+				 */	
 			} 
 		});
 	}
