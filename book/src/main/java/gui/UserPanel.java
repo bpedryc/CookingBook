@@ -14,6 +14,7 @@ public class UserPanel extends BasePanel {
 	JButton accept_recipe_button = new JButton("+");
 	JButton add_comment = new JButton("Dodaj_komentarz");
 	JButton sing_out_button = new JButton("Wyloguj");
+	JButton delete_button = new JButton("Usuń przepis");
 	boolean creating_recipe = false;
 	
 	public UserPanel(MainWindow win, GuiFacade fac) {
@@ -33,6 +34,11 @@ public class UserPanel extends BasePanel {
 		sing_out_button.setBounds(900, 20, 150, 50);
 		sing_out_button.setVisible(true);
 		this.add(sing_out_button);
+		
+		delete_button.setBackground(Color.LIGHT_GRAY);
+		delete_button.setBounds(140, 580, 160, 50);
+		delete_button.setVisible(true);
+		this.add(delete_button);
 				
 		add_recipe_button.addActionListener(new ActionListener() { 
 			public void actionPerformed(ActionEvent e) 
@@ -46,6 +52,8 @@ public class UserPanel extends BasePanel {
 					accept_recipe_button.setVisible(true);
 					next_page_button.setVisible(false);
 					previous_page_button.setVisible(false);
+					ingredients_area.setEditable(true);
+					recipe_area.setEditable(true);
 				} else {
 					creating_recipe = false;
 					String[] raw_recipe = facade.getChosenRecipe(facade.getActualIt());
@@ -55,6 +63,8 @@ public class UserPanel extends BasePanel {
 					next_page_button.setVisible(true);
 					previous_page_button.setVisible(true);
 					accept_recipe_button.setVisible(false);
+					ingredients_area.setEditable(false);
+					recipe_area.setEditable(false);
 				}
 			} 
 		});	
@@ -71,6 +81,8 @@ public class UserPanel extends BasePanel {
 					next_page_button.setVisible(true);
 					previous_page_button.setVisible(true);
 					accept_recipe_button.setVisible(false);
+					ingredients_area.setEditable(false);
+					recipe_area.setEditable(false);
 				}
 				
 				/*
@@ -94,6 +106,18 @@ public class UserPanel extends BasePanel {
 				 * Stary kod
 				 * setLogged_helper(false);
 				 */	
+			} 
+		});
+	    
+	    delete_button.addActionListener(new ActionListener() { 
+			public void actionPerformed(ActionEvent e) 
+			{ 
+				facade.deleteRecipe(facade.getActualIt());
+				String[] raw_recipe = facade.getNextRecipe();
+				recipe_area.setText(raw_recipe[0]);
+				ingredients_area.setText(raw_recipe[1]);
+				//System.out.println(facade.getActualIt());
+							
 			} 
 		});
 	}

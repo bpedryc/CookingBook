@@ -26,7 +26,9 @@ public class Book {
 	public void deleteRecipe(int it)
 	{
 		if(recipes.isEmpty())
-		recipes.remove(it);
+		{
+			recipes.remove(it);
+		}
 		if (it > recipes.size()-1)
 		{
 			it--;

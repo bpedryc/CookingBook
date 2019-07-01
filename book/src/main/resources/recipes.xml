@@ -79,4 +79,26 @@
     </ingredients>
     <description>wd</description>
   </recipe>
+  <recipe id="7">
+    <author>Autor</author>
+    <title>Nazwa przepisu</title>
+    <rating>Ocenaasd</rating>
+    <preptime>Czas wykonaniaasd</preptime>
+    <ingredients>
+      <ingredient>składnik1asd</ingredient>
+      <ingredient>składnik2aasd</ingredient>
+    </ingredients>
+    <description>Opisasd</description>
+  </recipe>
+  <recipe id="8">
+    <author>Autor</author>
+    <title>Nazwa przepisu</title>
+    <rating>Ocena</rating>
+    <preptime>Czas wykonania</preptime>
+    <ingredients>
+      <ingredient>składnik1</ingredient>
+      <ingredient>składnik2</ingredient>
+    </ingredients>
+    <description>Opis</description>
+  </recipe>
 </recipes>
