@@ -4,91 +4,83 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.*;
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 import javax.swing.JButton;
-import javax.swing.JFrame;
+import javax.swing.JComboBox;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
-import javax.swing.JComboBox;
 
-public abstract class BaseMenu {
-	static String[] filter_table = {"Składniki", "Nazwa przepisu", "Autor"};
-	static JPanel p = new JPanel();
-	static JButton next_page_button = new JButton(">>");
-	static JButton previous_page_button = new JButton("<<");
-	static JButton search_button = new JButton("Szukaj");
-	static JComboBox<String> filter_list = new JComboBox<String>(filter_table);
-	static JTextArea precipe_area = new JTextArea();
-	static JTextArea ingredients_area = new JTextArea("Lista przepisow tu bedzie");	
-	static JScrollPane ingredients_scroll = new JScrollPane(ingredients_area);
-	static JScrollPane precipe_scroll = new JScrollPane(precipe_area);
-	static JTextField search_text = new JTextField();
-	public static JFrame main_frame = new JFrame();
-	//static Book book = new Book();
-	int counter = 0;
-	private static boolean logged;
-	private boolean logged_helper;
-	String text0 = null;
-	String text1 = null;
-	String text2 = null;
-	String text3 = null;
-	String[] precipes_and_indgredients = new String[4];
+import mechanics.GuiFacade;
+
+public class BasePanel extends JPanel {
 	
-	public abstract void extraThings();
-    
-	public BaseMenu()
-	{
-		main_frame.setResizable(true);
-		main_frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		p.setLayout(null);
-		p.setBackground(Color.DARK_GRAY);
+	GuiFacade facade;
+	
+	JButton next_page_button = new JButton(">>");
+	JButton previous_page_button = new JButton("<<");
+	JButton search_button = new JButton("Szukaj");
+	
+	String[] filter_table = {"Składniki", "Nazwa przepisu", "Autor"};
+	JComboBox<String> filter_list = new JComboBox<String>(filter_table);
+	
+	JTextArea recipe_area = new JTextArea();
+	JScrollPane recipe_scroll = new JScrollPane(recipe_area);
+	JTextArea ingredients_area = new JTextArea("Lista przepisow tu bedzie");	
+	JScrollPane ingredients_scroll = new JScrollPane(ingredients_area);
+	
+	JTextField search_text = new JTextField();
+	
+	int counter = 0;
+	String[] recipe_raw = new String[4];
+	
+	public BasePanel(GuiFacade fac) {
+		this.facade = fac;
 		
-		/*sposob na przyciski bez tla i ramek (tak jak link w htmlu)
-		  next_page_button.setBorder(null);
+		this.setLayout(null);
+		this.setBackground(Color.DARK_GRAY);
+		
+		/* sposob na przyciski bez tla i ramek (tak jak link w htmlu)
+		next_page_button.setBorder(null);
 		next_page_button.setOpaque(false);
 		next_page_button.setContentAreaFilled(false);
-		next_page_button.setBorderPainted(false);*/
+		next_page_button.setBorderPainted(false);
+		*/
+		
 		next_page_button.setBounds(80, 510, 50, 50);
 		next_page_button.setBackground(Color.LIGHT_GRAY);
-		p.add(next_page_button);
+		this.add(next_page_button);
 		
 		previous_page_button.setBounds(20, 510, 50, 50);
 		previous_page_button.setBackground(Color.LIGHT_GRAY);
-		p.add(previous_page_button);
+		this.add(previous_page_button);
 		
 		search_button.setBounds(660, 20, 80, 40);
 		search_button.setBackground(Color.LIGHT_GRAY);
-		p.add(search_button);
+		this.add(search_button);
 		
 		filter_list.setBounds(20, 20, 120, 40);
 		filter_list.setBackground(Color.LIGHT_GRAY);
-		p.add(filter_list);
+		this.add(filter_list);
 		
-		precipe_scroll.setBounds(400, 100, 600, 670);
-		precipe_area.setBackground(Color.LIGHT_GRAY);
-		precipe_area.setFont(new Font("Serif", Font.ITALIC, 16));
-		p.add(precipe_scroll);
+		recipe_scroll.setBounds(400, 100, 600, 670);
+		recipe_area.setBackground(Color.LIGHT_GRAY);
+		recipe_area.setFont(new Font("Serif", Font.ITALIC, 16));
+		this.add(recipe_scroll);
 		
 		ingredients_scroll.setBounds(20, 100, 300, 400);
 		ingredients_area.setBackground(Color.LIGHT_GRAY);
 		ingredients_area.setFont(new Font("Serif", Font.ITALIC, 16));
-		p.add(ingredients_scroll);
+		this.add(ingredients_scroll);
 		
 		search_text.setBounds(150, 20, 500, 40);
 		search_text.setBackground(Color.LIGHT_GRAY);
 		search_text.setFont(new Font("Serif", Font.ROMAN_BASELINE, 16));
 		search_text.setText("Wpisz szukaną frazę...");
-		p.add(search_text);
-		
-		main_frame.add(p); //to jest window param klasy
-		main_frame.setVisible(true);
+		this.add(search_text);
 		
 		search_text.addMouseListener(new MouseAdapter() {
 			public void mouseClicked(MouseEvent e) {
@@ -99,119 +91,83 @@ public abstract class BaseMenu {
 		next_page_button.addActionListener(new ActionListener() { 
 			public void actionPerformed(ActionEvent e) 
 			{ 
+				// Do zrobienia
+				// recipe_raw = fasada.wczytajKolejnyPrzepis()
+				recipe_area.setText(recipe_raw[0]);
+				ingredients_area.setText(recipe_raw[1]);
+				
+				/*
+				 * Stary kod
 				if(counter == 0)
 				{
 					counter = 1;
-					precipe_area.setText(precipes_and_indgredients[counter + 1]);
-					ingredients_area.setText(precipes_and_indgredients[counter + 2]);
+					recipe_area.setText(recipe_raw[counter + 1]);
+					ingredients_area.setText(recipe_raw[counter + 2]);
 				}
 				else
 				{
 					counter = 0;
-					precipe_area.setText(precipes_and_indgredients[counter]);
-					ingredients_area.setText(precipes_and_indgredients[counter + 1]);
+					recipe_area.setText(recipe_raw[counter]);
+					ingredients_area.setText(recipe_raw[counter + 1]);
 				}
+				*/
 			} 
 		});	
 		
         previous_page_button.addActionListener(new ActionListener() { 
 			public void actionPerformed(ActionEvent e) 
 			{ 
+				// Do zrobienia
+				// recipe_raw = fasada.wczytajKolejnyPrzepis()
+				recipe_area.setText(recipe_raw[0]);
+				ingredients_area.setText(recipe_raw[1]);
+				
+				/*
+				 * Stary kod
 				if(counter == 0)
 				{
 					counter = 1;
-					precipe_area.setText(precipes_and_indgredients[counter + 1]);
-					ingredients_area.setText(precipes_and_indgredients[counter + 2]);
+					recipe_area.setText(recipe_raw[counter + 1]);
+					ingredients_area.setText(recipe_raw[counter + 2]);
 				}
 				else
 				{
 					counter = 0;
-					precipe_area.setText(precipes_and_indgredients[counter]);
-					ingredients_area.setText(precipes_and_indgredients[counter + 1]);
+					recipe_area.setText(recipe_raw[counter]);
+					ingredients_area.setText(recipe_raw[counter + 1]);
 				}
+				*/
 			} 
 		});	
         
         search_button.addActionListener(new ActionListener() { 
 			public void actionPerformed(ActionEvent e) 
 			{ 
-				System.out.println(search_text.getText()); //to czego szukamy	
+				// Do zrobienia:
+				// List<String> dopasowane_tytuly = fasada.znajdzDopasowaneTytuly(search_text.getText())
+				// wyswietlDopasowaneTytulyJakoPrzyciski() - każdy z tych przycisków będzie przenosił do konkretnego przepisu
+				
+				
+				/*
+				 * Stary kod
+				 * System.out.println(search_text.getText()); //to czego szukamy	
+				 */
 			} 
 		});	
         
         filter_list.addActionListener(new ActionListener() { 
 			public void actionPerformed(ActionEvent e) 
 			{ 
+				// Do zrobienia:
+				// fasada.zmienFiltrWyszukiwania(filter_list.getSelectedItem())
+				
+				
+				
+				/*
+				 * Stary kod
 				System.out.println(filter_list.getSelectedItem()); //to po czym szukamy
+				*/
 			} 
-		});	
-        
-        String fileName0 = "przepis1.txt";
-        String fileName1 = "skladniki1.txt";
-        String fileName2 = "przepis2.txt";
-        String fileName3 = "skladniki2.txt";
-        String line = null;
-        
-        try {
-            FileReader fileReader0 = new FileReader(fileName0);
-            FileReader fileReader1 = new FileReader(fileName1);
-            FileReader fileReader2 = new FileReader(fileName2);
-            FileReader fileReader3 = new FileReader(fileName3);
-            
-            BufferedReader bufferedReader0 = new BufferedReader(fileReader0);
-            BufferedReader bufferedReader1 = new BufferedReader(fileReader1);
-            BufferedReader bufferedReader2 = new BufferedReader(fileReader2);
-            BufferedReader bufferedReader3 = new BufferedReader(fileReader3);     
-            
-            precipes_and_indgredients[0] = bufferedReader0.readLine();
-            while((line = bufferedReader0.readLine()) != null) 
-            {
-            	precipes_and_indgredients[0] += "\n" + line;
-            }   
-            precipes_and_indgredients[1] = bufferedReader1.readLine();
-            while((line = bufferedReader1.readLine()) != null) 
-            {
-            	precipes_and_indgredients[1] += "\n" + line;
-            }   
-            precipes_and_indgredients[2] = bufferedReader2.readLine();
-            while((line = bufferedReader2.readLine()) != null) 
-            {
-            	precipes_and_indgredients[2] += "\n" + line;
-            }   
-            precipes_and_indgredients[3] = bufferedReader3.readLine();
-            while((line = bufferedReader3.readLine()) != null) 
-            {
-            	precipes_and_indgredients[3] += "\n" + line;
-            }   
-            bufferedReader0.close();
-            bufferedReader1.close();  
-            bufferedReader2.close();  
-            bufferedReader3.close();  
-        }
-        catch(FileNotFoundException ex) {
-            System.out.println("Unable to open file");                
-        }
-        catch(IOException ex) {
-            System.out.println( "Error reading file");                  
-        }
-        //book.createRecipe(precipes_and_indgredients[0], precipes_and_indgredients[1]);
-        //book.createRecipe(precipes_and_indgredients[2], precipes_and_indgredients[3]);
-	}
-
-	public boolean get_logged() {
-		return logged;
-	}
-
-	public void set_logged(boolean logged) {
-		BaseMenu.logged = logged;
-	}
-
-	public boolean isLogged_helper() {
-		return logged_helper;
-	}
-
-	public void setLogged_helper(boolean logged_helper) {
-		this.logged_helper = logged_helper;
+		});
 	}
 }
-
