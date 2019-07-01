@@ -1,25 +1,21 @@
+package main;
 
 import java.awt.Rectangle;
-import java.util.List;
-
-import javax.swing.JFrame;
 
 import gui.*;
-import database.*;
 import mechanics.*;
 
 public class MainClass {
 	public static void main(String[] args){
-		
-		// Przykładowe użycie ResourceManagera, żeby otrzymać przepisy z pliku .xml
-		// Plik w którym przechowujemy przepisy: book/src/main/resources/recipes.xml
-		ResourceManager resource_manager = new ResourceManager();
-		List<Recipe> recipes = resource_manager.fetchRecipes();
 	
 		Rectangle dimensions = new Rectangle(300, 100, 1100, 900);
 		GuiFacade facade = new GuiFacade();
+		facade.createBook();
 		MainWindow window = new MainWindow(dimensions, facade);
 
+		
+		
+		
 		/*
 		while(true) 
 		{

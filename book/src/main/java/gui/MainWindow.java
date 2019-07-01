@@ -14,21 +14,17 @@ public class MainWindow extends JFrame {
 	public MainWindow(Rectangle dims, GuiFacade fac) {
 		super("Cooking Book");
 		
-		// Tu trzeba tworzyć książkę
-		
-		// Tu trzeba wczytywać przepisy z bazy
-		
 		this.addWindowListener(new WindowAdapter () {
 			@Override
 			public void windowClosing(WindowEvent e) {
-				// Tu trzeba zapisywać przepisy do bazy
+				facade.saveRecipes();
 				System.exit(0);
 			}
 		});
 		
 		this.facade = fac; 
 		
-		this.getContentPane().add(new BasePanel(fac));
+		this.getContentPane().add(new GuestPanel(fac));
 		
 		this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 		this.setBounds(dims);

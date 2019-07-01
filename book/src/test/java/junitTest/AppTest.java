@@ -1,4 +1,4 @@
-package ksiazka_kucharska;
+package junitTest;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

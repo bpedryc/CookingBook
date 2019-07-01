@@ -7,14 +7,15 @@ public class GuiFacade {
 
 	private Book book;
 	
-	public GuiFacade()
+	public void createBook() 
 	{
 		book = new Book();
+		//Może tutaj coś bardziej skomplikowanego być póniej idunno
 	}
 	
-	public void saveBeforeClosing()
+	public void saveRecipes()
 	{
-		book.saveBeforeClosing();
+		book.saveRecipes();
 	}
 	
 	public HashMap<Integer,String> SearchTitles(String name)

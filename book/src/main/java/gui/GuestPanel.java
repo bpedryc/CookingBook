@@ -29,7 +29,7 @@ public class GuestPanel extends BasePanel {
 		login_text.setBackground(Color.LIGHT_GRAY);
 		login_text.setFont(new Font("Serif", Font.ROMAN_BASELINE, 16));
 		login_text.setText("Podaj nick...");
-		//login_text.setVisible(true);
+		login_text.setVisible(true);
 		this.add(login_text);
 		
 		login_text.addMouseListener(new MouseAdapter() {
