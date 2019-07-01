@@ -13,6 +13,25 @@ public class GuiFacade {
 		//Może tutaj coś bardziej skomplikowanego być póniej idunno
 	}
 	
+	public HashMap<Integer,String> search(String name)
+	{
+		HashMap<Integer, String> equal_titles =  new HashMap<Integer, String>();
+		if(book.getSearchingType() == 0)
+		{
+			equal_titles = book.searchTitles(name);
+		}
+		else if(book.getSearchingType() == 1)
+		{
+			equal_titles = book.searchAuthors(name);
+		}
+		
+		else if(book.getSearchingType() == 2)
+		{
+			equal_titles = book.searchIngredients(name);
+		}
+		return equal_titles;
+	}
+	
 	public void saveRecipes()
 	{
 		book.saveRecipes();
@@ -60,6 +79,25 @@ public class GuiFacade {
 		String [] string = new String [2];
 		string = book.getPrevRecipe();
 		return string;
+	}
+	
+	public boolean logIn(String user_name)
+	{
+		if(user_name == "")
+		{
+			return false;
+		}
+		
+		book.setLogStatus(true);
+		book.setUserName(user_name);
+		
+		return true;
+	}
+	
+	public void logOut(String user_name)
+	{
+		book.setLogStatus(false);
+		book.setUserName(user_name);
 	}
 	
 	public ArrayList<String> getTitles()

@@ -12,9 +12,6 @@ public class MainClass {
 		GuiFacade facade = new GuiFacade();
 		facade.createBook();
 		MainWindow window = new MainWindow(dimensions, facade);
-
-		
-		
 		
 		/*
 		while(true) 
