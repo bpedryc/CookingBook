@@ -10,22 +10,24 @@ public class Book {
 	private int recipe_id;
 	private List<Recipe> recipes = new ArrayList<Recipe>();
 	private int actual_it=-1;
-	ResourceManager storage = new ResourceManager();
+	
 	
 	public Book()
 	{
 		recipe_id = 0;
-		loadRecipesFromFile();
+		loadRecipes();
 	}
 	
-	public void saveBeforeClosing()
+	public void loadRecipes()
 	{
-		storage.saveRecipes(recipes);
+		ResourceManager res_manager = new ResourceManager();
+		recipes = res_manager.fetchRecipes();
 	}
 	
-	public void loadRecipesFromFile()
+	public void saveRecipes()
 	{
-		recipes = storage.fetchRecipes();
+		ResourceManager res_manager = new ResourceManager();
+		res_manager.saveRecipes(recipes);
 	}
 	
 	public ArrayList<String> getTitles()
