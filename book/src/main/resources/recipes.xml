@@ -38,4 +38,45 @@
     </ingredients>
     <description>Jakiś ładny opis</description>
   </recipe>
+  <recipe id="3">
+    <author>WojMiszcz69</author>
+    <title>przepis na fms+9 sr.44</title>
+    <rating>5</rating>
+    <preptime>do nastepnego eventu</preptime>
+    <ingredients>
+      <ingredient>duzo milosci</ingredient>
+    </ingredients>
+    <description>DROPIMY NA BESTACH PANY</description>
+  </recipe>
+  <recipe id="4">
+    <author>Autor</author>
+    <title>Nazwa przepisu</title>
+    <rating>Ocena</rating>
+    <preptime>Czas wykonania</preptime>
+    <ingredients>
+      <ingredient />
+    </ingredients>
+    <description>Opis</description>
+  </recipe>
+  <recipe id="5">
+    <author>Autor</author>
+    <title>Nazwa przepisu</title>
+    <rating>Ocena</rating>
+    <preptime>Czas wykonania</preptime>
+    <ingredients>
+      <ingredient>sds</ingredient>
+      <ingredient>składnik2</ingredient>
+    </ingredients>
+    <description>Opis</description>
+  </recipe>
+  <recipe id="6">
+    <author>Ausda</author>
+    <title>Nazwa przepisu</title>
+    <rating>sad</rating>
+    <preptime>asd</preptime>
+    <ingredients>
+      <ingredient>sds</ingredient>
+    </ingredients>
+    <description>wd</description>
+  </recipe>
 </recipes>

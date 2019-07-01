@@ -23,6 +23,16 @@ public class Book {
 		loadRecipes();
 	}
 	
+	public void deleteRecipe(int it)
+	{
+		if(recipes.isEmpty())
+		recipes.remove(it);
+		if (it > recipes.size()-1)
+		{
+			it--;
+		}
+	}
+	
 	public int getActualIt()
 	{
 		return actual_it;
@@ -126,6 +136,7 @@ public class Book {
 	{
 		ResourceManager res_manager = new ResourceManager();
 		recipes = res_manager.fetchRecipes();
+		recipe_id = recipes.get(recipes.size()-1).getId();
 	}
 	
 	public void saveRecipes()
@@ -199,14 +210,14 @@ public class Book {
 	
 	private boolean testRecipe(String [] splitedArray)
 	{
-		if (splitedArray.length < 3)
+		if (splitedArray.length < 4)
 		{
 			return false;
 		}
 		
 		for (int i = 0; i < 4; i++)
 		{
-			if (splitedArray[i] == "")
+			if (splitedArray[i].contentEquals(""))
 			{
 				return false;
 			}
@@ -219,7 +230,7 @@ public class Book {
 	{
 		for (int i = 0; i < splitedArray.length; i++)
 		{
-			if (splitedArray[i] != "")
+			if (!(splitedArray[i].contentEquals("")))
 			{
 				return true;
 			}

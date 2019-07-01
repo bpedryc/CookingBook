@@ -50,6 +50,11 @@ public class GuiFacade {
 		return bool;
 	}
 	
+	public void deleteRecipe(int it)
+	{
+		book.deleteRecipe(it);
+	}
+	
 	public String[] getChosenRecipe(int index_of_recipe)
 	{
 		String [] string = new String [2];
