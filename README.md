@@ -37,4 +37,10 @@ Fasada:
   - Zmiana filtru wyszukiwania
   (setter jakiegoś pola "filter" - z tego pola korzysta powyższa metoda)
   
+  Testy:
+    Zaimplementować testy JUnit
+    
+  Maven:
+    Sprawić by projekt uruchamiał się z konsoli
+  
   
