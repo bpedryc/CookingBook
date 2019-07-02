@@ -52,7 +52,7 @@ public class Book {
 				recipes.add(actual_it, entry.getValue());
 			}
 		}
-		
+		deleted_recipe = null;
 		str = getChosenRecipe(actual_it);
 		return str;
 	}
@@ -102,16 +102,14 @@ public class Book {
 		return user_name;
 	}
 	
-	public String[] getChosenRecipe(int index_of_recipe)
+	public String[] getChosenRecipe(Integer index_of_recipe)
 	{
 		String[] text = new String[2];
-		
-		if (!(index_of_recipe < 0 || index_of_recipe >= recipes.size()))
+		if (!(index_of_recipe < 0 || index_of_recipe >= recipes.size() || (index_of_recipe instanceof Integer)))
 		{
-			text = new String[2];
 			actual_it = index_of_recipe;
-			text = getAtributesToString();
 		}
+		text = getAtributesToString();
 		
 		return text;
 	}
