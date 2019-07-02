@@ -1,7 +1,7 @@
 # java_project
 
-Źródła do nauki:
-  GitHub:
+Źródła do nauki:  
+  GitHub:  
     - https://www.freecodecamp.org/news/how-to-use-git-efficiently-54320a236369/  
     - http://think-like-a-git.net/ (szczególnie polecam od rozdziału "Experimenting with git")   
   
