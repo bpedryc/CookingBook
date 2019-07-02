@@ -5,7 +5,7 @@
     - https://www.freecodecamp.org/news/how-to-use-git-efficiently-54320a236369/
     - http://think-like-a-git.net/ (szczególnie polecam od rozdziału "Experimenting with git")
 
-//////////////////////////////////////////////////////////////////////////////////////////////
+
 To do:
   BasePanel:
     Obsługa przycisków we współpracy z fasadą:
@@ -22,4 +22,4 @@ To do:
 
   Maven:
     Sprawić by projekt uruchamiał się z konsoli
-/////////////////////////////////////////////////////////////////////////////////////////////
+
