@@ -1,46 +1,25 @@
 # java_project
 
-01.07.2019
+Źródła do nauki:
+  GitHub:
+    - https://www.freecodecamp.org/news/how-to-use-git-efficiently-54320a236369/
+    - http://think-like-a-git.net/ (szczególnie polecam od rozdziału "Experimenting with git")
+
+//////////////////////////////////////////////////////////////////////////////////////////////
 To do:
+  BasePanel:
+    Obsługa przycisków we współpracy z fasadą:
+    - Wyszukiwanie przepisu
+    
+  UserPanel:
+    Obsługa przycisków we współpracy z fasadą:
+    - Usuwanie przepisu
 
-(Problem: chciałem żebyśmy zrobili LoginPanel, ale wtedy GuestPanel i UserPanel się nie różnią - może lepiej zrobić bez LoginPanel?)
+// Po wykonaniu powyższych trzeba merge'ować release/ver1 do master
 
-MainWindow:
-  Zaimplementować metodę zmieniającą aktywny panel
-  (Panele: LoginPanel, UserPanel, GuestPanel)
-  
-BasePanel:
-  Obsługa przycisków we współpracy z fasadą:
-  - Następny przepis
-  - Poprzedni przepis
-  - Wyszukaj przepis
-  - Filtruj wyszukiwanie
-  
-GuestPanel:
-  Obsługa przycisków we współpracy z fasadą:
-  - Logowanie użytkownika
-  
-UserPanel:
-  Obsługa przycisków we współpracy z fasadą:
-  - Dodawanie przepisu
-  - accept_recipe_button?
-  - Wyglogowanie użytkownika
-  
-Fasada:
-  Zaimplementować metody potrzebne dla Paneli:
-  - Wczytywanie kolejnego przepisu 
-  (zwraca przepis w stringu; [0]-tresc, [1]-skladniki)
-  - Wczytywanie poprzedniego przepisu
-  (zwraca przepis w stringu; [0]-tresc, [1]-skladniki)
-  - Znajdywanie dopasowania
-  (może zwracać tytuły, najlepiej listę par <id, tytuł>, które pasują)
-  - Zmiana filtru wyszukiwania
-  (setter jakiegoś pola "filter" - z tego pola korzysta powyższa metoda)
-  
   Testy:
     Zaimplementować testy JUnit
-    
+
   Maven:
     Sprawić by projekt uruchamiał się z konsoli
-  
-  
+/////////////////////////////////////////////////////////////////////////////////////////////
