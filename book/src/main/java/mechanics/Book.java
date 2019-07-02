@@ -23,13 +23,16 @@ public class Book {
 		loadRecipes();
 	}
 	
-	public void deleteRecipe(int it)
+	public void deleteRecipe()
 	{
-		if(recipes.isEmpty())
-		recipes.remove(it);
-		if (it > recipes.size()-1)
+		if(!(recipes.isEmpty()))
 		{
-			it--;
+			recipes.remove(actual_it);
+			
+			if (actual_it > recipes.size()-1)
+			{
+				actual_it--;
+			}
 		}
 	}
 	

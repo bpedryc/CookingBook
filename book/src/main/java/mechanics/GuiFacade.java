@@ -50,9 +50,9 @@ public class GuiFacade {
 		return bool;
 	}
 	
-	public void deleteRecipe(int it)
+	public void deleteRecipe()
 	{
-		book.deleteRecipe(it);
+		book.deleteRecipe();
 	}
 	
 	public String[] getChosenRecipe(int index_of_recipe)
