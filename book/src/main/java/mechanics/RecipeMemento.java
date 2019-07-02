@@ -15,5 +15,4 @@ public class RecipeMemento {
 		return recipe;
 	}
 	
-	
 }

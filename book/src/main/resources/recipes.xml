@@ -1,29 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <recipes>
-  <recipe id="0">
-    <author>Jaimie Oliver</author>
-    <title>Kluski jakieś</title>
-    <rating>4</rating>
-    <preptime>25 minut</preptime>
-    <ingredients>
-      <ingredient>2 jabłka</ingredient>
-      <ingredient>3 gruszki</ingredient>
-      <ingredient>4 winogrona</ingredient>
-    </ingredients>
-    <description>Klasyk. Koniecznie jeść na zimno.</description>
-  </recipe>
-  <recipe id="1">
-    <author>Gordon Ramsay</author>
-    <title>Racuchy</title>
-    <rating>5</rating>
-    <preptime>15 minut</preptime>
-    <ingredients>
-      <ingredient>2 jabłka</ingredient>
-      <ingredient>3 gruszki</ingredient>
-      <ingredient>4 winogrona</ingredient>
-    </ingredients>
-    <description>Bardzo dobre.</description>
-  </recipe>
   <recipe id="2">
     <author>gotowanietoproste</author>
     <title>Trójkolorowe ciasto</title>
@@ -82,23 +58,100 @@
   <recipe id="7">
     <author>Autor</author>
     <title>Nazwa przepisu</title>
-    <rating>Ocenaasd</rating>
-    <preptime>Czas wykonaniaasd</preptime>
-    <ingredients>
-      <ingredient>składnik1asd</ingredient>
-      <ingredient>składnik2aasd</ingredient>
-    </ingredients>
-    <description>Opisasd</description>
-  </recipe>
-  <recipe id="8">
-    <author>Autor</author>
-    <title>Nazwa przepisu</title>
     <rating>Ocena</rating>
     <preptime>Czas wykonania</preptime>
     <ingredients>
       <ingredient>składnik1</ingredient>
-      <ingredient>składnik2</ingredient>
+      <ingredient>składnik211</ingredient>
     </ingredients>
     <description>Opis</description>
+  </recipe>
+  <recipe id="8">
+    <author>Kościuszko</author>
+    <title>Żubr</title>
+    <rating>MAX</rating>
+    <preptime>5 minut</preptime>
+    <ingredients>
+      <ingredient>Woda</ingredient>
+      <ingredient>Słód jęczmienny</ingredient>
+      <ingredient>Jęczmień</ingredient>
+      <ingredient>syrop z przenicy</ingredient>
+      <ingredient>syrop z słodu jęczmiennego</ingredient>
+      <ingredient>Chmiel</ingredient>
+    </ingredients>
+    <description>Do sklepu i z powrotem</description>
+  </recipe>
+  <recipe id="9">
+    <author>Von Kiper</author>
+    <title>Spalona zapiekanka</title>
+    <rating>2/10</rating>
+    <preptime>Cały dzień</preptime>
+    <ingredients>
+      <ingredient>Makaron</ingredient>
+      <ingredient>Przeterminowany sos z saszetki</ingredient>
+      <ingredient>Stare ziemniaki</ingredient>
+      <ingredient>Spleśniały ser</ingredient>
+      <ingredient>Resztki z lodówki</ingredient>
+    </ingredients>
+    <description>Wrzuć wszystko do naczynia żaroodpornego przez przykrywki przypalając górę.</description>
+  </recipe>
+  <recipe id="11">
+    <author>Von Kiper</author>
+    <title>Chrupiąca przekąska na bazie mleka</title>
+    <rating>Bezglutenowe/Dieta dietetyczna</rating>
+    <preptime>10 sekund</preptime>
+    <ingredients>
+      <ingredient>Randomowe płatki</ingredient>
+      <ingredient>Randomowe mleko</ingredient>
+      <ingredient>Łyżka</ingredient>
+      <ingredient>Miska (wersja kolekcjonerka, nie myta pół semestru)</ingredient>
+    </ingredients>
+    <description>Randomowe płatki z randomowym mlekiem</description>
+  </recipe>
+  <recipe id="12">
+    <author>Pietruszkov</author>
+    <title>Jajecznica Pietruszkova</title>
+    <rating>Spalona na wiór (bo lubie)</rating>
+    <preptime>Zależny od mocy kuchenki</preptime>
+    <ingredients>
+      <ingredient>Mogą być jajka</ingredient>
+      <ingredient>Mięso</ingredient>
+      <ingredient>Temperatura bliska temp. Słońca</ingredient>
+      <ingredient>Specjalna patelnia Adiego, zajmująca cztery palniki</ingredient>
+      <ingredient>Sól na oko</ingredient>
+      <ingredient>Eleganckie pieczywko</ingredient>
+      <ingredient>Margaryna fitness (magnez, mangan, uran, tytan, rad, polon, granit)</ingredient>
+      <ingredient>Obudzone trzy osoby z mieszkania</ingredient>
+    </ingredients>
+    <description>Elegancka jajecznica na eleganckiej kuchence smażona o 4 nad ranem przy akompaniamrncie Bolka i Lolka (100 % VOLUME)</description>
+  </recipe>
+  <recipe id="13">
+    <author>Pietruszkov</author>
+    <title>Ryż w daniu własnym</title>
+    <rating>Poza skale</rating>
+    <preptime>Gotowanie ryżu + jedzenie ogromnej porcji jedzenia przez godzinę</preptime>
+    <ingredients>
+      <ingredient>Ryż zbierany o północy przez chińskich komu-</ingredient>
+      <ingredient>nistycznych robotników partii proletariatu</ingredient>
+      <ingredient>Randomowe mięso</ingredient>
+      <ingredient>Randomowe przyprawy (nie czosnek)</ingredient>
+      <ingredient>Keczup w promocji</ingredient>
+      <ingredient>Patelnia Adiego</ingredient>
+    </ingredients>
+    <description>Gotowanko ryżu + randomowe mięso (zależne od promocji w Lidlu (nie dodawaniejajka do mięsa mielonego))</description>
+  </recipe>
+  <recipe id="14">
+    <author>Von Kiper</author>
+    <title>Kanapki a'la Eryk</title>
+    <rating>Wyśmienite</rating>
+    <preptime>5 minut</preptime>
+    <ingredients>
+      <ingredient>Resztki z lodówki</ingredient>
+      <ingredient>Czerstwy chleb</ingredient>
+      <ingredient>Keczup zabrany sąsiadowi</ingredient>
+      <ingredient>Składnik dnia (zależny od</ingredient>
+      <ingredient>tego co jest na promocji w Lidlu)</ingredient>
+    </ingredients>
+    <description>Wyśmienite kanapki szefa kuchni z Kramażówki</description>
   </recipe>
 </recipes>

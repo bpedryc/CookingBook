@@ -1,6 +1,7 @@
 package gui;
 
 import java.awt.Color;
+import java.awt.Component;
 import java.awt.Font;
 import java.awt.List;
 import java.awt.event.ActionEvent;
@@ -170,7 +171,7 @@ public abstract class BasePanel extends JPanel {
 				// wyświetlaj wszystkie te w postaci spisu tresci
 				System.out.println(found_titles);
 					//titles_buttons.add(new JButton(found_titles.get(i)));
-				int i = 0;
+				//int i = 0;
 				ingredients_area.setText("");
 				recipe_area.setText("");
 				String seach_results = new String();
@@ -178,7 +179,9 @@ public abstract class BasePanel extends JPanel {
 				{
 					seach_results += (found_titles.get(key).toString() + "   str ");
 					seach_results += (key + "\n");
-				}						
+					
+				}				
+				//add_search_buttons(titles_search_buttons);
 				recipe_area.setText(seach_results);
 				/*
 				 * Stary kod
@@ -208,18 +211,18 @@ public abstract class BasePanel extends JPanel {
                 if(e.getKeyCode() == KeyEvent.VK_ENTER) {
                 	String choosen_page = new String();
                 	choosen_page = page_search_area.getText().trim();
-                	System.out.println(choosen_page);
-                	page_search_area.setText("");
-                	//nalezy dodac mozliwosc przechodzenia do strony po wpisaniu jej numeru
                 	if(choosen_page.isEmpty() == false)
-	                {	String[] recipe_raw = facade.getChosenRecipe(Integer.parseInt(choosen_page.trim()));
-	                	recipe_area.setText(recipe_raw[0]);
-	    				ingredients_area.setText(recipe_raw[1]);
+                	{
+                		String[] recipe_raw = facade.getChosenRecipe(Integer.parseInt(choosen_page.trim()));
+                    	System.out.println(Integer.parseInt(choosen_page.trim()));
+    	                recipe_area.setText(recipe_raw[0]);
+    	    			ingredients_area.setText(recipe_raw[1]);
+                    	page_search_area.setCaretPosition(0);
+                    	page_search_area.setText("");
                 	}
-                	page_search_area.setCaretPosition(0);
-
                 }
             }
         });
 	}
+
 }

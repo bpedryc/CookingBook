@@ -15,6 +15,7 @@ public class UserPanel extends BasePanel {
 	JButton add_comment = new JButton("Dodaj_komentarz");
 	JButton sing_out_button = new JButton("Wyloguj");
 	JButton delete_button = new JButton("Usuń przepis");
+	JButton recover_button = new JButton("Odzyskaj przepis");
 	boolean creating_recipe = false;
 	
 	public UserPanel(MainWindow win, GuiFacade fac) {
@@ -36,9 +37,14 @@ public class UserPanel extends BasePanel {
 		this.add(sing_out_button);
 		
 		delete_button.setBackground(Color.LIGHT_GRAY);
-		delete_button.setBounds(140, 580, 160, 50);
+		delete_button.setBounds(140, 570, 160, 50);
 		delete_button.setVisible(true);
 		this.add(delete_button);
+		
+		recover_button.setBackground(Color.LIGHT_GRAY);
+		recover_button.setBounds(140, 630, 160, 50);
+		recover_button.setVisible(true);
+		this.add(recover_button);
 				
 		add_recipe_button.addActionListener(new ActionListener() { 
 			public void actionPerformed(ActionEvent e) 
@@ -112,12 +118,23 @@ public class UserPanel extends BasePanel {
 	    delete_button.addActionListener(new ActionListener() { 
 			public void actionPerformed(ActionEvent e) 
 			{ 
-				facade.deleteRecipe(facade.getActualIt());
-				String[] raw_recipe = facade.getNextRecipe();
+				facade.deleteRecipe();
+				String[] raw_recipe = facade.getChosenRecipe(facade.getActualIt());
+				//String[] raw_recipe = facade.getNextRecipe();
 				recipe_area.setText(raw_recipe[0]);
 				ingredients_area.setText(raw_recipe[1]);
 				//System.out.println(facade.getActualIt());
 							
+			} 
+		});
+	    
+	    recover_button.addActionListener(new ActionListener() { 
+			public void actionPerformed(ActionEvent e) 
+			{ 
+				facade.restoreResult();
+				String[] raw_recipe = facade.getChosenRecipe(facade.getActualIt());
+				recipe_area.setText(raw_recipe[0]);
+				ingredients_area.setText(raw_recipe[1]);
 			} 
 		});
 	}
