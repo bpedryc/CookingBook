@@ -12,6 +12,7 @@ public class Book {
 	private int searching_type;
 	private boolean log_status;
 	private String user_name;
+	private RecipeMemento deleted_recipe;
 	
 	public Book()
 	{
@@ -27,6 +28,9 @@ public class Book {
 	{
 		if(!(recipes.isEmpty()))
 		{
+			HashMap<Integer,Recipe> delete_recipe = new HashMap<Integer,Recipe>();
+			delete_recipe.put(actual_it ,recipes.get(actual_it));
+			deleted_recipe = new RecipeMemento(delete_recipe);
 			recipes.remove(actual_it);
 			
 			if (actual_it > recipes.size()-1)
@@ -34,6 +38,23 @@ public class Book {
 				actual_it--;
 			}
 		}
+	}
+	
+	public String [] restoreResult()
+	{
+		String [] str = new String [2];
+		
+		if(!deleted_recipe.getRecipe().isEmpty())
+		{
+			for (HashMap.Entry<Integer, Recipe> entry : deleted_recipe.getRecipe().entrySet()) 
+			{
+				actual_it = entry.getKey();
+				recipes.add(actual_it, entry.getValue());
+			}
+		}
+		
+		str = getChosenRecipe(actual_it);
+		return str;
 	}
 	
 	public int getActualIt()
