@@ -13,6 +13,12 @@ public class GuiFacade {
 		//Może tutaj coś bardziej skomplikowanego być póniej idunno
 	}
 	
+	public String [] restoreResult()
+	{
+		String [] str = book.restoreResult();
+		return str;
+	}
+	
 	public HashMap<Integer,String> search(String name)
 	{
 		HashMap<Integer, String> equal_titles =  new HashMap<Integer, String>();
