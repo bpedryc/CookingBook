@@ -74,6 +74,8 @@ public abstract class BasePanel extends JPanel {
 		recipe_area.setFont(new Font("Serif", Font.ITALIC, 16));
 		recipe_area.setText(recipe_raw[0]);
 		recipe_area.setEditable(false);
+		recipe_area.setLineWrap(true);
+		recipe_area.setWrapStyleWord(true);
 		this.add(recipe_scroll);
 		
 		ingredients_scroll.setBounds(20, 100, 300, 400);
@@ -81,6 +83,8 @@ public abstract class BasePanel extends JPanel {
 		ingredients_area.setFont(new Font("Serif", Font.ITALIC, 16));
 		ingredients_area.setText(recipe_raw[1]);
 		ingredients_area.setEditable(false);
+		ingredients_area.setLineWrap(true);
+		ingredients_area.setWrapStyleWord(true);
 		this.add(ingredients_scroll);
 		
 		search_text.setBounds(150, 20, 500, 40);
