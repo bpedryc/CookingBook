@@ -241,7 +241,8 @@ public abstract class BasePanel extends JPanel {
 			public void actionPerformed(ActionEvent e) 
 			{ 
 				String table_of_contents = facade.tableOfContents();
-				recipe_area.setText(table_of_contents);				
+				recipe_area.setText(table_of_contents);	
+				ingredients_area.setText("");
 				/*
 				 * Stary kod
 				if(counter == 0)
