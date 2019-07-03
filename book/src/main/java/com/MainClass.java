@@ -1,9 +1,9 @@
-package main;
+package com;
 
 import java.awt.Rectangle;
 
-import gui.*;
-import mechanics.*;
+import com.gui.*;
+import com.mechanics.*;
 
 public class MainClass {
 	public static void main(String[] args){
@@ -12,34 +12,6 @@ public class MainClass {
 		GuiFacade facade = new GuiFacade();
 		MainWindow window = new MainWindow(dimensions, facade);
 		
-		/*
-		while(true) 
-		{
-			BaseMenu object = new GuestMenu(dimensions);
-			BaseMenu.main_frame.getContentPane().repaint();
-			while(object.get_logged() == false)
-			{
-				if(object.get_logged() == true)
-				{
-					break;
-				}
-				object.extraThings();
-			}
-			dimensions = BaseMenu.main_frame.getBounds();
-			object = (BaseMenu)new LoggedMenu(dimensions);
-			BaseMenu.main_frame.getContentPane().repaint();
-			System.out.println(object);
-			while(object.get_logged() == true)
-			{
-				if(object.get_logged() == false)
-				{
-					break;
-				}
-				object.extraThings();
-			}
-			dimensions = BaseMenu.main_frame.getBounds();
-		}
-	*/
 	}
 }
 

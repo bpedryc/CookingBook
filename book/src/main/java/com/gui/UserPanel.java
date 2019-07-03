@@ -1,4 +1,4 @@
-package gui;
+package com.gui;
 
 import java.awt.Color;
 import java.awt.event.ActionEvent;
@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 
-import mechanics.GuiFacade;
+import com.mechanics.GuiFacade;
 
 public class UserPanel extends BasePanel {
 	
@@ -90,15 +90,6 @@ public class UserPanel extends BasePanel {
 					ingredients_area.setEditable(false);
 					recipe_area.setEditable(false);
 				}
-				
-				/*
-				 * Stary kod
-			    String recipe = recipe_area.getText();
-			    String ingredients = ingredients_area.getText();
-			    System.out.println(recipe);
-			    System.out.println(ingredients);			     
-			    accept_recipe_button.setVisible(false);
-			    */	  
 			} 
 		});
 	    
@@ -107,11 +98,6 @@ public class UserPanel extends BasePanel {
 			{ 
 				facade.logOut();
 				window.displayPanel(window.getGuestPanel());
-				
-				/*
-				 * Stary kod
-				 * setLogged_helper(false);
-				 */	
 			} 
 		});
 	    

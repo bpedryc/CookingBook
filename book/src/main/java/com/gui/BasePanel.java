@@ -1,29 +1,23 @@
-package gui;
+package com.gui;
 
 import java.awt.Color;
-import java.awt.Component;
 import java.awt.Font;
-import java.awt.List;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.util.ArrayList;
 import java.util.HashMap;
 
-import javax.swing.Icon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
-import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
-import javax.swing.text.Caret;
 
-import mechanics.GuiFacade;
+import com.mechanics.GuiFacade;
 
 public abstract class BasePanel extends JPanel {
 	
@@ -56,13 +50,6 @@ public abstract class BasePanel extends JPanel {
 		
 		this.setLayout(null);
 		this.setBackground(Color.DARK_GRAY);
-		
-		/* sposob na przyciski bez tla i ramek (tak jak link w htmlu)
-		next_page_button.setBorder(null);
-		next_page_button.setOpaque(false);
-		next_page_button.setContentAreaFilled(false);
-		next_page_button.setBorderPainted(false);
-		*/
 		
 		next_page_button.setBounds(80, 510, 50, 50);
 		next_page_button.setBackground(Color.LIGHT_GRAY);
@@ -132,21 +119,6 @@ public abstract class BasePanel extends JPanel {
 				recipe_area.setText(recipe_raw[0]);
 				ingredients_area.setText(recipe_raw[1]);
 				
-				/*
-				 * Stary kod
-				if(counter == 0)
-				{
-					counter = 1;
-					recipe_area.setText(recipe_raw[counter + 1]);
-					ingredients_area.setText(recipe_raw[counter + 2]);
-				}
-				else
-				{
-					counter = 0;
-					recipe_area.setText(recipe_raw[counter]);
-					ingredients_area.setText(recipe_raw[counter + 1]);
-				}
-				*/
 			} 
 		});	
 		
@@ -157,21 +129,6 @@ public abstract class BasePanel extends JPanel {
 				recipe_area.setText(recipe_raw[0]);
 				ingredients_area.setText(recipe_raw[1]);
 				
-				/*
-				 * Stary kod
-				if(counter == 0)
-				{
-					counter = 1;
-					recipe_area.setText(recipe_raw[counter + 1]);
-					ingredients_area.setText(recipe_raw[counter + 2]);
-				}
-				else
-				{
-					counter = 0;
-					recipe_area.setText(recipe_raw[counter]);
-					ingredients_area.setText(recipe_raw[counter + 1]);
-				}
-				*/
 			} 
 		});	
         
@@ -193,10 +150,6 @@ public abstract class BasePanel extends JPanel {
 				}				
 				//add_search_buttons(titles_search_buttons);
 				recipe_area.setText(seach_results);
-				/*
-				 * Stary kod
-				 * System.out.println(search_text.getText()); //to czego szukamy	
-				 */
 			}
 
 			
@@ -206,12 +159,6 @@ public abstract class BasePanel extends JPanel {
 			public void actionPerformed(ActionEvent e) 
 			{ 
 				facade.setSearchingType(filter_list.getSelectedItem().toString());
-				
-				
-				/*
-				 * Stary kod
-				System.out.println(filter_list.getSelectedItem()); //to po czym szukamy
-				*/
 			} 
 		});
         
@@ -243,21 +190,6 @@ public abstract class BasePanel extends JPanel {
 				String table_of_contents = facade.tableOfContents();
 				recipe_area.setText(table_of_contents);	
 				ingredients_area.setText("");
-				/*
-				 * Stary kod
-				if(counter == 0)
-				{
-					counter = 1;
-					recipe_area.setText(recipe_raw[counter + 1]);
-					ingredients_area.setText(recipe_raw[counter + 2]);
-				}
-				else
-				{
-					counter = 0;
-					recipe_area.setText(recipe_raw[counter]);
-					ingredients_area.setText(recipe_raw[counter + 1]);
-				}
-				*/
 			} 
 		});	
 	}
