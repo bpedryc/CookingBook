@@ -45,12 +45,10 @@ public abstract class BasePanel extends JPanel {
 	JTextArea search_page_area = new JTextArea("Przejdź do str");
 	
 	JTextField search_text = new JTextField();
-	
-	
 
 	int counter = 0;
 	String[] recipe_raw = new String[4];
-	
+
 	public BasePanel(MainWindow win, GuiFacade fac) {
 		this.window = win;
 		this.facade = fac;
@@ -177,7 +175,6 @@ public abstract class BasePanel extends JPanel {
 			{ 
 				HashMap<Integer, String> found_titles = facade.search(search_text.getText());
 				// wyświetlaj wszystkie te w postaci spisu tresci
-				System.out.println(found_titles);
 					//titles_buttons.add(new JButton(found_titles.get(i)));
 				//int i = 0;
 				ingredients_area.setText("");
@@ -213,22 +210,25 @@ public abstract class BasePanel extends JPanel {
 			} 
 		});
         
+        
         page_search_area.addKeyListener(new KeyAdapter() {
             @Override
             public void keyPressed(KeyEvent e) {
                 if(e.getKeyCode() == KeyEvent.VK_ENTER) {
-                	String choosen_page = new String();
-                	choosen_page = page_search_area.getText().trim();
-                	if(choosen_page.isEmpty() == false)
-                	{
-                		String[] recipe_raw = facade.getChosenRecipe(Integer.parseInt(choosen_page.trim()));
-                    	System.out.println(Integer.parseInt(choosen_page.trim()));
+                	int choosen_page = -1;
+                		try {
+                        	choosen_page = Integer.parseInt(page_search_area.getText().trim());
+
+                	    } catch (NumberFormatException | NullPointerException nfe) {
+                	    }          
+            			String[] recipe_raw = facade.getChosenRecipe(choosen_page);
+
     	                recipe_area.setText(recipe_raw[0]);
     	    			ingredients_area.setText(recipe_raw[1]);
                     	page_search_area.setCaretPosition(0);
                     	page_search_area.setText("");
                 	}
-                }
+       
             }
         });
 	}
