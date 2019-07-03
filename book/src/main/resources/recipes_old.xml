@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recipes>
+  <recipe id="2">
+    <author>gotowanietoproste</author>
+    <title>Tr?lorowe ciasto</title>
+    <rating>2/10</rating>
+    <preptime>46 minuty</preptime>
+    <ingredients>
+      <ingredient>burak</ingredient>
+      <ingredient>banan</ingredient>
+      <ingredient>marchew</ingredient>
+      <ingredient>mi?</ingredient>
+      <ingredient>sok</ingredient>
+    </ingredients>
+    <description>Jaki??dny opis</description>
+  </recipe>
+  <recipe id="3">
+    <author>WojMiszcz69</author>
+    <title>przepis na fms+9 sr.44</title>
+    <rating>5</rating>
+    <preptime>do nastepnego eventu</preptime>
+    <ingredients>
+      <ingredient>duzo milosci</ingredient>
+    </ingredients>
+    <description>DROPIMY NA BESTACH PANY</description>
+  </recipe>
+  <recipe id="5">
+    <author>Autor</author>
+    <title>Nazwa przepisu</title>
+    <rating>Ocena</rating>
+    <preptime>Czas wykonania</preptime>
+    <ingredients>
+      <ingredient>sds</ingredient>
+      <ingredient>sk?dnik2</ingredient>
+    </ingredients>
+    <description>Opis</description>
+  </recipe>
+  <recipe id="6">
+    <author>Ausda</author>
+    <title>Nazwa przepisu</title>
+    <rating>sad</rating>
+    <preptime>asd</preptime>
+    <ingredients>
+      <ingredient>sds</ingredient>
+    </ingredients>
+    <description>wd</description>
+  </recipe>
+  <recipe id="7">
+    <author>Autor</author>
+    <title>Nazwa przepisu</title>
+    <rating>Ocena</rating>
+    <preptime>Czas wykonania</preptime>
+    <ingredients>
+      <ingredient>sk?dnik1</ingredient>
+      <ingredient>sk?dnik211</ingredient>
+    </ingredients>
+    <description>Opis</description>
+  </recipe>
+  <recipe id="8">
+    <author>Ko?iuszko</author>
+    <title>?br</title>
+    <rating>MAX</rating>
+    <preptime>5 minut</preptime>
+    <ingredients>
+      <ingredient>Woda</ingredient>
+      <ingredient>S?d j?mienny</ingredient>
+      <ingredient>J?mie?ngredient>
+      <ingredient>syrop z przenicy</ingredient>
+      <ingredient>syrop z s?du j?miennego</ingredient>
+      <ingredient>Chmiel</ingredient>
+    </ingredients>
+    <description>Do sklepu i z powrotem</description>
+  </recipe>
+  <recipe id="9">
+    <author>Von Kiper</author>
+    <title>Spalona zapiekanka</title>
+    <rating>2/10</rating>
+    <preptime>Ca? dzie?reptime>
+    <ingredients>
+      <ingredient>Makaron</ingredient>
+      <ingredient>Przeterminowany sos z saszetki</ingredient>
+      <ingredient>Stare ziemniaki</ingredient>
+      <ingredient>Sple?ia? ser</ingredient>
+      <ingredient>Resztki z lod?</ingredient>
+    </ingredients>
+    <description>Wrzu?szystko do naczynia ?roodpornego przez przykrywki przypalaj? g?</description>
+  </recipe>
+  <recipe id="11">
+    <author>Von Kiper</author>
+    <title>Chrupi?a przek?ka na bazie mleka</title>
+    <rating>Bezglutenowe/Dieta dietetyczna</rating>
+    <preptime>10 sekund</preptime>
+    <ingredients>
+      <ingredient>Randomowe p?tki</ingredient>
+      <ingredient>Randomowe mleko</ingredient>
+      <ingredient>L?a</ingredient>
+      <ingredient>Miska (wersja kolekcjonerka, nie myta p?emestru)</ingredient>
+    </ingredients>
+    <description>Randomowe p?tki z randomowym mlekiem</description>
+  </recipe>
+  <recipe id="12">
+    <author>Pietruszkov</author>
+    <title>Jajecznica Pietruszkova</title>
+    <rating>Spalona na wi?bo lubie)</rating>
+    <preptime>Zale?y od mocy kuchenki</preptime>
+    <ingredients>
+      <ingredient>Mog?by?ajka</ingredient>
+      <ingredient>Mi?</ingredient>
+      <ingredient>Temperatura bliska temp. S??/ingredient>
+      <ingredient>Specjalna patelnia Adiego, zajmuj?a cztery palniki</ingredient>
+      <ingredient>S?a oko</ingredient>
+      <ingredient>Eleganckie pieczywko</ingredient>
+      <ingredient>Margaryna fitness (magnez, mangan, uran, tytan, rad, polon, granit)</ingredient>
+      <ingredient>Obudzone trzy osoby z mieszkania</ingredient>
+    </ingredients>
+    <description>Elegancka jajecznica na eleganckiej kuchence sma?na o 4 nad ranem przy akompaniamrncie Bolka i Lolka (100 % VOLUME)</description>
+  </recipe>
+  <recipe id="13">
+    <author>Pietruszkov</author>
+    <title>Ry?w daniu w?snym</title>
+    <rating>Poza skale</rating>
+    <preptime>Gotowanie ry? + jedzenie ogromnej porcji jedzenia przez godzin?preptime>
+    <ingredients>
+      <ingredient>Ry?zbierany o p?cy przez chi?ch komu-</ingredient>
+      <ingredient>nistycznych robotnik?artii proletariatu</ingredient>
+      <ingredient>Randomowe mi?</ingredient>
+      <ingredient>Randomowe przyprawy (nie czosnek)</ingredient>
+      <ingredient>Keczup w promocji</ingredient>
+      <ingredient>Patelnia Adiego</ingredient>
+    </ingredients>
+    <description>Gotowanko ry? + randomowe mi? (zale?e od promocji w Lidlu (nie dodawaniejajka do mi? mielonego))</description>
+  </recipe>
+  <recipe id="14">
+    <author>Von Kiper</author>
+    <title>Kanapki a'la Eryk</title>
+    <rating>Wy?ienite</rating>
+    <preptime>5 minut</preptime>
+    <ingredients>
+      <ingredient>Resztki z lod?</ingredient>
+      <ingredient>Czerstwy chleb</ingredient>
+      <ingredient>Keczup zabrany s?iadowi</ingredient>
+      <ingredient>Sk?dnik dnia (zale?y od</ingredient>
+      <ingredient>tego co jest na promocji w Lidlu)</ingredient>
+    </ingredients>
+    <description>Wy?ienite kanapki szefa kuchni z Krama?wki</description>
+  </recipe>
+  <recipe id="15">
+    <author>Rykub Ja?/author>
+    <title>muj przepis</title>
+    <rating>5.0</rating>
+    <preptime>jakie?15 sekund nie wi?j nie mniej</preptime>
+    <ingredients>
+      <ingredient>sk?dnik 1</ingredient>
+      <ingredient>sk?dnik 2</ingredient>
+    </ingredients>
+    <description>czemu nie ma endlajn? pietruchy w tych przepisach co?zobaczmy czy tu si?robi?o? on po prostu przejecha?za ostro specjalnie wariatno w ka?ym razie zaraz si?ka?</description>
+  </recipe>
+  <recipe id="16">
+    <author>Rykup Ja?/author>
+    <title>Co?z endlajnami nie tak</title>
+    <rating>5.0</rating>
+    <preptime>15 sekund nie mniej nie wi?j</preptime>
+    <ingredients>
+      <ingredient>linijka opisu wykonannia przepisu</ingredient>
+      <ingredient>"\n"</ingredient>
+    </ingredients>
+    <description>czemu nie ma endlajn? pietruchy w tych przepisach co?
+zobaczmy czy tu si?robi?
+mo? on po prostu przejecha?za ostro specjalnie wariat
+no w ka?ym razie zaraz si?ka?</description>
+  </recipe>
+</recipes>
+
