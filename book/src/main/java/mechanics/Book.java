@@ -105,10 +105,20 @@ public class Book {
 		return user_name;
 	}
 	
+	public String tableOfContents()
+	{
+		String contents = new String();
+		for (int i =0; i < getTitles().size(); i++)
+		{
+			contents += getTitles().get(i) + "  nr." + i + "\n"; 
+		}
+		return contents;
+	}
+	
 	public String[] getChosenRecipe(Integer index_of_recipe)
 	{
 		String[] text = new String[2];
-		if ((!(index_of_recipe < 0 || index_of_recipe >= recipes.size()) && (index_of_recipe instanceof Integer)))
+		if (!(index_of_recipe < 0 || index_of_recipe >= recipes.size()))
 		{
 			actual_it = index_of_recipe;
 		}
