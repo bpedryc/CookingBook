@@ -61,6 +61,11 @@ public class GuiFacade {
 		book.deleteRecipe();
 	}
 	
+	public String tableOfContents()
+	{
+		return book.tableOfContents();
+	}
+	
 	public String[] getChosenRecipe(int index_of_recipe)
 	{
 		String [] string = new String [2];
