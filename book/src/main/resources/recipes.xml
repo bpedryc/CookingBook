@@ -154,4 +154,29 @@
     </ingredients>
     <description>Wyśmienite kanapki szefa kuchni z Kramażówki</description>
   </recipe>
+  <recipe id="15">
+    <author>Rykub Jaś</author>
+    <title>muj przepis</title>
+    <rating>5.0</rating>
+    <preptime>jakieś 15 sekund nie więcej nie mniej</preptime>
+    <ingredients>
+      <ingredient>składnik 1</ingredient>
+      <ingredient>skłądnik 2</ingredient>
+    </ingredients>
+    <description>czemu nie ma endlajnów u pietruchy w tych przepisach co?zobaczmy czy tu się zrobiąmoże on po prostu przejechał za ostro specjalnie wariatno w każdym razie zaraz się okaże</description>
+  </recipe>
+  <recipe id="16">
+    <author>Rykup Jaś</author>
+    <title>Coś z endlajnami nie tak</title>
+    <rating>5.0</rating>
+    <preptime>15 sekund nie mniej nie więcej</preptime>
+    <ingredients>
+      <ingredient>linijka opisu wykonannia przepisu</ingredient>
+      <ingredient>"\n"</ingredient>
+    </ingredients>
+    <description>czemu nie ma endlajnów u pietruchy w tych przepisach co?
+zobaczmy czy tu się zrobią 
+może on po prostu przejechał za ostro specjalnie wariat
+no w każdym razie zaraz się okaże</description>
+  </recipe>
 </recipes>

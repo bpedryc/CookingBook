@@ -13,6 +13,7 @@ public class Book {
 	private boolean log_status;
 	private String user_name;
 	private RecipeMemento deleted_recipe;
+	private boolean deleted_recipe_exist;
 	
 	public Book()
 	{
@@ -20,6 +21,7 @@ public class Book {
 		searching_type = 2;
 		actual_it = -1;
 		recipes = new ArrayList<Recipe>();
+		deleted_recipe_exist = false;
 		setLogStatus(false);
 		loadRecipes();
 	}
@@ -37,6 +39,7 @@ public class Book {
 			{
 				actual_it--;
 			}
+			deleted_recipe_exist = true;
 		}
 	}
 	
@@ -44,15 +47,15 @@ public class Book {
 	{
 		String [] str = new String [2];
 		
-		if(!deleted_recipe.getRecipe().isEmpty())
+		if(deleted_recipe_exist)
 		{
 			for (HashMap.Entry<Integer, Recipe> entry : deleted_recipe.getRecipe().entrySet()) 
 			{
 				actual_it = entry.getKey();
 				recipes.add(actual_it, entry.getValue());
 			}
+			deleted_recipe_exist = false;
 		}
-		deleted_recipe = null;
 		str = getChosenRecipe(actual_it);
 		return str;
 	}
@@ -105,7 +108,7 @@ public class Book {
 	public String[] getChosenRecipe(Integer index_of_recipe)
 	{
 		String[] text = new String[2];
-		if (!(index_of_recipe < 0 || index_of_recipe >= recipes.size() || (index_of_recipe instanceof Integer)))
+		if ((!(index_of_recipe < 0 || index_of_recipe >= recipes.size()) && (index_of_recipe instanceof Integer)))
 		{
 			actual_it = index_of_recipe;
 		}
@@ -277,7 +280,7 @@ public class Book {
 
 		for (int i = 4 ; i < splitedArray.length ; i++) 
 		{
-		    desc += splitedArray[i];
+		    desc += splitedArray[i]+"\n";
 		}
 		
 		ArrayList<String> ingred = new ArrayList<String>();
