@@ -1,4 +1,4 @@
-package com.gui;
+package com.pk.java.gui;
 
 import java.awt.Color;
 import java.awt.event.ActionEvent;
@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 
-import com.mechanics.GuiFacade;
+import com.pk.java.mechanics.GuiFacade;
 
 public class UserPanel extends BasePanel {
 	

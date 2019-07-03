@@ -1,4 +1,4 @@
-package com.gui;
+package com.pk.java.gui;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -17,7 +17,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
-import com.mechanics.GuiFacade;
+import com.pk.java.mechanics.GuiFacade;
 
 public abstract class BasePanel extends JPanel {
 	

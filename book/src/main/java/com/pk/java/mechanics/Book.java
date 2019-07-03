@@ -1,8 +1,8 @@
-package com.mechanics;
+package com.pk.java.mechanics;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import com.database.ResourceManager;
+import com.pk.java.database.ResourceManager;
 
 public class Book {
 

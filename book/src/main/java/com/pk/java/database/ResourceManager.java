@@ -1,4 +1,4 @@
-package com.database;
+package com.pk.java.database;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -14,7 +14,7 @@ import org.jdom2.input.SAXBuilder;
 import org.jdom2.output.Format;
 import org.jdom2.output.XMLOutputter;
 
-import com.mechanics.Recipe;
+import com.pk.java.mechanics.Recipe;
 
 /**
  * Menedżer zasobów w projekcie

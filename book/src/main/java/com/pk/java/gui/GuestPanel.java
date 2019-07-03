@@ -1,4 +1,4 @@
-package com.gui;
+package com.pk.java.gui;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -10,7 +10,7 @@ import java.awt.event.MouseEvent;
 import javax.swing.JButton;
 import javax.swing.JTextField;
 
-import com.mechanics.GuiFacade;
+import com.pk.java.mechanics.GuiFacade;
 
 public class GuestPanel extends BasePanel {
 

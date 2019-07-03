@@ -1,4 +1,4 @@
-package com.gui;
+package com.pk.java.gui;
 
 import java.awt.Rectangle;
 import java.awt.event.WindowAdapter;
@@ -7,7 +7,7 @@ import java.awt.event.WindowEvent;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-import com.mechanics.GuiFacade;
+import com.pk.java.mechanics.GuiFacade;
 
 public class MainWindow extends JFrame {
 	GuiFacade facade;

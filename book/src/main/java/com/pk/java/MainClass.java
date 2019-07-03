@@ -1,9 +1,9 @@
-package com;
+package com.pk.java;
 
 import java.awt.Rectangle;
 
-import com.gui.*;
-import com.mechanics.*;
+import com.pk.java.gui.*;
+import com.pk.java.mechanics.*;
 
 public class MainClass {
 	public static void main(String[] args){

@@ -1,4 +1,4 @@
-package com.mechanics;
+package com.pk.java.mechanics;
 
 import java.util.ArrayList;
 import java.util.HashMap;
