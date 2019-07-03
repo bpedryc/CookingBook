@@ -24,16 +24,6 @@
     </ingredients>
     <description>DROPIMY NA BESTACH PANY</description>
   </recipe>
-  <recipe id="4">
-    <author>Autor</author>
-    <title>Nazwa przepisu</title>
-    <rating>Ocena</rating>
-    <preptime>Czas wykonania</preptime>
-    <ingredients>
-      <ingredient />
-    </ingredients>
-    <description>Opis</description>
-  </recipe>
   <recipe id="5">
     <author>Autor</author>
     <title>Nazwa przepisu</title>

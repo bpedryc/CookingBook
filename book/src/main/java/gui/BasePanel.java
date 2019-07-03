@@ -42,10 +42,11 @@ public abstract class BasePanel extends JPanel {
 	JTextArea ingredients_area = new JTextArea("Lista przepisow tu bedzie");	
 	JScrollPane ingredients_scroll = new JScrollPane(ingredients_area);
 	JTextArea page_search_area = new JTextArea();
+	JTextArea search_page_area = new JTextArea("Przejdź do str");
 	
 	JTextField search_text = new JTextField();
 	
-	List titles_buttons =  new List();
+	
 
 	int counter = 0;
 	String[] recipe_raw = new String[4];
@@ -102,11 +103,18 @@ public abstract class BasePanel extends JPanel {
 		search_text.setText("Wpisz szukaną frazę...");
 		this.add(search_text);
 		
-		page_search_area.setBounds(500, 780, 50, 50);
+		page_search_area.setBounds(180, 690, 140, 50);
 		page_search_area.setBackground(Color.LIGHT_GRAY);
 		page_search_area.setFont(new Font("Serif", Font.ROMAN_BASELINE, 32));
 		page_search_area.setText("");
 		this.add(page_search_area);
+		
+		search_page_area.setBounds(20, 690, 150, 50);
+		search_page_area.setForeground(Color.LIGHT_GRAY);
+		search_page_area.setBackground(Color.DARK_GRAY);
+		search_page_area.setFont(new Font("Serif", Font.ROMAN_BASELINE, 26));
+		
+		this.add(search_page_area);
 		
 		search_text.addMouseListener(new MouseAdapter() {
 			public void mouseClicked(MouseEvent e) {
