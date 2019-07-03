@@ -33,6 +33,7 @@ public abstract class BasePanel extends JPanel {
 	JButton next_page_button = new JButton(">>");
 	JButton previous_page_button = new JButton("<<");
 	JButton search_button = new JButton("Szukaj");
+	JButton table_of_contents_button = new JButton("Spis treści");
 
 	String[] filter_table = {"Składniki", "Nazwa przepisu", "Autor"};
 	JComboBox<String> filter_list = new JComboBox<String>(filter_table);
@@ -111,6 +112,10 @@ public abstract class BasePanel extends JPanel {
 		search_page_area.setForeground(Color.LIGHT_GRAY);
 		search_page_area.setBackground(Color.DARK_GRAY);
 		search_page_area.setFont(new Font("Serif", Font.ROMAN_BASELINE, 26));
+		
+		table_of_contents_button.setBounds(20, 570, 110, 50);
+		table_of_contents_button.setBackground(Color.LIGHT_GRAY);
+		this.add(table_of_contents_button);
 		
 		this.add(search_page_area);
 		
@@ -231,6 +236,29 @@ public abstract class BasePanel extends JPanel {
        
             }
         });
+        
+        table_of_contents_button.addActionListener(new ActionListener() { 
+			public void actionPerformed(ActionEvent e) 
+			{ 
+				String table_of_contents = facade.tableOfContents();
+				recipe_area.setText(table_of_contents);				
+				/*
+				 * Stary kod
+				if(counter == 0)
+				{
+					counter = 1;
+					recipe_area.setText(recipe_raw[counter + 1]);
+					ingredients_area.setText(recipe_raw[counter + 2]);
+				}
+				else
+				{
+					counter = 0;
+					recipe_area.setText(recipe_raw[counter]);
+					ingredients_area.setText(recipe_raw[counter + 1]);
+				}
+				*/
+			} 
+		});	
 	}
 
 }
