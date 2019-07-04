@@ -7,10 +7,16 @@ public class GuiFacade {
 
 	private Book book;
 	
+	
 	public GuiFacade() 
 	{
 		book = new Book();
 		//Może tutaj coś bardziej skomplikowanego być póniej idunno
+	}
+	
+	public int getNumberOfRecipes()
+	{
+		return book.getNumberOfRecipes();
 	}
 	
 	public String [] restoreResult()

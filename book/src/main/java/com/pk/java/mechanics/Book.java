@@ -174,6 +174,11 @@ public class Book {
 		recipe_id = recipes.get(recipes.size()-1).getId();
 	}
 	
+	public int getNumberOfRecipes()
+	{
+		return recipes.size();
+	}
+	
 	public void saveRecipes()
 	{
 		ResourceManager res_manager = new ResourceManager();

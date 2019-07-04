@@ -1,69 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <recipes>
-  <recipe id="0">
-    <author>Vigu</author>
-    <title>PLACKI SEROWE Z TRUSKAWKAMI</title>
-    <rating>8/10</rating>
-    <preptime>5 minut</preptime>
-    <ingredients>
-      <ingredient>250 g sera bialego, twarogu</ingredient>
-      <ingredient>2 jajka</ingredient>
-      <ingredient>3 lyzki cukru</ingredient>
-      <ingredient>2 lyzki oleju roslinnego</ingredient>
-      <ingredient>okolo 1/3 szklanki mleka</ingredient>
-      <ingredient>1 i 1/3 szklanki maki pszennej</ingredient>
-      <ingredient>2 lyzeczki proszku do pieczenia</ingredient>
-      <ingredient>kilka truskawek</ingredient>
-    </ingredients>
-    <description>Do miski wlozyc twarog i rozgniesc go praska do ziemniakow.
-Dodac jajka, cukier i wymieszac rozga, nastepnie wlac olej 
-oraz mleko i ponownie wymieszac. 
-
-W drugiej misce wymieszac make z proszkiem do pieczenia. 
-Krotko polaczyc skladniki z dwoch misek za pomoca lyzki na 
-dosc gesta mase.
-
-Rozgrzac patelnie (np. nalesnikowa lub inna z 
-nieprzywierajaca powloka), nakladac po 2 lyzki ciasta na 
-jednego placka, wyrownac powierzchnie i smazyc na srednim 
-ogniu do czasu az urosna i beda ladnie zrumienione przez 
-okolo 2,5 minuty.
-
-Gdy placki troche podrosna wcisnac w ciasto po ok. 
-4 plasterki truskawek. Przewrocic na druga strone i smazyc
-do zrumienienia w podobnym czasie jak poprzednio. Posypac 
-cukrem pudrem.</description>
-  </recipe>
-  <recipe id="1">
-    <author>Adam</author>
-    <title>SCHAB W SOSIE KOPERKOWYM</title>
-    <rating>2/10</rating>
-    <preptime>30 minut</preptime>
-    <ingredients>
-      <ingredient>ok. 700 g schabu bez kosci (wystekowane plastry)</ingredient>
-      <ingredient>1 lyzka oleju</ingredient>
-      <ingredient>500 ml bulionu</ingredient>
-      <ingredient>1 zabek czosnku</ingredient>
-      <ingredient>1/2 marchewki</ingredient>
-      <ingredient>1/4 cebuli</ingredient>
-      <ingredient>1/3 szklanki smietanki 30%</ingredient>
-      <ingredient>po 1 i 1/2 lyzeczki maki pszennej i ziemniaczanej</ingredient>
-      <ingredient>2 lyzki posiekanego koperku</ingredient>
-    </ingredients>
-    <description>Mieso pokroic na grube plastry i rozbic (najlepiej poprosic o wystekowanie jeszcze w sklepie 
-w specjalnej maszynie). Rozgrzac duza patelnie, rozprowadzic po niej olej, wlozyc mieso i na 
-duzym ogniu obsmazac po 5 minut z kazdej strony.
-W miedzyczasie zagotowac bulion w garnku. Wlozyc w niego podsmazone mieso (mozna 
-ulozyc jeden plaster na drugim), doprawic sola (ok. 1/2 lyzeczki) i pieprzem.
-
-Po zagotowaniu przykryc garnek, zmniejszyc ogien i gotowac przez ok. 1 godzine lub nieco 
-krocej, do kruchosci miesa. W polowie czasu dodac obrany zabek czosnku, obrana i starta 
-marchewke oraz pokrojona w kosteczke cebule.
-
-Do ugotowanego miesa dodac smietanke oraz (bezposrednio przez sitko) make pszenne i 
-ziemniaczana. Wymieszac delikatnie i zagotowac. Dodac posiekany koperek i jeszcze 
-pogotowac przez ok. 1 minute.</description>
-<recipe id="18">
+  <recipe id="18">
     <author>Magda Gessler</author>
     <title>Sałatka owocowa</title>
     <rating>3 gwiazdki</rating>
@@ -95,6 +32,7 @@ pogotowac przez ok. 1 minute.</description>
     <title>Ciasto cytrynowe</title>
     <rating>5 gwiazdek</rating>
     <preptime>90 min</preptime>
+    <ingredients>
       <ingredient>4 jajka</ingredient>
       <ingredient>3/4 szklanki mąki</ingredient>
       <ingredient>3/4 szklanki cukru</ingredient>
@@ -108,26 +46,16 @@ pogotowac przez ok. 1 minute.</description>
       <ingredient>galaretka cytrynowa</ingredient>
       <ingredient>herbantniki</ingredient>
       <ingredient>masło</ingredient>
+    </ingredients>
     <description>upiec biszkopt, ugotować budyń, utrzeć budyń z masłem, wyłożyć na biszkopt, śmietanę ubić,
 dodać cukier, wylać na masę cytrynową, na wierzch ułożyć herbatniki, można posypać
 cukrem pudrem</description>
-  </recipe>/preptime>
-    <ingredients>
-      <ingredient />
-    </ingredients>
-    <description>Opis</description>
   </recipe>
-  <recipe id="5">
-    <author>Autor</authepisu</title>
-    <rating>Ocena</rating>
-    <preptime>Czas wykonania</preptime>
-=======
   <recipe id="20">
     <author>Gordon Ramsay</author>
     <title>Tarta karmelowa</title>
     <rating>3.5 gwiazdki</rating>
     <preptime>100 minut</preptime>
->>>>>>> Stashed changes
     <ingredients>
       <ingredient>Biały cukier</ingredient>
       <ingredient>Biała czekolada</ingredient>
@@ -166,20 +94,11 @@ do bardzo cienkiej postaci po czym wycinamy mniej więcej równe kółka i kład
 rozgrzanej patelni na pełnym gazie, takie ciasto ma piec się 30 sekund na jednym boku,
 n w 180 stopniach przez 20 minut.</description>
   </recipe>
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
-  <recipe id="7">
-    <author>Autor</author>
-    <title    <rating>Ocena</rating>
-    <preptime>Czas wykonania</preptime>
-=======
   <recipe id="24">
     <author>Angelika gotuje</author>
     <title>Fit fasolka z masłem orzechowym</title>
     <rating>5 gwiazdek</rating>
     <preptime>20 min</preptime>
->>>>>>> Stashed changes
     <ingredients>
       <ingredient>500 fasolki szparagowej</ingredient>
       <ingredient>2 łyżki masła orzechowego</ingredient>
@@ -621,5 +540,4 @@ a beza chrupka i lekko spękana.</description>
  Jeśli zupa jest za mało kwaśna można dodać sok z cytryny.
  Zaś kiedy za kwaśna dodać trochę cukru.</description>
   </recipe>
->>>>>>> Stashed changes
 </recipes>
