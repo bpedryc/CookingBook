@@ -469,23 +469,6 @@ Przekładamy na ciepłe brownie i pieczemy w temperaturze 160 stopni przez okoł
 Sprawdzamy suchym patyczkiem. Brownie będzie mokre, ale nie lejące, 
 a beza chrupka i lekko spękana.</description>
   </recipe>
-  <recipe id="37">
-    <author>Agnieszka gotuje</author>
-    <title>Puree z bobu z czosnkiem i cebulą</title>
-    <rating>3 gwiazdki</rating>
-    <preptime>20 minut</preptime>
-    <ingredients>
-      <ingredient>500 g bobu</ingredient>
-      <ingredient>1 cebula</ingredient>
-      <ingredient>3 ząbki czosnku</ingredient>
-      <ingredient>Oliwa z oliwek</ingredient>
-      <ingredient>Sól i pieprz</ingredient>
-    </ingredients>
-    <description>1. Gotujemy bób do miękkości.
-2. Cebulę i czosnek podsmażamy na oliwie z oliwek.
-3. Blendujemy bób z podsmażoną cebulą i czosnkiem.
-4. Doprawiamy do smaku solą i pieprzem.</description>
-  </recipe>
   <recipe id="38">
     <author>Angelika gotuje</author>
     <title>Potrawka z grzybami mun</title>
@@ -509,35 +492,5 @@ a beza chrupka i lekko spękana.</description>
 3. Gdy warzywa i mięso są podsmażone, dodać grzyby mun,
  zalac wszystko wodą, dodać sos sojowy i dusić około godzinę.
 4. Doprawić do smaku solą i pieprzem.</description>
-  </recipe>
-  <recipe id="39">
-    <author>Moje_male_gotowanie</author>
-    <title>Zupa szczawiowa</title>
-    <rating>5 gwiazdek</rating>
-    <preptime>40 minut</preptime>
-    <ingredients>
-      <ingredient>Liście szczawiu (ok 1.5 l)</ingredient>
-      <ingredient>Marchew</ingredient>
-      <ingredient>Pietruszka korzeń</ingredient>
-      <ingredient>Seler</ingredient>
-      <ingredient>Por</ingredient>
-      <ingredient>Oliwa</ingredient>
-      <ingredient>1.5 l bulionu</ingredient>
-      <ingredient>Ząbek czosnku</ingredient>
-      <ingredient>Pieprz, magii, sól</ingredient>
-      <ingredient>Śmietana 18%</ingredient>
-      <ingredient>8 szt Ziemniaków</ingredient>
-      <ingredient>Łyżka maki</ingredient>
-      <ingredient>5 jajek</ingredient>
-    </ingredients>
-    <description>1. Liście szczawiu (ok 1.5 l) myję, szatkuję i wkładam do garnka
- w którym będę gotować zupę. Obsmażam na oliwie,
- dodaję pokrojoną marchew i pietruszkę oraz por i seler w kawałku. 
- Po 5 min zalewam 1.5 l bulionu i gotuję do miękkości marchewki.
- Dokładam ząbek czosnku. Dopmagii. 
- Zaprawiam śmietaną 18% z łyżką mąki. Gotuję jeszcze chwilę.
- Ziemniaki i jajka gotuję osobno.
- Jeśli zupa jest za mało kwaśna można dodać sok z cytryny.
- Zaś kiedy za kwaśna dodać trochę cukru.</description>
   </recipe>
 </recipes>

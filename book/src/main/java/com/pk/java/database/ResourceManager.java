@@ -1,5 +1,6 @@
 package com.pk.java.database;
 
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -56,7 +57,8 @@ public class ResourceManager
 			
 			XMLOutputter xml_output = new XMLOutputter();
 			xml_output.setFormat(Format.getPrettyFormat());
-			xml_output.output(document, new FileWriter("src/main/resources/recipes.xml"));
+			xml_output.getFormat().setEncoding("UTF-8");
+			xml_output.output(document, new FileOutputStream("src/main/resources/recipes.xml"));
 		} catch (IOException e)
 		{
 			e.printStackTrace();
