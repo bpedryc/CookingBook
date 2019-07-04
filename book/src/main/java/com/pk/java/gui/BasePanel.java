@@ -16,6 +16,7 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+import javax.swing.text.DefaultCaret;
 
 import com.pk.java.mechanics.GuiFacade;
 
@@ -70,7 +71,7 @@ public abstract class BasePanel extends JPanel {
 		
 		String[] recipe_raw = facade.getChosenRecipe(0);
 		
-		page_nr_area.setBounds(980, 100, 50, 50);
+		page_nr_area.setBounds(960, 100, 50, 50);
 		page_nr_area.setOpaque(false);
 		page_nr_area.setForeground(Color.DARK_GRAY);
 		page_nr_area.setFont(new Font("Serif", Font.ROMAN_BASELINE, 26));
@@ -86,8 +87,6 @@ public abstract class BasePanel extends JPanel {
 		recipe_area.setWrapStyleWord(true);
 		this.add(recipe_scroll);
 		
-		
-		
 		ingredients_scroll.setBounds(20, 100, 300, 400);
 		ingredients_area.setBackground(Color.LIGHT_GRAY);
 		ingredients_area.setFont(new Font("Serif", Font.ITALIC, 16));
@@ -95,6 +94,8 @@ public abstract class BasePanel extends JPanel {
 		ingredients_area.setEditable(false);
 		ingredients_area.setLineWrap(true);
 		ingredients_area.setWrapStyleWord(true);
+		DefaultCaret caret = (DefaultCaret)ingredients_area.getCaret();
+		caret.setUpdatePolicy(DefaultCaret.NEVER_UPDATE);
 		this.add(ingredients_scroll);
 		
 		search_text.setBounds(150, 20, 500, 40);
@@ -136,7 +137,6 @@ public abstract class BasePanel extends JPanel {
 				recipe_area.setText(recipe_raw[0]);
 				ingredients_area.setText(recipe_raw[1]);
 				
-				
 			} 
 		});	
 		
@@ -147,7 +147,6 @@ public abstract class BasePanel extends JPanel {
 				page_nr_area.setText(Integer.toString(facade.getActualIt() + 1));
 				recipe_area.setText(recipe_raw[0]);
 				ingredients_area.setText(recipe_raw[1]);
-				page_nr_area.setText(Integer.toString(facade.getActualIt() + 1));
 				
 			} 
 		});	
@@ -193,6 +192,11 @@ public abstract class BasePanel extends JPanel {
 
                 	    } catch (NumberFormatException | NullPointerException nfe) {
                 	    }          
+                		if (choosen_page < 1) {
+                			choosen_page = 1;}
+                		} else if (choosen_page > facade.getNumberOfRecipes()) {
+                			choosen_page = facade.getNumberOfRecipes();
+                		}
             			String[] recipe_raw = facade.getChosenRecipe(choosen_page);
 
             			page_nr_area.setText(Integer.toString(choosen_page));
