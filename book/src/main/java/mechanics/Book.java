@@ -110,7 +110,7 @@ public class Book {
 		String contents = new String();
 		for (int i =0; i < getTitles().size(); i++)
 		{
-			contents += getTitles().get(i) + "  nr." + i + "\n"; 
+			contents += "nr."+(i+1)+"  "+getTitles().get(i)+"\n"; 
 		}
 		return contents;
 	}
@@ -118,9 +118,9 @@ public class Book {
 	public String[] getChosenRecipe(Integer index_of_recipe)
 	{
 		String[] text = new String[2];
-		if (!(index_of_recipe < 0 || index_of_recipe >= recipes.size()))
+		if (!(index_of_recipe -1 < 0 || index_of_recipe-1 >= recipes.size()))
 		{
-			actual_it = index_of_recipe;
+			actual_it = index_of_recipe-1;
 		}
 		text = getAtributesToString();
 		
@@ -187,9 +187,9 @@ public class Book {
 		{
 			for(int j = 0; j< recipes.get(i).getIngredients().size(); j++)
 			{
-				if(recipes.get(i).getIngredients().get(j).toLowerCase().startsWith(name.toLowerCase()))
+				if(recipes.get(i).getIngredients().get(j).toLowerCase().contains(name.toLowerCase()))
 				{
-					equal_titles.put(i,recipes.get(i).getTitle());
+					equal_titles.put(i+1,recipes.get(i).getTitle());
 					break;
 				}
 			}
@@ -203,9 +203,9 @@ public class Book {
 		HashMap<Integer, String> equal_authors = new HashMap<Integer, String>();
 		for(int i = 0; i < recipes.size(); i++)
 		{
-			if(recipes.get(i).getAuthor().toLowerCase().startsWith(name.toLowerCase()))
+			if(recipes.get(i).getAuthor().toLowerCase().contains(name.toLowerCase()))
 			{
-				equal_authors.put(i,recipes.get(i).getTitle());
+				equal_authors.put(i+1,recipes.get(i).getTitle());
 			}
 		}
 		return equal_authors;
@@ -216,9 +216,9 @@ public class Book {
 		HashMap<Integer, String> equal_titles = new HashMap<Integer, String>();
 		for(int i = 0; i < recipes.size(); i++)
 		{
-			if(recipes.get(i).getTitle().toLowerCase().startsWith(name.toLowerCase()))
+			if(recipes.get(i).getTitle().toLowerCase().contains(name.toLowerCase()))
 			{
-				equal_titles.put(i,recipes.get(i).getTitle());
+				equal_titles.put(i+1,recipes.get(i).getTitle());
 			}
 		}
 		return equal_titles;

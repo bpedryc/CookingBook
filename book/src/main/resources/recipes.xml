@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <recipes>
+<<<<<<< Updated upstream
   <recipe id="0">
     <author>Jaimie Oliver</author>
     <title>Kluski jakieś</title>
@@ -29,25 +30,46 @@
     <title>Trójkolorowe ciasto</title>
     <rating>2/10</rating>
     <preptime>46 minuty</preptime>
+=======
+  <recipe id="18">
+    <author>Magda Gessler</author>
+    <title>Sałatka owocowa</title>
+    <rating>3 gwiazdki</rating>
+    <preptime>30 min</preptime>
+>>>>>>> Stashed changes
     <ingredients>
-      <ingredient>burak</ingredient>
-      <ingredient>banan</ingredient>
-      <ingredient>marchew</ingredient>
-      <ingredient>mięta</ingredient>
-      <ingredient>sok</ingredient>
+      <ingredient>2 pomarańcze</ingredient>
+      <ingredient>2 banany</ingredient>
+      <ingredient>garść winogron</ingredient>
+      <ingredient>jogurt owocowy</ingredient>
     </ingredients>
-    <description>Jakiś ładny opis</description>
+    <description>Owoce obrać, pokroić w kostkę, wrzucić do miski, zalać jogurtem, wymieszać</description>
   </recipe>
-  <recipe id="3">
-    <author>WojMiszcz69</author>
-    <title>przepis na fms+9 sr.44</title>
-    <rating>5</rating>
-    <preptime>do nastepnego eventu</preptime>
+  <recipe id="19">
+    <author>Wioleta Staśko</author>
+    <title>Ciasto cytrynowe</title>
+    <rating>5 gwiazdek</rating>
+    <preptime>90 min</preptime>
     <ingredients>
-      <ingredient>duzo milosci</ingredient>
+      <ingredient>4 jajka</ingredient>
+      <ingredient>3/4 szklanki mąki</ingredient>
+      <ingredient>3/4 szklanki cukru</ingredient>
+      <ingredient>ocet</ingredient>
+      <ingredient>2 łyżeczki proszku do pieczenia</ingredient>
+      <ingredient>3 cytryny</ingredient>
+      <ingredient>2 budynie</ingredient>
+      <ingredient>szklanka wody</ingredient>
+      <ingredient>220 g cukru</ingredient>
+      <ingredient>śmietana 36% 500 ml</ingredient>
+      <ingredient>galaretka cytrynowa</ingredient>
+      <ingredient>herbantniki</ingredient>
+      <ingredient>masło</ingredient>
     </ingredients>
-    <description>DROPIMY NA BESTACH PANY</description>
+    <description>upiec biszkopt, ugotować budyń, utrzeć budyń z masłem, wyłożyć na biszkopt, śmietanę ubić,
+dodać cukier, wylać na masę cytrynową, na wierzch ułożyć herbatniki, można posypać
+cukrem pudrem</description>
   </recipe>
+<<<<<<< Updated upstream
   <recipe id="4">
     <author>Autor</author>
     <title>Nazwa przepisu</title>
@@ -63,22 +85,54 @@
     <title>Nazwa przepisu</title>
     <rating>Ocena</rating>
     <preptime>Czas wykonania</preptime>
+=======
+  <recipe id="20">
+    <author>Gordon Ramsay</author>
+    <title>Tarta karmelowa</title>
+    <rating>3.5 gwiazdki</rating>
+    <preptime>100 minut</preptime>
+>>>>>>> Stashed changes
     <ingredients>
-      <ingredient>sds</ingredient>
-      <ingredient>składnik2</ingredient>
+      <ingredient>Biały cukier</ingredient>
+      <ingredient>Biała czekolada</ingredient>
+      <ingredient>200 g masła</ingredient>
+      <ingredient>300 g mąki</ingredient>
+      <ingredient>100 ml mleka</ingredient>
+      <ingredient>300 ml śmietany słodkiej</ingredient>
     </ingredients>
-    <description>Opis</description>
+    <description>Cukier grzać na patelni na bardzo małym gazie, w momencie kiedy się zarumieni mieszać
+od czasu do czasu. Kiedy stanie się koloru lekko brązowego dodać śmietanę a następnie
+rozpuścić czekoladę i całość mieszać łyżką. Masło zmieszać z mąką i mlekiem do powstania
+konsystencji ciasta a następnie uformować z niej ciasto z dziurą w środku. Do dziury wlać
+zrobiony wcześniej karmel a następnie włożyć do kuchenki na 30 minut na 120 stopni.</description>
   </recipe>
-  <recipe id="6">
-    <author>Ausda</author>
-    <title>Nazwa przepisu</title>
-    <rating>sad</rating>
-    <preptime>asd</preptime>
+  <recipe id="21">
+    <author>Martyna Michalak</author>
+    <title>Quesadillas z kurczakiem</title>
+    <rating>4 gwiazdki</rating>
+    <preptime>120 min</preptime>
     <ingredients>
-      <ingredient>sds</ingredient>
+      <ingredient>500 g piersi z kurczaka</ingredient>
+      <ingredient>500 g mąki</ingredient>
+      <ingredient>3 łyżki smalcu</ingredient>
+      <ingredient>300 ml gorącej wody</ingredient>
+      <ingredient>przyprawy wedle uznania</ingredient>
+      <ingredient>500 g sera</ingredient>
+      <ingredient>główka sałaty lodowej</ingredient>
     </ingredients>
-    <description>wd</description>
+    <description>Do wrzącej wody umieszczonej w szklance dodajemy 3 łyżki smalcu a nastepnie mieszamy
+do jego rozpuszczenia. do miski przesiewamy mąkę a następnie ciągle mieszając powoli 
+wlewamy wodę ze smalcem. mo utworzeniu jednolitej bryły rękami modelujemy ciato jakieś
+15 minut a następnie wkładamy ciasto do reklamówki i chowamy do lodówki na 30 minut
+w między czasie oporządzamy kurę dodajemy do niej odpowiednie przyprawy i tniemy
+na małe kawałki, ser trzemy na tarce. Po pół godziny wyciągamy ciasto, wałkujemy
+do bardzo cienkiej postaci po czym wycinamy mniej więcej równe kółka i kładziemy je na
+rozgrzanej patelni na pełnym gazie, takie ciasto ma piec się 30 sekund na jednym boku,
+następnie 30 na drugim a później 15 sekund na pierwszym, patelnia ma nie być polana
+żadnym tłuszczem! Po zrobieniu placków kładziemy na kązdy trochę tartego sera sałaty
+oraz kury i grzejemy w piekarniku w 180 stopniach przez 20 minut.</description>
   </recipe>
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 =======
   <recipe id="7">
@@ -86,124 +140,453 @@
     <title>Nazwa przepisu</title>
     <rating>Ocena</rating>
     <preptime>Czas wykonania</preptime>
+=======
+  <recipe id="24">
+    <author>Angelika gotuje</author>
+    <title>Fit fasolka z masłem orzechowym</title>
+    <rating>5 gwiazdek</rating>
+    <preptime>20 min</preptime>
+>>>>>>> Stashed changes
     <ingredients>
-      <ingredient>składnik1</ingredient>
-      <ingredient>składnik211</ingredient>
-    </ingredients>
-    <description>Opis</description>
-  </recipe>
-  <recipe id="8">
-    <author>Kościuszko</author>
-    <title>Żubr</title>
-    <rating>MAX</rating>
-    <preptime>5 minut</preptime>
-    <ingredients>
+      <ingredient>500 fasolki szparagowej</ingredient>
+      <ingredient>2 łyżki masła orzechowego</ingredient>
+      <ingredient>Sól</ingredient>
       <ingredient>Woda</ingredient>
-      <ingredient>Słód jęczmienny</ingredient>
-      <ingredient>Jęczmień</ingredient>
-      <ingredient>syrop z przenicy</ingredient>
-      <ingredient>syrop z słodu jęczmiennego</ingredient>
-      <ingredient>Chmiel</ingredient>
     </ingredients>
-    <description>Do sklepu i z powrotem</description>
+    <description>1. Odcinamy końcówki fasolek.
+2. Fasolkę gotujemy maksymalnie 10 minut w osolonej wodzie.
+3. Odcedzoną fasolkę mieszamy z dwoma łyżkami masła orzechowego i podgrzewamy chwilę.</description>
   </recipe>
-  <recipe id="9">
-    <author>Von Kiper</author>
-    <title>Spalona zapiekanka</title>
-    <rating>2/10</rating>
-    <preptime>Cały dzień</preptime>
+  <recipe id="25">
+    <author>dragonik7</author>
+    <title>Tarta z truskawkami z waniliową pianką</title>
+    <rating>4 gwiazdki</rating>
+    <preptime>120</preptime>
     <ingredients>
-      <ingredient>Makaron</ingredient>
-      <ingredient>Przeterminowany sos z saszetki</ingredient>
-      <ingredient>Stare ziemniaki</ingredient>
-      <ingredient>Spleśniały ser</ingredient>
-      <ingredient>Resztki z lodówki</ingredient>
+      <ingredient>2,5 szklanki mąki krupczatki</ingredient>
+      <ingredient>250 g masła</ingredient>
+      <ingredient>5 łyżek cukru</ingredient>
+      <ingredient>5 żółtek</ingredient>
+      <ingredient>5 białek</ingredient>
+      <ingredient>3/4 szklanki cukru</ingredient>
+      <ingredient>2 budynie waniliowe (bez cukru)</ingredient>
+      <ingredient>1 cukier waniliowy</ingredient>
+      <ingredient>1/4 szklanki oleju</ingredient>
+      <ingredient>ok 400 g truskawek</ingredient>
+      <ingredient>cukier puder do oprószenia (opcjonalnie)</ingredient>
     </ingredients>
-    <description>Wrzuć wszystko do naczynia żaroodpornego przez przykrywki przypalając górę.</description>
+    <description>1. Mąkę wsypujemy do miski, dodajemy cukier oraz masło
+wszystko siekamy dokładnie nożem. Dodajemy żółtka. 
+Zagniatamy szybko gładkie ciasto. Dzielimy je na 2 nierówne części. 
+Mniejszą część zawijamy w folię i wkładamy na ok godzinę do lodówki.
+
+Formę do tarty o średnicy ok 31cm smarujemy masłem i wysypujemy bułką tartą. 
+Spód oraz boki wyklejamy większą częścią ciasta. 
+Dokładnie raz przy razie nakłuwamy widelcem. 
+Wstawiamy do piekarnika nagranego do 180º. Zapiekamy ok 15 minut. Studzimy.
+
+2. Białka ubijamy na sztywno, stopniowo łyżka po łyżce dodajemy cukier 
+a następnie proszek budyniowy. Na końcu (nie przerywając miksowania) małym 
+strumieniem wlewamy stopniowo olej. Gotową pianę wykładamy na zapieczony spód.
+
+3. Truskawki myjemy, pozbywamy się szypułek. Układamy je dowolnie na pianie.
+ Na wierzch na tarce o grubych oczkach ścieramy schłodzone ciasto. 
+Całość wstawiamy do piekarnika nagrzanego do 180º. Pieczemy ok 25-30 minut. 
+Pozostawiamy do wystudzenia. Wierzch gotowej tarty posypujemy cukrem pudrem.</description>
   </recipe>
-  <recipe id="11">
-    <author>Von Kiper</author>
-    <title>Chrupiąca przekąska na bazie mleka</title>
-    <rating>Bezglutenowe/Dieta dietetyczna</rating>
-    <preptime>10 sekund</preptime>
+  <recipe id="26">
+    <author>Honorata Kielczyk</author>
+    <title>Kluski śląskie z sosem wiśniowym</title>
+    <rating>4 gwiazdki</rating>
+    <preptime>60 min</preptime>
     <ingredients>
-      <ingredient>Randomowe płatki</ingredient>
-      <ingredient>Randomowe mleko</ingredient>
-      <ingredient>Łyżka</ingredient>
-      <ingredient>Miska (wersja kolekcjonerka, nie myta pół semestru)</ingredient>
+      <ingredient>500 g ziemniaków</ingredient>
+      <ingredient>200 g mąki ziemniaczanej</ingredient>
+      <ingredient>woda</ingredient>
+      <ingredient>sos wiśniowy</ingredient>
+      <ingredient>200 g wiśni(mrożonych lub świeżych)</ingredient>
+      <ingredient>50 ml wody</ingredient>
+      <ingredient>20 g mąki ziemniaczanej</ingredient>
     </ingredients>
-    <description>Randomowe płatki z randomowym mlekiem</description>
+    <description>Ziemniaki gotujemy, odcedzamy i ubijamy. Studzimy.
+Zimne ziemniaki przeciskamy przez praskę. Dodajemy mąkę ziemniaczaną. 
+Zagniatamy gładkie ciasto. Ciasto odrywamy pojedyncze kulki, lekko spłaszczam
+i tworzę charakterystyczną dziurkę. Kluski wrzucam do gotującej się wody. 
+Gotuję do momentu wypłynięcia. Odcedzam. Studzę.
+Wiśnie umieszczam w garnku z grubym dnem, zalewam wodą. 
+Gdy wiśnie zaczną się gotować dodaję mąkę ziemniaczaną. Chwilę gotuję.
+Kluski polewam ciepłym sosem wiśniowym.</description>
   </recipe>
-  <recipe id="12">
-    <author>Pietruszkov</author>
-    <title>Jajecznica Pietruszkova</title>
-    <rating>Spalona na wiór (bo lubie)</rating>
-    <preptime>Zależny od mocy kuchenki</preptime>
+  <recipe id="27">
+    <author>Natalia Ch</author>
+    <title>rosół</title>
+    <rating>3.5 gwiazdki</rating>
+    <preptime>120 minut</preptime>
     <ingredients>
-      <ingredient>Mogą być jajka</ingredient>
-      <ingredient>Mięso</ingredient>
-      <ingredient>Temperatura bliska temp. Słońca</ingredient>
-      <ingredient>Specjalna patelnia Adiego, zajmująca cztery palniki</ingredient>
-      <ingredient>Sól na oko</ingredient>
-      <ingredient>Eleganckie pieczywko</ingredient>
-      <ingredient>Margaryna fitness (magnez, mangan, uran, tytan, rad, polon, granit)</ingredient>
-      <ingredient>Obudzone trzy osoby z mieszkania</ingredient>
+      <ingredient>3 marchewki</ingredient>
+      <ingredient>2 pietruszki</ingredient>
+      <ingredient>1 por</ingredient>
+      <ingredient>1/2 selera</ingredient>
+      <ingredient>1 cebula</ingredient>
+      <ingredient>2 ząbki czosnku</ingredient>
+      <ingredient>Kilka ziaren pieprzu</ingredient>
+      <ingredient>Sól i pieprz</ingredient>
+      <ingredient>Natka zielonej pietruszki</ingredient>
+      <ingredient>makaron</ingredient>
     </ingredients>
-    <description>Elegancka jajecznica na eleganckiej kuchence smażona o 4 nad ranem przy akompaniamrncie Bolka i Lolka (100 % VOLUME)</description>
+    <description>Porcje rosołowe dokładnie umyć, włożyć do garnka, zalać zimną wodą
+i gotować na wolnym ogniu. Szumowiny zebrać łyżką.
+Marchewki, pietruszki, pora, selera i czosnek obrać. 
+Pokroić na mniejsze części i dodać do gotujących się udek.
+Cebulę można dodać na tym samy etapie gotowania,
+ew. jeśli posiadacie palnik gazowy – można ją opalić i wówczas dodać go gotującej się zupy.
+Dodać kilka gałązek zielonej pietruszki.
+Rosół gotować na małym ogniu, pod przykryciem, przez ok. 1,5 – 2 godzin. 
+W międzyczasie ugotować makaron i posiekać natkę pietruszki.
+Kiedy warzywa i mięso będą miękkie, zupę doprawić solą i pieprzem do smaku. 
+Gotowy rosół przecedzić. Marchewkę i pietruszkę drobno pokroić,
+mięso obrać i dodać do zupy.
+Rosół z udek podawać gorący z makaronem i natką pietruszki.</description>
   </recipe>
-  <recipe id="13">
-    <author>Pietruszkov</author>
-    <title>Ryż w daniu własnym</title>
-    <rating>Poza skale</rating>
-    <preptime>Gotowanie ryżu + jedzenie ogromnej porcji jedzenia przez godzinę</preptime>
+  <recipe id="28">
+    <author>Natalia Ch</author>
+    <title>Szybkie fale dunaju z agrestem</title>
+    <rating>4 gwiazdki</rating>
+    <preptime>70 minut</preptime>
     <ingredients>
-      <ingredient>Ryż zbierany o północy przez chińskich komu-</ingredient>
-      <ingredient>nistycznych robotników partii proletariatu</ingredient>
-      <ingredient>Randomowe mięso</ingredient>
-      <ingredient>Randomowe przyprawy (nie czosnek)</ingredient>
-      <ingredient>Keczup w promocji</ingredient>
-      <ingredient>Patelnia Adiego</ingredient>
+      <ingredient>kostka masła lub margaryny</ingredient>
+      <ingredient>6 jaj</ingredient>
+      <ingredient>2 szklanki mąki pszennej</ingredient>
+      <ingredient>1 szklanka cukru pudru</ingredient>
+      <ingredient>cukier waniliowy</ingredient>
+      <ingredient>olejek rumowy</ingredient>
+      <ingredient>2 łyżki kakao</ingredient>
+      <ingredient>2 łyżeczki proszku do pieczenia</ingredient>
+      <ingredient>krem karpatka gotowy</ingredient>
+      <ingredient>mleko</ingredient>
     </ingredients>
-    <description>Gotowanko ryżu + randomowe mięso (zależne od promocji w Lidlu (nie dodawaniejajka do mięsa mielonego))</description>
+    <description>Masło dobrze utrzeć z cukrem, dodać żółtka, olejek rumowy, resztę składników 
+i na koniec pianę z białek. Jedną część wyłożyć na blachę, a do drugiej dodać kakao.
+Utrzeć. Na ciasto jasne wyłożyć ciasto ciemne, a na sam wierzch rozłożyć owoce .
+Piec około 45 minut w temperaturze 180-190 stopni C. 
+
+krem zrobić według instrukcji na opakowaniu
+posypać czekoladą</description>
   </recipe>
-  <recipe id="14">
-    <author>Von Kiper</author>
-    <title>Kanapki a'la Eryk</title>
-    <rating>Wyśmienite</rating>
-    <preptime>5 minut</preptime>
+  <recipe id="29">
+    <author>Maalikaa</author>
+    <title>Bekonowa fantazja</title>
+    <rating>4 gwiazdki</rating>
+    <preptime>30 minut</preptime>
     <ingredients>
-      <ingredient>Resztki z lodówki</ingredient>
-      <ingredient>Czerstwy chleb</ingredient>
-      <ingredient>Keczup zabrany sąsiadowi</ingredient>
-      <ingredient>Składnik dnia (zależny od</ingredient>
-      <ingredient>tego co jest na promocji w Lidlu)</ingredient>
+      <ingredient>1 filet z kurczaka</ingredient>
+      <ingredient>Sól</ingredient>
+      <ingredient>Przyprawa do kurczaka</ingredient>
+      <ingredient>10 podłużnych plastrów boczku parzonego</ingredient>
+      <ingredient>3 marchewki</ingredient>
+      <ingredient>½ pęczka szczypiorku</ingredient>
+      <ingredient>1 papryka czerwona</ingredient>
+      <ingredient>Serek śmietankowy</ingredient>
     </ingredients>
-    <description>Wyśmienite kanapki szefa kuchni z Kramażówki</description>
+    <description>1. Mięso kroimy w plastry i lekko rozbijamy.
+2. Doprawiamy solą oraz przyprawą.
+3. Marchew obieramy i ścieramy na tarce o dużych oczach.
+4. Szczypiorek siekamy.
+5. Paprykę drobno kroimy.
+6. Na każdym kawałku mięsa układamy po kolei: 
+Jedna łyżeczka serka, marchew, papryka, szczypiorek.
+7. Zwijamy w roladki.
+8. Obwijamy boczkiem.
+9. Pieczemy 30 minut 180 °C.</description>
   </recipe>
-  <recipe id="15">
-    <author>Rykub Jaś</author>
-    <title>muj przepis</title>
-    <rating>5.0</rating>
-    <preptime>jakieś 15 sekund nie więcej nie mniej</preptime>
+  <recipe id="30">
+    <author>Weronia1997</author>
+    <title>Tort Snikers</title>
+    <rating>4.5 gwiazdki</rating>
+    <preptime>45 minut</preptime>
     <ingredients>
-      <ingredient>składnik 1</ingredient>
-      <ingredient>skłądnik 2</ingredient>
+      <ingredient>Biszkopt</ingredient>
+      <ingredient>4 białek jajka</ingredient>
+      <ingredient>150 g migdałów w łupinkach</ingredient>
+      <ingredient>2-3 łyżki dowolnego słodzidła</ingredient>
+      <ingredient>Masa</ingredient>
+      <ingredient>250 g jogurtu greckiego</ingredient>
+      <ingredient>3 łyżki sera mascarpone</ingredient>
+      <ingredient>2-3 łyżki dowolnego słodzidła</ingredient>
+      <ingredient />
+      <ingredient>Dodatkowo</ingredient>
+      <ingredient>25 g orzeszków ziemnych</ingredient>
+      <ingredient>40 g gorzkiej czekolady (bez cukru)</ingredient>
+      <ingredient>1 łyżeczka oleju kokosowego</ingredient>
+      <ingredient>100 g daktyli</ingredient>
     </ingredients>
-    <description>czemu nie ma endlajnów u pietruchy w tych przepisach co?zobaczmy czy tu się zrobiąmoże on po prostu przejechał za ostro specjalnie wariatno w każdym razie zaraz się okaże</description>
+    <description>Biszkopt
+Migdały rozdrabniamy na drobne kawałki (ale nie mąkę!). Białka ubijamy na sztywną pianę. 
+Pod koniec dodajemy nasze słodzidło. Wsypujemy mielone migdały 
+i wszystko dokładnie mieszamy. Masę przelewamy do formy i pieczemy 
+w piekarniku nagrzanym do 180 stopni przez około 20 -25 minut. 
+Masa 
+Jogurt grecki miksujemy z serem mascarpone oraz słodzidłem. 
+Wykładamy na przestudzony biszkopt. Daktyle moczymy w gorącej wodzie
+przez około 10 minut. Następnie blendujemy na jednolitą masę i przekładamy na krem.
+Orzechy ziemne siekamy i posypujemy nimi krem daktylowy. 
+Czekoladę roztapiamy z olejem kokosowym a następnie polewamy wierzch naszego tortu.</description>
   </recipe>
-  <recipe id="16">
-    <author>Rykup Jaś</author>
-    <title>Coś z endlajnami nie tak</title>
-    <rating>5.0</rating>
-    <preptime>15 sekund nie mniej nie więcej</preptime>
+  <recipe id="31">
+    <author>Marzena13</author>
+    <title>Nadziewana cukinia</title>
+    <rating>4 gwiazdki</rating>
+    <preptime>60 minut</preptime>
     <ingredients>
-      <ingredient>linijka opisu wykonannia przepisu</ingredient>
-      <ingredient>"\n"</ingredient>
+      <ingredient>3 lub 4 cukinie średniej wielkości</ingredient>
+      <ingredient>1 pierś kurczaka</ingredient>
+      <ingredient>1/2 szkl.ryżu</ingredient>
+      <ingredient>2 ząbki czosnku</ingredient>
+      <ingredient>Olej</ingredient>
+      <ingredient>Sól,pieprz,rozmaryn,papryka słodka</ingredient>
     </ingredients>
-    <description>czemu nie ma endlajnów u pietruchy w tych przepisach co?
-zobaczmy czy tu się zrobią 
-może on po prostu przejechał za ostro specjalnie wariat
-no w każdym razie zaraz się okaże</description>
+    <description>Cukinie umyć , pokroić w kawałki ok. 5 cm. Wydrążyć miąższ tak,
+aby zostało trochę na spodzie. Posolić. Ryż ugotować w osolonej wodzie 
+i odstawić do wystygnięcia. Mięso i miąższ cukinii zmielić w maszynce. 
+Zmielone mięso i miąższ podsmażyć z przeciśniętym przez praskę czosnkiem.
+Wymieszać z ryżem i doprawić solą, pieprzem, rozmarynem, papryką słodką. 
+Cukinię nadziać farszem pokropić olejem i piec w naczyniu żaroodpornym przez 40 minut 
+w temp. 190 stopni Celcjusza.</description>
+  </recipe>
+  <recipe id="32">
+    <author>JustKuchcik</author>
+    <title>Czerwona kapusta z grochem i kaszą gryczaną</title>
+    <rating>4 gwiazdki</rating>
+    <preptime>60 minut</preptime>
+    <ingredients>
+      <ingredient>1 nieduża główka kapusty czerwonej</ingredient>
+      <ingredient>1 puszka groszku konserwowego</ingredient>
+      <ingredient>200 g obranej białej cebuli</ingredient>
+      <ingredient>100 g suchej kaszy gryczanej prażonej</ingredient>
+      <ingredient>2 łyżki masła</ingredient>
+      <ingredient>2/3 szklanki mleka kokosowego</ingredient>
+      <ingredient>1 szklanka wody</ingredient>
+      <ingredient>3 łyżki octu 10%</ingredient>
+      <ingredient>3 łyżeczki koncentratu pomidorowego</ingredient>
+      <ingredient>2 łyżki jasnego sosu sojowego</ingredient>
+      <ingredient>1 łyżeczka suszonej natki kolendry</ingredient>
+      <ingredient>½ łyżeczka suszonego oregano</ingredient>
+      <ingredient>½ łyżeczki suszonego tymianku</ingredient>
+      <ingredient>2 liście laurowe</ingredient>
+      <ingredient>6 kulek ziela angielskiego</ingredient>
+      <ingredient>1 łyżeczka papryki słodkiej mielonej</ingredient>
+      <ingredient>1 łyżeczka cukru trzcinowego</ingredient>
+      <ingredient>pieprz czarny mielony</ingredient>
+    </ingredients>
+    <description>Kaszę ugotować wg instrukcji na opakowaniu i osączyć.
+W szerokim rondlu rozpuścić masło, dodać posiekaną cebulę, liście laurowe i ziele angielskie,
+wsypać suszone zioła, słodką paprykę, goździki, cynamon, chilli oraz cukier, wlać sos sojowy.
+Składniki dusić 5 min, mieszając.
+Następnie dołożyć poszatkowaną kapustę i jeszcze chwilę podgrzewać.
+Do zawartości rondla wlać ocet i wodę, całość doprowadzić do wrzenia,
+po czy dusić 20 nim, co jakiś czas mieszając.
+Do duszonych składników dodać osączony groszek i koncentrat pomidorowy
+– wymieszać i podgrzewać 5 min.
+Następnie wlać mleko kokosowe i dołożyć ugotowaną kaszę.
+Całość wymieszać, doprowadzić do wrzenia i gotować jeszcze ok. 5 min.
+Na końcu potrawę doprawić przyprawami do smaku.</description>
+  </recipe>
+  <recipe id="33">
+    <author>Honorata Kielczyk</author>
+    <title>Placki owsiane</title>
+    <rating>4.5 gwiazdki</rating>
+    <preptime>30 minut</preptime>
+    <ingredients>
+      <ingredient>100 g mąki pszennej</ingredient>
+      <ingredient>100 g płatków owsianych</ingredient>
+      <ingredient>100 ml jogurtu naturalnego</ingredient>
+      <ingredient>100 g cukru pudru</ingredient>
+      <ingredient>20 g margaryny</ingredient>
+      <ingredient>10 g proszku do pieczenia</ingredient>
+      <ingredient>1 jajko</ingredient>
+      <ingredient>brzoskwinie do dekoracji</ingredient>
+    </ingredients>
+    <description>Margarynę rozpuszczam i studzę. Mąkę, cukier puder, płatki owsiane, proszek do pieczenia,
+jogurt naturalny i jajko łączę ze sobą. Do masy dodaje wystudzoną margarynę.
+Krótko miksuję do połączenia się składników. Rozgrzewam patelnie. 
+Na patelni smażę małe placuszki około 2 minuty z obu stron. 
+Brzoskwinie kroję na połówki. Podaje wraz z ciepłymi plackami.</description>
+  </recipe>
+  <recipe id="34">
+    <author>Lidka Bawolska</author>
+    <title>Polędwica łososiowa</title>
+    <rating>4 gwiazdki</rating>
+    <preptime>30 minut</preptime>
+    <ingredients>
+      <ingredient>Składniki na 1 kg schabu:</ingredient>
+      <ingredient />
+      <ingredient>ok. 1/2 szklanki cukru</ingredient>
+      <ingredient>ok. 1/2 szklanki soli</ingredient>
+      <ingredient />
+      <ingredient>Ulubione przyprawy np.</ingredient>
+      <ingredient />
+      <ingredient>1 łyżeczka papryki słodkiej</ingredient>
+      <ingredient>1/2 łyżeczki papryki ostrej</ingredient>
+      <ingredient>czosnek granulowany</ingredient>
+      <ingredient>majeranek</ingredient>
+    </ingredients>
+    <description>1 doba
+Usunęłam tłuste kawałki z wierzchu i umyłam schab pod bieżącą wodą. 
+Osuszyłam ręcznikiem papierowym.
+Włożyłam następnie go do miski z cukrem i natarłam nim mięso z każdej strony dokładnie. 
+Przykryłam naczynie folią spożywczą i wstawiłam do lodówki na 1 dobę. 
+Przez ten czas cukier wyciągnął wodę z mięsa.
+
+2 doba 
+Mięso opłukałam z cukru pod bieżącą wodą i osuszyłam. 
+Włożyłam następnie do miski z solą i natarłam nią schab z każdej strony dokładnie. 
+Przykryłam folią spożywczą i wstawiłam do lodówki na 1 dobę. 
+
+3 -7 doba
+
+Na trzecią dobę opłukałam mięso z soli i osuszyłam. 
+Wszystkie przyprawy wymieszałam i natarłam nimi schab. 
+Można użyć przypraw jakie lubimy do mięs najbardziej, 
+ale zachęcam jednak by w każdym przypadku dodać papryki. 
+Tak natarte mięso wsadziłam ...tak do pończochy :) 
+Można tez użyć siatki do wędzenia, jak kto woli. 
+Powiesiłam w przewiewnym miejscu na 5 dni. 
+Po tym czasie rozcięłam pończochę i za pomocą nożyka zebrałam nadmiar przypraw. 
+Mięso było gotowe do jedzenia.</description>
+  </recipe>
+  <recipe id="35">
+    <author>Justyna Kołosowska</author>
+    <title>Pizza z jajkiem sadzonym i szparagami</title>
+    <rating>4 gwiazdki</rating>
+    <preptime>30 minut</preptime>
+    <ingredients>
+      <ingredient>4 szklanki mąki pszennej 450g</ingredient>
+      <ingredient>1,5 szklanki wody</ingredient>
+      <ingredient>1 łyżka soli</ingredient>
+      <ingredient>5g świeżych drożdży</ingredient>
+      <ingredient>Passata pomidorowa</ingredient>
+      <ingredient>Czosnek</ingredient>
+      <ingredient>Bazylia</ingredient>
+      <ingredient>Szparagi</ingredient>
+      <ingredient>Mozarella</ingredient>
+      <ingredient>2 jajka</ingredient>
+      <ingredient>Oregano</ingredient>
+    </ingredients>
+    <description>1. Zaczyn:
+Zmieszaj drożdże, łyżeczkę mąki oraz 50 ml ciepłej wody (ok 40 stopni). 
+Na górze utworzy się delikatna pianka.
+2. Do miski wsyp mąkę i sól. Mieszaj energicznie. Wlej wodę i zaczyn. 
+Wyrabia ciasto tak, by zamknąć w nim jak najwięcej powietrza.
+3. Odstaw przykryte na godzinę. Podziel ciasto na 3 części i przechowuj w lodówce 
+zawiniete w worki strunowe przez 2 dni. Drożdże w tym czasie się przepracują 
+i ciasto będzie lekkie i elastyczne.
+4. Nagrzewamy piekarnik do najwyższej możliwej temperatury. 
+1 porcję ciasta wałkujemy podsypując mąkę. Średnica to około 35 cm
+5. Passatę mieszamy z wyciśniętą głowką czosnku i bazylią. 
+Smarujemy spod ciasta zostawiając ok 1 cm z brzegu. Posypujemy mozzarellą. 
+Układamy podgotowane wcześniej szparagi i wbijamy jajka. Posypujemy oregano.
+6. Całość pieczemy około 7 minut (do ścięcia jajek).</description>
+  </recipe>
+  <recipe id="36">
+    <author>Justyna kołosowska</author>
+    <title>Bezowe brownie</title>
+    <rating>3.5 gwiazdki</rating>
+    <preptime>45 minut</preptime>
+    <ingredients>
+      <ingredient>Masło</ingredient>
+      <ingredient>Czekolada</ingredient>
+      <ingredient>Sól</ingredient>
+      <ingredient>Jajka</ingredient>
+      <ingredient>Cukier</ingredient>
+      <ingredient>Mąka migdałowa</ingredient>
+      <ingredient>Owoce (maliny lub truskawki)</ingredient>
+      <ingredient>Mąka ziemniaczana</ingredient>
+      <ingredient>Sok z cytryny</ingredient>
+    </ingredients>
+    <description>1. Na małym ogniu roztapiamy masło (180g), czekoladę gorzką ( 1 tabliczkę) i szczyptę soli. 
+Studzimy
+2. Ubijamy 4 jajka ze szklanką cukru. Stopniowo dodajemy mąkę migdałów ą (100g)
+3. Łączymy dotychczas przygotowane składniki. Przelewamy do formy. 
+Dodajemy owoce i wstawiamy do piekarnika. Pieczemy w temp. 180 stopni 
+przez około 10-15 minut. Ciasto będzie surowe, ale z wierzchu powinna być już 
+twarda skórka.
+4. Ubijamy białka z dwóch jajek na sztywno. Dodajemy łyżkę kopiastą mąki ziemniaczanej 
+oraz łyżkę soku z cytryny.
+Miksujemy ok. 5 minut. 
+Przekładamy na ciepłe brownie i pieczemy w temperaturze 160 stopni przez około 30 min. 
+Sprawdzamy suchym patyczkiem. Brownie będzie mokre, ale nie lejące, 
+a beza chrupka i lekko spękana.</description>
+  </recipe>
+  <recipe id="37">
+    <author>Agnieszka gotuje</author>
+    <title>Puree z bobu z czosnkiem i cebulą</title>
+    <rating>3 gwiazdki</rating>
+    <preptime>20 minut</preptime>
+    <ingredients>
+      <ingredient>500 g bobu</ingredient>
+      <ingredient>1 cebula</ingredient>
+      <ingredient>3 ząbki czosnku</ingredient>
+      <ingredient>Oliwa z oliwek</ingredient>
+      <ingredient>Sól i pieprz</ingredient>
+    </ingredients>
+    <description>1. Gotujemy bób do miękkości.
+2. Cebulę i czosnek podsmażamy na oliwie z oliwek.
+3. Blendujemy bób z podsmażoną cebulą i czosnkiem.
+4. Doprawiamy do smaku solą i pieprzem.</description>
+  </recipe>
+  <recipe id="38">
+    <author>Angelika gotuje</author>
+    <title>Potrawka z grzybami mun</title>
+    <rating>4.5</rating>
+    <preptime>40 minut</preptime>
+    <ingredients>
+      <ingredient>500 g fileta z indyka</ingredient>
+      <ingredient>1 opakowanie grzybów mun</ingredient>
+      <ingredient>Pół kalafiora</ingredient>
+      <ingredient>4 starte marchewki</ingredient>
+      <ingredient>1 cebula</ingredient>
+      <ingredient>1 ząbek czosnku</ingredient>
+      <ingredient>Olej</ingredient>
+      <ingredient>Sos sojowy</ingredient>
+      <ingredient>Sól, pieprz</ingredient>
+    </ingredients>
+    <description>1. Grzyby mun zalać gorącą wodą i zostawić na 20 min. 
+ Po tym czasie odcedzić i pokroić na mniejsze kawałki.
+2. Na oleju podsmażyć cebulę, dodać kurczaka,
+ czosnek i starte marchewki, a na koniec kalafior.
+3. Gdy warzywa i mięso są podsmażone, dodać grzyby mun,
+ zalac wszystko wodą, dodać sos sojowy i dusić około godzinę.
+4. Doprawić do smaku solą i pieprzem.</description>
+  </recipe>
+  <recipe id="39">
+    <author>Moje_male_gotowanie</author>
+    <title>Zupa szczawiowa</title>
+    <rating>5 gwiazdek</rating>
+    <preptime>40 minut</preptime>
+    <ingredients>
+      <ingredient>Liście szczawiu (ok 1.5 l)</ingredient>
+      <ingredient>Marchew</ingredient>
+      <ingredient>Pietruszka korzeń</ingredient>
+      <ingredient>Seler</ingredient>
+      <ingredient>Por</ingredient>
+      <ingredient>Oliwa</ingredient>
+      <ingredient>1.5 l bulionu</ingredient>
+      <ingredient>Ząbek czosnku</ingredient>
+      <ingredient>Pieprz, magii, sól</ingredient>
+      <ingredient>Śmietana 18%</ingredient>
+      <ingredient>8 szt Ziemniaków</ingredient>
+      <ingredient>Łyżka maki</ingredient>
+      <ingredient>5 jajek</ingredient>
+    </ingredients>
+    <description>1. Liście szczawiu (ok 1.5 l) myję, szatkuję i wkładam do garnka
+ w którym będę gotować zupę. Obsmażam na oliwie,
+ dodaję pokrojoną marchew i pietruszkę oraz por i seler w kawałku. 
+ Po 5 min zalewam 1.5 l bulionu i gotuję do miękkości marchewki.
+ Dokładam ząbek czosnku. Doprawiam solą, pieprzem, magii. 
+ Zaprawiam śmietaną 18% z łyżką mąki. Gotuję jeszcze chwilę.
+ Ziemniaki i jajka gotuję osobno.
+ Jeśli zupa jest za mało kwaśna można dodać sok z cytryny.
+ Zaś kiedy za kwaśna dodać trochę cukru.</description>
   </recipe>
 >>>>>>> Stashed changes
 </recipes>
