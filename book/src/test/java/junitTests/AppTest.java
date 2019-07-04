@@ -1,6 +1,6 @@
 package junitTests;
 
-import mechanics.*;
+import com.pk.java.mechanics.*;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
