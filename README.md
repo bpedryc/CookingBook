@@ -1,4 +1,10 @@
-# java_project
+# Java Project  
+ Wykonane przez:  
+ - Bartłomiej Pedryc  
+ - Jakub Ryś  
+ - Adrian Pietruszka  
+ - Maksymilian Siembab
+
 Instrukcja uruchomienia:  
   - mvn clean (żeby wyczyścić - nieobowiązkowe)  
   - mvn package (żeby zbudować)  
@@ -9,5 +15,4 @@ Instrukcja uruchomienia:
   GitHub:  
     - https://www.freecodecamp.org/news/how-to-use-git-efficiently-54320a236369/  
     - http://think-like-a-git.net/ (szczególnie polecam od rozdziału "Experimenting with git")  
-
-
+  
