@@ -36,8 +36,9 @@ public abstract class BasePanel extends JPanel {
 	JScrollPane recipe_scroll = new JScrollPane(recipe_area);
 	JTextArea ingredients_area = new JTextArea("Lista przepisow tu bedzie");	
 	JScrollPane ingredients_scroll = new JScrollPane(ingredients_area);
-	JTextArea page_search_area = new JTextArea();
+	JTextField page_search_area = new JTextField();
 	JTextArea search_page_area = new JTextArea("Przejdź do str");
+	JTextArea page_nr_area = new JTextArea("1");
 	
 	JTextField search_text = new JTextField();
 
@@ -69,6 +70,13 @@ public abstract class BasePanel extends JPanel {
 		
 		String[] recipe_raw = facade.getChosenRecipe(0);
 		
+		page_nr_area.setBounds(980, 100, 50, 50);
+		page_nr_area.setOpaque(false);
+		page_nr_area.setForeground(Color.DARK_GRAY);
+		page_nr_area.setFont(new Font("Serif", Font.ROMAN_BASELINE, 26));
+		page_nr_area.setEditable(false);
+		this.add(page_nr_area);
+		
 		recipe_scroll.setBounds(400, 100, 600, 670);
 		recipe_area.setBackground(Color.LIGHT_GRAY);
 		recipe_area.setFont(new Font("Serif", Font.ITALIC, 16));
@@ -77,6 +85,8 @@ public abstract class BasePanel extends JPanel {
 		recipe_area.setLineWrap(true);
 		recipe_area.setWrapStyleWord(true);
 		this.add(recipe_scroll);
+		
+		
 		
 		ingredients_scroll.setBounds(20, 100, 300, 400);
 		ingredients_area.setBackground(Color.LIGHT_GRAY);
@@ -103,12 +113,14 @@ public abstract class BasePanel extends JPanel {
 		search_page_area.setForeground(Color.LIGHT_GRAY);
 		search_page_area.setBackground(Color.DARK_GRAY);
 		search_page_area.setFont(new Font("Serif", Font.ROMAN_BASELINE, 26));
+		search_page_area.setEditable(false);
+		this.add(search_page_area);
 		
 		table_of_contents_button.setBounds(20, 570, 110, 50);
 		table_of_contents_button.setBackground(Color.LIGHT_GRAY);
 		this.add(table_of_contents_button);
 		
-		this.add(search_page_area);
+		
 		
 		search_text.addMouseListener(new MouseAdapter() {
 			public void mouseClicked(MouseEvent e) {
@@ -120,8 +132,10 @@ public abstract class BasePanel extends JPanel {
 			public void actionPerformed(ActionEvent e) 
 			{ 
 				String[] recipe_raw = facade.getNextRecipe();
+				page_nr_area.setText(Integer.toString(facade.getActualIt() + 1));
 				recipe_area.setText(recipe_raw[0]);
 				ingredients_area.setText(recipe_raw[1]);
+				
 				
 			} 
 		});	
@@ -130,8 +144,10 @@ public abstract class BasePanel extends JPanel {
 			public void actionPerformed(ActionEvent e) 
 			{ 
 				String[] recipe_raw = facade.getPrevRecipe();
+				page_nr_area.setText(Integer.toString(facade.getActualIt() + 1));
 				recipe_area.setText(recipe_raw[0]);
 				ingredients_area.setText(recipe_raw[1]);
+				page_nr_area.setText(Integer.toString(facade.getActualIt() + 1));
 				
 			} 
 		});	
@@ -179,10 +195,12 @@ public abstract class BasePanel extends JPanel {
                 	    }          
             			String[] recipe_raw = facade.getChosenRecipe(choosen_page);
 
+            			page_nr_area.setText(Integer.toString(choosen_page));
     	                recipe_area.setText(recipe_raw[0]);
     	    			ingredients_area.setText(recipe_raw[1]);
                     	page_search_area.setCaretPosition(0);
                     	page_search_area.setText("");
+                    	
                 	}
        
             }
