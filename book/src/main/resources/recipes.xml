@@ -1,43 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <recipes>
-<<<<<<< Updated upstream
-  <recipe id="0">
-    <author>Jaimie Oliver</author>
-    <title>Kluski jakieś</title>
-    <rating>4</rating>
-    <preptime>25 minut</preptime>
-    <ingredients>
-      <ingredient>2 jabłka</ingredient>
-      <ingredient>3 gruszki</ingredient>
-      <ingredient>4 winogrona</ingredient>
-    </ingredients>
-    <description>Klasyk. Koniecznie jeść na zimno.</description>
-  </recipe>
-  <recipe id="1">
-    <author>Gordon Ramsay</author>
-    <title>Racuchy</title>
-    <rating>5</rating>
-    <preptime>15 minut</preptime>
-    <ingredients>
-      <ingredient>2 jabłka</ingredient>
-      <ingredient>3 gruszki</ingredient>
-      <ingredient>4 winogrona</ingredient>
-    </ingredients>
-    <description>Bardzo dobre.</description>
-  </recipe>
-  <recipe id="2">
-    <author>gotowanietoproste</author>
-    <title>Trójkolorowe ciasto</title>
-    <rating>2/10</rating>
-    <preptime>46 minuty</preptime>
-=======
   <recipe id="18">
     <author>Magda Gessler</author>
     <title>Sałatka owocowa</title>
     <rating>3 gwiazdki</rating>
     <preptime>30 min</preptime>
->>>>>>> Stashed changes
     <ingredients>
+      <ingredient>burak</ingredient>
+      <ingredient>banan</ingredient>
+      <ingredient>marchew</ingredient>
+      <ingredient>mięta</ingredient>
+      <ingredient>sok</ingredient>
+      <ingredient>ok. 700 g schabu bez kosci (wystekowane plastry)</ingredient>
+      <ingredient>1 lyzka oleju</ingredient>
+      <ingredient>500 ml bulionu</ingredient>
+      <ingredient>1 zabek czosnku</ingredient>
+      <ingredient>1/2 marchewki</ingredient>
+      <ingredient>1/4 cebuli</ingredient>
+      <ingredient>1/3 szklanki smietanki 30%</ingredient>
+      <ingredient>po 1 i 1/2 lyzeczki maki pszennej i ziemniaczanej</ingredient>
+      <ingredient>2 lyzki posiekanego koperku</ingredient>
       <ingredient>2 pomarańcze</ingredient>
       <ingredient>2 banany</ingredient>
       <ingredient>garść winogron</ingredient>
@@ -69,29 +51,11 @@
 dodać cukier, wylać na masę cytrynową, na wierzch ułożyć herbatniki, można posypać
 cukrem pudrem</description>
   </recipe>
-<<<<<<< Updated upstream
-  <recipe id="4">
-    <author>Autor</author>
-    <title>Nazwa przepisu</title>
-    <rating>Ocena</rating>
-    <preptime>Czas wykonania</preptime>
-    <ingredients>
-      <ingredient />
-    </ingredients>
-    <description>Opis</description>
-  </recipe>
-  <recipe id="5">
-    <author>Autor</author>
-    <title>Nazwa przepisu</title>
-    <rating>Ocena</rating>
-    <preptime>Czas wykonania</preptime>
-=======
   <recipe id="20">
     <author>Gordon Ramsay</author>
     <title>Tarta karmelowa</title>
     <rating>3.5 gwiazdki</rating>
     <preptime>100 minut</preptime>
->>>>>>> Stashed changes
     <ingredients>
       <ingredient>Biały cukier</ingredient>
       <ingredient>Biała czekolada</ingredient>
@@ -128,25 +92,13 @@ w między czasie oporządzamy kurę dodajemy do niej odpowiednie przyprawy i tni
 na małe kawałki, ser trzemy na tarce. Po pół godziny wyciągamy ciasto, wałkujemy
 do bardzo cienkiej postaci po czym wycinamy mniej więcej równe kółka i kładziemy je na
 rozgrzanej patelni na pełnym gazie, takie ciasto ma piec się 30 sekund na jednym boku,
-następnie 30 na drugim a później 15 sekund na pierwszym, patelnia ma nie być polana
-żadnym tłuszczem! Po zrobieniu placków kładziemy na kązdy trochę tartego sera sałaty
-oraz kury i grzejemy w piekarniku w 180 stopniach przez 20 minut.</description>
+n w 180 stopniach przez 20 minut.</description>
   </recipe>
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
-  <recipe id="7">
-    <author>Autor</author>
-    <title>Nazwa przepisu</title>
-    <rating>Ocena</rating>
-    <preptime>Czas wykonania</preptime>
-=======
   <recipe id="24">
     <author>Angelika gotuje</author>
     <title>Fit fasolka z masłem orzechowym</title>
     <rating>5 gwiazdek</rating>
     <preptime>20 min</preptime>
->>>>>>> Stashed changes
     <ingredients>
       <ingredient>500 fasolki szparagowej</ingredient>
       <ingredient>2 łyżki masła orzechowego</ingredient>
@@ -582,11 +534,10 @@ a beza chrupka i lekko spękana.</description>
  w którym będę gotować zupę. Obsmażam na oliwie,
  dodaję pokrojoną marchew i pietruszkę oraz por i seler w kawałku. 
  Po 5 min zalewam 1.5 l bulionu i gotuję do miękkości marchewki.
- Dokładam ząbek czosnku. Doprawiam solą, pieprzem, magii. 
+ Dokładam ząbek czosnku. Dopmagii. 
  Zaprawiam śmietaną 18% z łyżką mąki. Gotuję jeszcze chwilę.
  Ziemniaki i jajka gotuję osobno.
  Jeśli zupa jest za mało kwaśna można dodać sok z cytryny.
  Zaś kiedy za kwaśna dodać trochę cukru.</description>
   </recipe>
->>>>>>> Stashed changes
 </recipes>
