@@ -67,7 +67,7 @@ public abstract class BasePanel extends JPanel {
 		filter_list.setBackground(Color.LIGHT_GRAY);
 		this.add(filter_list);
 		
-		String[] recipe_raw = facade.getChosenRecipe(0);
+		String[] recipe_raw = facade.getChosenRecipe(1);
 		
 		recipe_scroll.setBounds(400, 100, 600, 670);
 		recipe_area.setBackground(Color.LIGHT_GRAY);
